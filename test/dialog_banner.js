@@ -4,16 +4,16 @@ var p; // shortcut to reference prototypes
 
 // library properties:
 lib.properties = {
-	width: 960,
-	height: 960,
+	width: 400,
+	height: 360,
 	fps: 30,
-	color: "#666666",
+	color: "#FFFFFF",
 	opacity: 1.00,
 	manifest: [
-		{src:"images/app_store.png?1474874464307", id:"app_store"},
-		{src:"images/google_play.png?1474874464307", id:"google_play"},
-		{src:"images/stars_bitmap.png?1474874464307", id:"stars_bitmap"},
-		{src:"images/zagl.png?1474874464307", id:"zagl"}
+		{src:"images/app_store.png?1475221658761", id:"app_store"},
+		{src:"images/google_play.png?1475221658761", id:"google_play"},
+		{src:"images/stars_bitmap.png?1475221658761", id:"stars_bitmap"},
+		{src:"images/zagl.png?1475221658761", id:"zagl"}
 	]
 };
 
@@ -532,40 +532,29 @@ p.nominalBounds = new cjs.Rectangle(-290,-226.5,580,452);
 	// timeline functions:
 	this.frame_0 = function() {
 		var _this = this;
-		stage.scaleX = stage.scaleY = window.devicePixelRatio;
 		var mixTAG = mixTAG;
 		var _searchData = null;
 		
-		 //Size
-		
-		function getWindowSize() {
-		
-			return {
-				width: Math.min(document.documentElement.clientWidth, window.innerWidth || 0),
-				height: Math.min(document.documentElement.clientHeight, window.innerHeight || 0)
-			}
-		}
-		
 		// GET
 		
-		function getQueryParam(paramName) {
-		      if (_searchData === null) {
-		        _searchData = {};
-		    
-		        try {
-		          var _ = document.location.search.split('?')[1].split('&');
-		          for (var i = 0; i < _.length; i++) {
-		    
-		            var _param = _[i].split('=');
-		            _searchData[_param[0]] = _param.length === 2 ? decodeURIComponent(_param[1]) : null;
-		          }
-		        } catch (e) {}
-		      }
-		    
-		      if (_searchData[paramName] != undefined) {
-		        return _searchData[paramName];
-		      }
-		    }
+			function getQueryParam(paramName) {
+				      if (_searchData === null) {
+				        _searchData = {};
+				    
+				        try {
+				          var _ = document.location.search.split('?')[1].split('&');
+				          for (var i = 0; i < _.length; i++) {
+				    
+				            var _param = _[i].split('=');
+				            _searchData[_param[0]] = _param.length === 2 ? decodeURIComponent(_param[1]) : null;
+				          }
+				        } catch (e) {}
+				      }
+				    
+				      if (_searchData[paramName] != undefined) {
+				        return _searchData[paramName];
+				      }
+				    }
 		
 		var appData = _this.d_window.dialog.app_data;
 		
@@ -581,45 +570,6 @@ p.nominalBounds = new cjs.Rectangle(-290,-226.5,580,452);
 		if (rate > 5) {rate = 5;}
 		var x = (5 - rate) * (appData.app_rating.stars_mask.instance.image.width / 5) * -1;
 		appData.app_rating.stars_mask.instance.mask.x = x;
-		
-		//Resize
-		
-		window._setCanvasSize = function() {
-			
-			stage.scaleX = stage.scaleY = window.devicePixelRatio;
-			var windowSize = getWindowSize();
-			stage.canvas.style.width = windowSize.width + 'px';
-			stage.canvas.style.height = windowSize.height + 'px';
-			stage.canvas.width = windowSize.width * window.devicePixelRatio;
-			stage.canvas.height = windowSize.height * window.devicePixelRatio;
-			
-			var StageScaleT = 0.5;
-			var StageScaleS = windowSize.width / 650;
-			var StageScaleSL = windowSize.height / 650;
-			
-			_this.d_window.x = windowSize.width/2;
-			_this.d_window.y = windowSize.height/2;
-			_this.d_window.scaleX = _this.d_window.scaleY = StageScaleT;
-			
-			if (windowSize.width < 420) {
-				_this.d_window.scaleX = _this.d_window.scaleY = StageScaleS;
-			}
-			
-			if (windowSize.height < 420) {
-				_this.d_window.scaleX = _this.d_window.scaleY = StageScaleSL;
-			}
-		}
-		
-		window.addEventListener('orientationchange', _setCanvasSize);
-		
-			//window.onresize=function(){
-				//_setCanvasSize();
-			//}
-		
-			
-		//window.onresize();
-			
-		
 		
 		//Actions
 		
@@ -655,9 +605,6 @@ p.nominalBounds = new cjs.Rectangle(-290,-226.5,580,452);
 		function CancelBtn() {
 			stage.canvas.style.display = 'none';
 		}
-		
-		//window.onresize();
-		_setCanvasSize();
 	}
 
 	// actions tween:
@@ -666,12 +613,12 @@ p.nominalBounds = new cjs.Rectangle(-290,-226.5,580,452);
 	// d_window
 	this.d_window = new lib.d_window();
 	this.d_window.parent = this;
-	this.d_window.setTransform(480,530.7);
+	this.d_window.setTransform(200,180.4,0.598,0.598,0,0,0,0.1,0.1);
 
 	this.timeline.addTween(cjs.Tween.get(this.d_window).wait(1));
 
 }).prototype = p = new cjs.MovieClip();
-p.nominalBounds = new cjs.Rectangle(670,784.2,580,452);
+p.nominalBounds = new cjs.Rectangle(226.6,225,346.7,270.2);
 
 })(lib = lib||{}, images = images||{}, createjs = createjs||{}, ss = ss||{});
 var lib, images, createjs, ss;
