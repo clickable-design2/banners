@@ -10,15 +10,15 @@ lib.properties = {
 	color: "#CCCCCC",
 	opacity: 1.00,
 	manifest: [
-		{src:"images/baks.png?1475470808360", id:"baks"},
-		{src:"images/best.png?1475470808360", id:"best"},
-		{src:"images/fon.jpg?1475470808360", id:"fon"},
-		{src:"images/girl1.png?1475470808360", id:"girl1"},
-		{src:"images/image34.png?1475470808360", id:"image34"},
-		{src:"images/image37.png?1475470808360", id:"image37"},
-		{src:"images/image40.png?1475470808360", id:"image40"},
-		{src:"images/image79.png?1475470808360", id:"image79"},
-		{src:"images/logo.png?1475470808360", id:"logo"}
+		{src:"images/baks.png?1475471058051", id:"baks"},
+		{src:"images/best.png?1475471058051", id:"best"},
+		{src:"images/fon.jpg?1475471058051", id:"fon"},
+		{src:"images/girl1.png?1475471058051", id:"girl1"},
+		{src:"images/image34.png?1475471058051", id:"image34"},
+		{src:"images/image37.png?1475471058051", id:"image37"},
+		{src:"images/image40.png?1475471058051", id:"image40"},
+		{src:"images/image79.png?1475471058051", id:"image79"},
+		{src:"images/logo.png?1475471058051", id:"logo"}
 	]
 };
 
@@ -1083,7 +1083,7 @@ p.nominalBounds = new cjs.Rectangle(-2.2,-186,247.3,1456.1);
 
 
 // stage content:
-(lib.ledy_vulk_600x300 = function(mode,startPosition,loop) {
+(lib.ledy_vulk_240x400 = function(mode,startPosition,loop) {
 	this.initialize(mode,startPosition,loop,{});
 
 	// timeline functions:
