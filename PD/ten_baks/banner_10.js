@@ -10,14 +10,14 @@ lib.properties = {
 	color: "#FFFFFF",
 	opacity: 1.00,
 	manifest: [
-		{src:"images/_10b.png?1475480310271", id:"_10b"},
-		{src:"images/_10baks.jpg?1475480310271", id:"_10baks"},
-		{src:"images/_10r.png?1475480310271", id:"_10r"},
-		{src:"images/Image.png?1475480310271", id:"Image"},
-		{src:"images/Image_0.png?1475480310271", id:"Image_0"},
-		{src:"images/Image_1.png?1475480310271", id:"Image_1"},
-		{src:"images/hand.png?1475480310271", id:"hand"},
-		{src:"images/sovremennyypodval.png?1475480310271", id:"sovremennyypodval"}
+		{src:"images/Image.png?1475480705567", id:"Image"},
+		{src:"images/Image_0.png?1475480705567", id:"Image_0"},
+		{src:"images/Image_1.png?1475480705567", id:"Image_1"},
+		{src:"images/B10b.png?1475480705567", id:"B10b"},
+		{src:"images/B10baks.jpg?1475480705567", id:"B10baks"},
+		{src:"images/B10r.png?1475480705567", id:"B10r"},
+		{src:"images/hand.png?1475480705567", id:"hand"},
+		{src:"images/sovremennyypodval.png?1475480705567", id:"sovremennyypodval"}
 	]
 };
 
@@ -28,24 +28,6 @@ lib.ssMetadata = [];
 
 // symbols:
 
-
-
-(lib._10b = function() {
-	this.initialize(img._10b);
-}).prototype = p = new cjs.Bitmap();
-p.nominalBounds = new cjs.Rectangle(0,0,120,157);
-
-
-(lib._10baks = function() {
-	this.initialize(img._10baks);
-}).prototype = p = new cjs.Bitmap();
-p.nominalBounds = new cjs.Rectangle(0,0,190,80);
-
-
-(lib._10r = function() {
-	this.initialize(img._10r);
-}).prototype = p = new cjs.Bitmap();
-p.nominalBounds = new cjs.Rectangle(0,0,120,157);
 
 
 (lib.Image = function() {
@@ -64,6 +46,24 @@ p.nominalBounds = new cjs.Rectangle(0,0,500,500);
 	this.initialize(img.Image_1);
 }).prototype = p = new cjs.Bitmap();
 p.nominalBounds = new cjs.Rectangle(0,0,500,500);
+
+
+(lib.B10b = function() {
+	this.initialize(img.B10b);
+}).prototype = p = new cjs.Bitmap();
+p.nominalBounds = new cjs.Rectangle(0,0,120,157);
+
+
+(lib.B10baks = function() {
+	this.initialize(img.B10baks);
+}).prototype = p = new cjs.Bitmap();
+p.nominalBounds = new cjs.Rectangle(0,0,190,80);
+
+
+(lib.B10r = function() {
+	this.initialize(img.B10r);
+}).prototype = p = new cjs.Bitmap();
+p.nominalBounds = new cjs.Rectangle(0,0,120,157);
 
 
 (lib.hand = function() {
@@ -221,7 +221,7 @@ p.nominalBounds = new cjs.Rectangle(0,0,640,388);
 	this.initialize(mode,startPosition,loop,{});
 
 	// Слой 1
-	this.instance = new lib._10r();
+	this.instance = new lib.B10r();
 	this.instance.parent = this;
 	this.instance.setTransform(-60,-78.5);
 
@@ -235,7 +235,7 @@ p.nominalBounds = new cjs.Rectangle(-60,-78.5,120,157);
 	this.initialize(mode,startPosition,loop,{});
 
 	// Слой 1
-	this.instance = new lib._10baks();
+	this.instance = new lib.B10baks();
 	this.instance.parent = this;
 	this.instance.setTransform(-40,95,1,1,-90);
 
@@ -249,7 +249,7 @@ p.nominalBounds = new cjs.Rectangle(-40,-95,80,190);
 	this.initialize(mode,startPosition,loop,{});
 
 	// Слой 1
-	this.instance = new lib._10b();
+	this.instance = new lib.B10b();
 	this.instance.parent = this;
 	this.instance.setTransform(-60,-78.5);
 
@@ -518,7 +518,7 @@ p.nominalBounds = new cjs.Rectangle(-87.4,-105.7,188.6,209.9);
 	this.timeline.addTween(cjs.Tween.get(this.instance).wait(1));
 
 	// Слой 1
-	this.instance_1 = new lib._10r();
+	this.instance_1 = new lib.B10r();
 	this.instance_1.parent = this;
 	this.instance_1.setTransform(-60,-78.5);
 
@@ -540,7 +540,7 @@ p.nominalBounds = new cjs.Rectangle(-114.7,-119.7,229.7,239.7);
 	this.timeline.addTween(cjs.Tween.get(this.instance).wait(1));
 
 	// Слой 1
-	this.instance_1 = new lib._10baks();
+	this.instance_1 = new lib.B10baks();
 	this.instance_1.parent = this;
 	this.instance_1.setTransform(-40,95,1,1,-90);
 
