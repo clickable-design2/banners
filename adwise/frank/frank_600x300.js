@@ -10,19 +10,19 @@ lib.properties = {
 	color: "#FFFFFF",
 	opacity: 1.00,
 	manifest: [
-		{src:"images/_1txt.png?1475574246345", id:"_1txt"},
-		{src:"images/_2txt.png?1475574246345", id:"_2txt"},
-		{src:"images/butt0n.png?1475574246345", id:"butt0n"},
-		{src:"images/derevo.jpg?1475574246345", id:"derevo"},
-		{src:"images/fon.jpg?1475574246345", id:"fon"},
-		{src:"images/logo.png?1475574246345", id:"logo"},
-		{src:"images/pero1.png?1475574246345", id:"pero1"},
-		{src:"images/pero2.png?1475574246345", id:"pero2"},
-		{src:"images/pero3.png?1475574246345", id:"pero3"},
-		{src:"images/ptica1.png?1475574246345", id:"ptica1"},
-		{src:"images/ptica2.png?1475574246345", id:"ptica2"},
-		{src:"images/ptica3.png?1475574246345", id:"ptica3"},
-		{src:"images/vetka.png?1475574246345", id:"vetka"}
+		{src:"images/butt0n.png?1475574769801", id:"butt0n"},
+		{src:"images/derevo.jpg?1475574769801", id:"derevo"},
+		{src:"images/f1txt.png?1475574769801", id:"f1txt"},
+		{src:"images/f2txt.png?1475574769801", id:"f2txt"},
+		{src:"images/fon.jpg?1475574769801", id:"fon"},
+		{src:"images/logo.png?1475574769801", id:"logo"},
+		{src:"images/pero1.png?1475574769801", id:"pero1"},
+		{src:"images/pero2.png?1475574769801", id:"pero2"},
+		{src:"images/pero3.png?1475574769801", id:"pero3"},
+		{src:"images/ptica1.png?1475574769801", id:"ptica1"},
+		{src:"images/ptica2.png?1475574769801", id:"ptica2"},
+		{src:"images/ptica3.png?1475574769801", id:"ptica3"},
+		{src:"images/vetka.png?1475574769801", id:"vetka"}
 	]
 };
 
@@ -35,18 +35,6 @@ lib.ssMetadata = [];
 
 
 
-(lib._1txt = function() {
-	this.initialize(img._1txt);
-}).prototype = p = new cjs.Bitmap();
-p.nominalBounds = new cjs.Rectangle(0,0,462,78);
-
-
-(lib._2txt = function() {
-	this.initialize(img._2txt);
-}).prototype = p = new cjs.Bitmap();
-p.nominalBounds = new cjs.Rectangle(0,0,337,44);
-
-
 (lib.butt0n = function() {
 	this.initialize(img.butt0n);
 }).prototype = p = new cjs.Bitmap();
@@ -57,6 +45,18 @@ p.nominalBounds = new cjs.Rectangle(0,0,274,69);
 	this.initialize(img.derevo);
 }).prototype = p = new cjs.Bitmap();
 p.nominalBounds = new cjs.Rectangle(0,0,339,500);
+
+
+(lib.f1txt = function() {
+	this.initialize(img.f1txt);
+}).prototype = p = new cjs.Bitmap();
+p.nominalBounds = new cjs.Rectangle(0,0,462,78);
+
+
+(lib.f2txt = function() {
+	this.initialize(img.f2txt);
+}).prototype = p = new cjs.Bitmap();
+p.nominalBounds = new cjs.Rectangle(0,0,337,44);
 
 
 (lib.fon = function() {
@@ -238,7 +238,7 @@ p.nominalBounds = new cjs.Rectangle(0,0,676,81.5);
 	this.initialize(mode,startPosition,loop,{});
 
 	// Слой 1
-	this.instance = new lib._2txt();
+	this.instance = new lib.f2txt();
 	this.instance.parent = this;
 
 	this.timeline.addTween(cjs.Tween.get(this.instance).wait(1));
@@ -317,7 +317,7 @@ p.nominalBounds = new cjs.Rectangle(0,0,237,258);
 	this.initialize(mode,startPosition,loop,{});
 
 	// Слой 1
-	this.instance = new lib._1txt();
+	this.instance = new lib.f1txt();
 	this.instance.parent = this;
 
 	this.timeline.addTween(cjs.Tween.get(this.instance).wait(1));
