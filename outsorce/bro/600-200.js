@@ -9,16 +9,16 @@ lib.properties = {
 	fps: 24,
 	color: "#FFFFFF",
 	manifest: [
-		{src:"arm.png", id:"arm"},
-		{src:"back.jpg", id:"back"},
-		{src:"body.png", id:"body"},
-		{src:"head.png", id:"head"},
-		{src:"keys.png", id:"keys"},
-		{src:"money11.png", id:"money11"},
-		{src:"nap.png", id:"nap"},
-		{src:"strela.png", id:"strela"},
-		{src:"tors.png", id:"tors"},
-		{src:"vulk.png", id:"vulk"}
+		{src:"images/arm.png", id:"arm"},
+		{src:"images/back.jpg", id:"back"},
+		{src:"images/body.png", id:"body"},
+		{src:"images/head.png", id:"head"},
+		{src:"images/keys.png", id:"keys"},
+		{src:"images/money11.png", id:"money11"},
+		{src:"images/nap.png", id:"nap"},
+		{src:"images/strela.png", id:"strela"},
+		{src:"images/tors.png", id:"tors"},
+		{src:"images/vulk.png", id:"vulk"}
 	]
 };
 
