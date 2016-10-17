@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>adult_job</title>
+<meta name="viewport" content="width=320, initial-scale=1.0">
+<script src="https://code.createjs.com/createjs-2015.11.26.min.js"></script>
+<script src="adult_job.js?1461249206732"></script>
+<script>
+var canvas, stage, exportRoot;
+function init() {
+	// --- write your JS code here ---
+	
+	canvas = document.getElementById("canvas");
+	images = images||{};
+
+	var loader = new createjs.LoadQueue(false);
+	loader.addEventListener("fileload", handleFileLoad);
+	loader.addEventListener("complete", handleComplete);
+	loader.loadManifest(lib.properties.manifest);
+
+	setTimeout(function() {
+		var closeBtn = document.querySelector('#clickky_banner_full>#closeBtn');
+		if(closeBtn) {
+			closeBtn.style.display = 'block';
+		}
+	}, 5000);
+}
+
+function handleFileLoad(evt) {
+	if (evt.item.type == "image") { images[evt.item.id] = evt.result; }
+}
+
+function handleComplete(evt) {
+	exportRoot = new lib.adult_job();
+
+	stage = new createjs.Stage(canvas);
+	stage.addChild(exportRoot);
+	stage.update();
+
+	createjs.Ticker.setFPS(lib.properties.fps);
+	createjs.Ticker.addEventListener("tick", stage);
+}
+function close_banner_full(){
+	document.getElementById("clickky_banner_full").style.display = "none";
+}
+
+</script>
+
+<!-- write your code here -->
+
+</head>
+<body onload="init();" style="background-color:#D4D4D4;margin:0px;">
+	<div id="clickky_banner_full">
+    <div id="closeBtn" onclick="close_banner_full();" style="position:absolute;top:10px;right:10px;display:none;width:10px;height:10px;background:url(images/closeBtn.svg) center no-repeat;background-size:cover;z-index:65001;"></div>
+    <canvas id="canvas" width="960" height="960" style="background-color:#FFFFFF"></canvas>
+    </div>
+</body>
+</html>
