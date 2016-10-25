@@ -9,33 +9,33 @@ lib.properties = {
 	fps: 24,
 	color: "#FFFFFF",
 	manifest: [
-		{src:"images/aplle.png?1477406200836", id:"aplle"},
-		{src:"images/back.png?1477406200836", id:"back"},
-		{src:"images/crossbow.png?1477406200836", id:"crossbow"},
-		{src:"images/item1.png?1477406200836", id:"item1"},
-		{src:"images/item10.png?1477406200836", id:"item10"},
-		{src:"images/item11.png?1477406200836", id:"item11"},
-		{src:"images/item12.png?1477406200836", id:"item12"},
-		{src:"images/item13.png?1477406200836", id:"item13"},
-		{src:"images/item14.png?1477406200836", id:"item14"},
-		{src:"images/item15.png?1477406200836", id:"item15"},
-		{src:"images/item16.png?1477406200836", id:"item16"},
-		{src:"images/item17.png?1477406200836", id:"item17"},
-		{src:"images/item2.png?1477406200836", id:"item2"},
-		{src:"images/item3.png?1477406200836", id:"item3"},
-		{src:"images/item4.png?1477406200836", id:"item4"},
-		{src:"images/item5.png?1477406200836", id:"item5"},
-		{src:"images/item6.png?1477406200836", id:"item6"},
-		{src:"images/item7.png?1477406200836", id:"item7"},
-		{src:"images/item8.png?1477406200836", id:"item8"},
-		{src:"images/item9.png?1477406200836", id:"item9"},
-		{src:"images/light.png?1477406200836", id:"light"},
-		{src:"images/osk1.png?1477406200836", id:"osk1"},
-		{src:"images/osk2.png?1477406200836", id:"osk2"},
-		{src:"images/osk3.png?1477406200836", id:"osk3"},
-		{src:"images/pricel.png?1477406200836", id:"pricel"},
-		{src:"images/tree.png?1477406200836", id:"tree"},
-		{src:"images/window.png?1477406200836", id:"window"}
+		{src:"images/aplle.png?1477406611838", id:"aplle"},
+		{src:"images/back.png?1477406611838", id:"back"},
+		{src:"images/crossbow.png?1477406611838", id:"crossbow"},
+		{src:"images/item1.png?1477406611838", id:"item1"},
+		{src:"images/item10.png?1477406611838", id:"item10"},
+		{src:"images/item11.png?1477406611838", id:"item11"},
+		{src:"images/item12.png?1477406611838", id:"item12"},
+		{src:"images/item13.png?1477406611838", id:"item13"},
+		{src:"images/item14.png?1477406611838", id:"item14"},
+		{src:"images/item15.png?1477406611838", id:"item15"},
+		{src:"images/item16.png?1477406611838", id:"item16"},
+		{src:"images/item17.png?1477406611838", id:"item17"},
+		{src:"images/item2.png?1477406611838", id:"item2"},
+		{src:"images/item3.png?1477406611838", id:"item3"},
+		{src:"images/item4.png?1477406611838", id:"item4"},
+		{src:"images/item5.png?1477406611838", id:"item5"},
+		{src:"images/item6.png?1477406611838", id:"item6"},
+		{src:"images/item7.png?1477406611838", id:"item7"},
+		{src:"images/item8.png?1477406611838", id:"item8"},
+		{src:"images/item9.png?1477406611838", id:"item9"},
+		{src:"images/light.png?1477406611838", id:"light"},
+		{src:"images/osk1.png?1477406611838", id:"osk1"},
+		{src:"images/osk2.png?1477406611838", id:"osk2"},
+		{src:"images/osk3.png?1477406611838", id:"osk3"},
+		{src:"images/pricel.png?1477406611838", id:"pricel"},
+		{src:"images/tree.png?1477406611838", id:"tree"},
+		{src:"images/window.png?1477406611838", id:"window"}
 	]
 };
 
@@ -222,18 +222,6 @@ p.nominalBounds = new cjs.Rectangle(0,0,500,750);
 p.nominalBounds = null;
 
 
-(lib.Символ58 = function(mode,startPosition,loop) {
-	this.initialize(mode,startPosition,loop,{});
-
-	// Слой 1
-	this.instance = new lib.aplle();
-
-	this.timeline.addTween(cjs.Tween.get(this.instance).wait(1));
-
-}).prototype = p = new cjs.MovieClip();
-p.nominalBounds = new cjs.Rectangle(0,0,94,94);
-
-
 (lib.Символ50 = function(mode,startPosition,loop) {
 	this.initialize(mode,startPosition,loop,{});
 
@@ -300,6 +288,18 @@ p.nominalBounds = new cjs.Rectangle(0,0,183.1,103);
 
 }).prototype = p = new cjs.MovieClip();
 p.nominalBounds = new cjs.Rectangle(0,0,1938.5,1036.3);
+
+
+(lib.Символ38 = function(mode,startPosition,loop) {
+	this.initialize(mode,startPosition,loop,{});
+
+	// Слой 1
+	this.instance = new lib.aplle();
+
+	this.timeline.addTween(cjs.Tween.get(this.instance).wait(1));
+
+}).prototype = p = new cjs.MovieClip();
+p.nominalBounds = new cjs.Rectangle(0,0,94,94);
 
 
 (lib.Символ36 = function(mode,startPosition,loop) {
@@ -626,6 +626,27 @@ p.nominalBounds = new cjs.Rectangle(-16,-33.5,32,67);
 
 }).prototype = p = new cjs.MovieClip();
 p.nominalBounds = new cjs.Rectangle(-20.5,-87,41,174);
+
+
+(lib.Символ58 = function(mode,startPosition,loop) {
+	this.initialize(mode,startPosition,loop,{});
+
+	// Слой 2
+	this.instance = new lib.Символ38();
+	this.instance.setTransform(47,47,1,1,0,0,0,47,47);
+	this.instance.alpha = 0.691;
+	this.instance.compositeOperation = "lighter";
+	this.instance._off = true;
+
+	this.timeline.addTween(cjs.Tween.get(this.instance).wait(1).to({_off:false},0).wait(1));
+
+	// Слой 1
+	this.instance_1 = new lib.aplle();
+
+	this.timeline.addTween(cjs.Tween.get(this.instance_1).wait(2));
+
+}).prototype = p = new cjs.MovieClip();
+p.nominalBounds = new cjs.Rectangle(0,0,94,94);
 
 
 (lib.Символ51 = function(mode,startPosition,loop) {
@@ -1143,7 +1164,7 @@ p.nominalBounds = new cjs.Rectangle(0,0,207,187);
 		
 		}
 		
-		
+		this.cross.alpha=0;
 		this.pric.alpha=0;
 		
 		
@@ -1165,7 +1186,8 @@ p.nominalBounds = new cjs.Rectangle(0,0,207,187);
 		
 		{
 		
-		
+		this.cross.alpha=1;
+			this.cross2.alpha=0;
 			this.cursor = "none"
 			this.pric.alpha=1;
 			this.pric2.alpha=0;
@@ -1177,7 +1199,8 @@ p.nominalBounds = new cjs.Rectangle(0,0,207,187);
 		
 		function fl_Clickout3()
 		{
-			
+			this.cross.alpha=0;
+			this.cross2.alpha=1;
 			this.cursor = "default"
 			this.pric.alpha=0;
 			this.pric2.alpha=1;
@@ -1200,10 +1223,13 @@ p.nominalBounds = new cjs.Rectangle(0,0,207,187);
 	this.timeline.addTween(cjs.Tween.get({}).to({state:[{t:this.pric},{t:this.pric2}]}).wait(1));
 
 	// Символ 19
+	this.cross2 = new lib.Символ19();
+	this.cross2.setTransform(1284.4,856,1,1,0,0,0,443.9,234);
+
 	this.cross = new lib.Символ19();
 	this.cross.setTransform(1212.4,856,1,1,0,0,0,443.9,234);
 
-	this.timeline.addTween(cjs.Tween.get(this.cross).wait(1));
+	this.timeline.addTween(cjs.Tween.get({}).to({state:[{t:this.cross},{t:this.cross2}]}).wait(1));
 
 	// Символ 1
 	this.baby = new lib.Символ1();
