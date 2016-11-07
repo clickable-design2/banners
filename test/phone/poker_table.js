@@ -70,14 +70,14 @@ function getMCSymbolPrototype(symbol, nominalBounds, frameBounds) {
 	this.initialize(mode,startPosition,loop,{});
 
 	// Layer 1
-	this.text = new cjs.Text("БЕЗ ДЕПОЗИТА", "bold 27px 'Rex Bold '", "#FFFFFF");
+	this.text = new cjs.Text("БЕЗ ДЕПОЗИТА", "bold 27px 'RexBold '", "#FFFFFF");
 	this.text.textAlign = "center";
 	this.text.lineHeight = 29;
 	this.text.lineWidth = 263;
 	this.text.parent = this;
 	this.text.setTransform(202.5,241.7,1.517,1.517);
 
-	this.text_1 = new cjs.Text("ВАШ БОНУС", "bold 35px 'Rex Bold '", "#FFFFFF");
+	this.text_1 = new cjs.Text("ВАШ БОНУС", "bold 35px 'RexBold '", "#FFFFFF");
 	this.text_1.textAlign = "center";
 	this.text_1.lineHeight = 37;
 	this.text_1.lineWidth = 263;
