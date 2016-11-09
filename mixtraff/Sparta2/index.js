@@ -10,15 +10,15 @@ lib.properties = {
 	color: "#620006",
 	opacity: 1.00,
 	manifest: [
-		{src:"images/back.jpg?1478533183028", id:"back"},
-		{src:"images/dfsd.png?1478533183028", id:"dfsd"},
-		{src:"images/for_03.png?1478533183028", id:"for_03"},
-		{src:"images/for_06.png?1478533183028", id:"for_06"},
-		{src:"images/for_11.png?1478533183028", id:"for_11"},
-		{src:"images/for_14.png?1478533183028", id:"for_14"},
-		{src:"images/Meteor.png?1478533183028", id:"Meteor"},
-		{src:"images/Stone.png?1478533183028", id:"Stone"},
-		{src:"images/w256h2561380453915MouseOptions256x25632.png?1478533183028", id:"w256h2561380453915MouseOptions256x25632"}
+		{src:"images/back.jpg?1478678612279", id:"back"},
+		{src:"images/dfsd.png?1478678612279", id:"dfsd"},
+		{src:"images/for_03.png?1478678612279", id:"for_03"},
+		{src:"images/for_06.png?1478678612279", id:"for_06"},
+		{src:"images/for_11.png?1478678612279", id:"for_11"},
+		{src:"images/for_14.png?1478678612279", id:"for_14"},
+		{src:"images/Meteor.png?1478678612279", id:"Meteor"},
+		{src:"images/Stone.png?1478678612279", id:"Stone"},
+		{src:"images/w256h2561380453915MouseOptions256x25632.png?1478678612279", id:"w256h2561380453915MouseOptions256x25632"}
 	]
 };
 
@@ -2196,7 +2196,7 @@ p.nominalBounds = new cjs.Rectangle(0,0,885.9,346.4);
 
 	this.fon = new lib.Символ42();
 	this.fon.parent = this;
-	this.fon.setTransform(5.2,0.3,1,1,0,0,0,-2.8,0.3);
+	this.fon.setTransform(-9.8,-11.7,1,1,0,0,0,-17.8,-11.7);
 
 	this.timeline.addTween(cjs.Tween.get({}).to({state:[{t:this.instance}]}).to({state:[{t:this.fon}]},1).wait(1));
 
@@ -2274,8 +2274,8 @@ p.nominalBounds = new cjs.Rectangle(-285,-63,693.8,294);
 		this.addEventListener("tick", fl_CustomMouseCursor.bind(this));
 		
 		function fl_CustomMouseCursor() {
-			this.pricel.x = stage.mouseX;
-			this.pricel.y = stage.mouseY;
+			this.pricel.x = stage.mouseX / window.devicePixelRatio;
+			this.pricel.y = stage.mouseY / window.devicePixelRatio;
 		}
 		//Чтобы восстановить курсор мыши по умолчанию, раскомментируйте следующие строки:
 		//this.removeEventListener("tick", fl_CustomMouseCursor.bind(this));

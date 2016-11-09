@@ -10,29 +10,29 @@ lib.properties = {
 	color: "#FFFFFF",
 	opacity: 1.00,
 	manifest: [
-		{src:"images/back.jpg?1478620779991", id:"back"},
-		{src:"images/f1.jpg?1478620779991", id:"f1"},
-		{src:"images/f2.jpg?1478620779991", id:"f2"},
-		{src:"images/f3.jpg?1478620779991", id:"f3"},
-		{src:"images/f4.jpg?1478620779991", id:"f4"},
-		{src:"images/fs1.jpg?1478620779991", id:"fs1"},
-		{src:"images/fs2.jpg?1478620779991", id:"fs2"},
-		{src:"images/fs3.jpg?1478620779991", id:"fs3"},
-		{src:"images/u600х300_03.png?1478620779991", id:"u600х300_03"},
-		{src:"images/u600х300_06.png?1478620779991", id:"u600х300_06"},
-		{src:"images/u600х300_08.png?1478620779991", id:"u600х300_08"},
-		{src:"images/u600х300_12.png?1478620779991", id:"u600х300_12"},
-		{src:"images/u600х300_17.png?1478620779991", id:"u600х300_17"},
-		{src:"images/u600х300_21.png?1478620779991", id:"u600х300_21"},
-		{src:"images/u600х300_25.png?1478620779991", id:"u600х300_25"},
-		{src:"images/u600х300_28.png?1478620779991", id:"u600х300_28"},
-		{src:"images/u600х300_32.png?1478620779991", id:"u600х300_32"},
-		{src:"images/u600х300_36.png?1478620779991", id:"u600х300_36"},
-		{src:"images/u600х300_40.png?1478620779991", id:"u600х300_40"},
-		{src:"images/u600х300_45.png?1478620779992", id:"u600х300_45"},
-		{src:"images/w256h2561380453915MouseOptions256x25632.png?1478620779992", id:"w256h2561380453915MouseOptions256x25632"},
-		{src:"images/water1.jpg?1478620779992", id:"water1"},
-		{src:"images/water2.jpg?1478620779992", id:"water2"}
+		{src:"images/back.jpg?1478677131750", id:"back"},
+		{src:"images/f1.jpg?1478677131750", id:"f1"},
+		{src:"images/f2.jpg?1478677131750", id:"f2"},
+		{src:"images/f3.jpg?1478677131750", id:"f3"},
+		{src:"images/f4.jpg?1478677131750", id:"f4"},
+		{src:"images/fs1.jpg?1478677131750", id:"fs1"},
+		{src:"images/fs2.jpg?1478677131750", id:"fs2"},
+		{src:"images/fs3.jpg?1478677131750", id:"fs3"},
+		{src:"images/u600х300_03.png?1478677131750", id:"u600х300_03"},
+		{src:"images/u600х300_06.png?1478677131750", id:"u600х300_06"},
+		{src:"images/u600х300_08.png?1478677131750", id:"u600х300_08"},
+		{src:"images/u600х300_12.png?1478677131750", id:"u600х300_12"},
+		{src:"images/u600х300_17.png?1478677131750", id:"u600х300_17"},
+		{src:"images/u600х300_21.png?1478677131750", id:"u600х300_21"},
+		{src:"images/u600х300_25.png?1478677131750", id:"u600х300_25"},
+		{src:"images/u600х300_28.png?1478677131750", id:"u600х300_28"},
+		{src:"images/u600х300_32.png?1478677131750", id:"u600х300_32"},
+		{src:"images/u600х300_36.png?1478677131750", id:"u600х300_36"},
+		{src:"images/u600х300_40.png?1478677131750", id:"u600х300_40"},
+		{src:"images/u600х300_45.png?1478677131750", id:"u600х300_45"},
+		{src:"images/w256h2561380453915MouseOptions256x25632.png?1478677131750", id:"w256h2561380453915MouseOptions256x25632"},
+		{src:"images/water1.jpg?1478677131750", id:"water1"},
+		{src:"images/water2.jpg?1478677131750", id:"water2"}
 	]
 };
 
@@ -1722,8 +1722,8 @@ p.nominalBounds = new cjs.Rectangle(-170,0,975,118.1);
 		this.addEventListener("tick", fl_CustomMouseCursor.bind(this));
 		
 		function fl_CustomMouseCursor() {
-			this.kur.x = stage.mouseX;
-			this.kur.y = stage.mouseY;
+			this.kur.x = stage.mouseX / window.devicePixelRatio;
+			this.kur.y = stage.mouseY / window.devicePixelRatio;
 		}
 		//Чтобы восстановить курсор мыши по умолчанию, раскомментируйте следующие строки:
 		//this.removeEventListener("tick", fl_CustomMouseCursor.bind(this));
