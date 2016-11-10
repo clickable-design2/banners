@@ -14,7 +14,7 @@
 <title>bdsm2_640x305</title>
 <!-- write your code here -->
 <script src="https://code.createjs.com/createjs-2015.11.26.min.js"></script>
-<script src="bdsm2_640x305.js?1478767704766"></script>
+<script src="bdsm2_640x305.js?1478768957675"></script>
 <script>
 var canvas, stage, exportRoot, anim_container, dom_overlay_container, fnStartAnimation;
 function init() {
@@ -40,7 +40,8 @@ function handleComplete(evt) {
 	}
 	exportRoot = new lib.bdsm2_640x305();
 	stage = new createjs.Stage(canvas);
-	stage.addChild(exportRoot);	
+	stage.addChild(exportRoot);
+	stage.enableMouseOver();	
 	//Registers the "tick" event listener.
 	fnStartAnimation = function() {
 		createjs.Ticker.setFPS(lib.properties.fps);
