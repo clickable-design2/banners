@@ -10,20 +10,20 @@ lib.properties = {
 	color: "#FFFFFF",
 	opacity: 1.00,
 	manifest: [
-		{src:"images/background.jpg?1478766061761", id:"background"},
-		{src:"images/girl_by__001.png?1478766061761", id:"girl_by__001"},
-		{src:"images/girl_by__02.png?1478766061761", id:"girl_by__02"},
-		{src:"images/girl_by__05.png?1478766061761", id:"girl_by__05"},
-		{src:"images/girl_by__08.png?1478766061761", id:"girl_by__08"},
-		{src:"images/girl_by__12.png?1478766061761", id:"girl_by__12"},
-		{src:"images/girl_by__15.png?1478766061761", id:"girl_by__15"},
-		{src:"images/girl_by__19.png?1478766061761", id:"girl_by__19"},
-		{src:"images/girl_by__22.png?1478766061761", id:"girl_by__22"},
-		{src:"images/girl_by__29.png?1478766061761", id:"girl_by__29"},
-		{src:"images/girl_by__31.png?1478766061761", id:"girl_by__31"},
-		{src:"images/glass.png?1478766061761", id:"glass"},
-		{src:"images/hand.png?1478766061761", id:"hand"},
-		{src:"images/hands2.png?1478766061761", id:"hands2"}
+		{src:"images/background.jpg?1478771327632", id:"background"},
+		{src:"images/girl_by__001.png?1478771327632", id:"girl_by__001"},
+		{src:"images/girl_by__02.png?1478771327632", id:"girl_by__02"},
+		{src:"images/girl_by__05.png?1478771327632", id:"girl_by__05"},
+		{src:"images/girl_by__08.png?1478771327632", id:"girl_by__08"},
+		{src:"images/girl_by__12.png?1478771327633", id:"girl_by__12"},
+		{src:"images/girl_by__15.png?1478771327633", id:"girl_by__15"},
+		{src:"images/girl_by__19.png?1478771327633", id:"girl_by__19"},
+		{src:"images/girl_by__22.png?1478771327633", id:"girl_by__22"},
+		{src:"images/girl_by__29.png?1478771327633", id:"girl_by__29"},
+		{src:"images/girl_by__31.png?1478771327633", id:"girl_by__31"},
+		{src:"images/glass.png?1478771327633", id:"glass"},
+		{src:"images/hand.png?1478771327633", id:"hand"},
+		{src:"images/hands2.png?1478771327633", id:"hands2"}
 	]
 };
 
@@ -1158,10 +1158,7 @@ p.nominalBounds = new cjs.Rectangle(-0.7,-0.7,49.4,49.4);
 		
 		
 		
-		function fl_CustomMouseCursor() {
-			this.mouse.x = stage.mouseX;
-			this.mouse.y = stage.mouseY;
-		}
+		
 		
 		document.addEventListener("click", fl_ClickToGoToWebPage);
 		
@@ -1182,7 +1179,7 @@ p.nominalBounds = new cjs.Rectangle(-0.7,-0.7,49.4,49.4);
 			this.pricel2.gotoAndPlay(0);
 			this.telka.gotoAndPlay(0);
 			this.fon.gotoAndPlay(0);
-			this.mouse.gotoAndPlay(0);
+			this.mouse.gotoAndPlay(1);
 			
 		}
 		
