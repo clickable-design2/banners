@@ -1625,7 +1625,7 @@ p.nominalBounds = new cjs.Rectangle(-14.1,8.9,460.7,211.6);
 	// Слой 1
 	this.instance = new lib.Символ18_1();
 	this.instance.parent = this;
-	this.instance.setTransform(43.5,42.6,1,1,0,0,0,43.5,43.5);
+	this.instance.setTransform(-0.5,-1.4,1,1,0,0,0,-0.5,-0.5);
 	this.instance._off = true;
 
 	this.timeline.addTween(cjs.Tween.get(this.instance).wait(1).to({_off:false},0).wait(1));
@@ -1884,7 +1884,7 @@ p.nominalBounds = new cjs.Rectangle(-44,-44,87,87);
 	// Слой 3
 	this.pricel = new lib.Символ23копия2();
 	this.pricel.parent = this;
-	this.pricel.setTransform(787.7,129,1,1,0,0,0,43.5,43.5);
+	this.pricel.setTransform(744.2,85.5);
 
 	this.prr = new lib.Символ23_1();
 	this.prr.parent = this;
@@ -1934,26 +1934,26 @@ lib.properties = {
 	color: "#FFFFFF",
 	opacity: 1.00,
 	manifest: [
-		{src:"images/bod.png?1478768957645", id:"bod"},
-		{src:"images/d1.png?1478768957645", id:"d1"},
-		{src:"images/d4.png?1478768957645", id:"d4"},
-		{src:"images/d5.png?1478768957645", id:"d5"},
-		{src:"images/d6.png?1478768957645", id:"d6"},
-		{src:"images/d7.png?1478768957645", id:"d7"},
-		{src:"images/fon.jpg?1478768957645", id:"fon"},
-		{src:"images/g1.png?1478768957645", id:"g1"},
-		{src:"images/g2.png?1478768957645", id:"g2"},
-		{src:"images/g3.png?1478768957645", id:"g3"},
-		{src:"images/g7.png?1478768957645", id:"g7"},
-		{src:"images/gun.png?1478768957645", id:"gun"},
-		{src:"images/hand.png?1478768957645", id:"hand"},
-		{src:"images/hat.png?1478768957645", id:"hat"},
-		{src:"images/led.png?1478768957645", id:"led"},
-		{src:"images/led5.png?1478768957645", id:"led5"},
-		{src:"images/pric.png?1478768957645", id:"pric"},
-		{src:"images/sock.png?1478768957645", id:"sock"},
-		{src:"images/wpod.png?1478768957645", id:"wpod"},
-		{src:"images/wxw.png?1478768957645", id:"wxw"}
+		{src:"images/bod.png?1478769195512", id:"bod"},
+		{src:"images/d1.png?1478769195512", id:"d1"},
+		{src:"images/d4.png?1478769195512", id:"d4"},
+		{src:"images/d5.png?1478769195512", id:"d5"},
+		{src:"images/d6.png?1478769195512", id:"d6"},
+		{src:"images/d7.png?1478769195512", id:"d7"},
+		{src:"images/fon.jpg?1478769195512", id:"fon"},
+		{src:"images/g1.png?1478769195512", id:"g1"},
+		{src:"images/g2.png?1478769195512", id:"g2"},
+		{src:"images/g3.png?1478769195512", id:"g3"},
+		{src:"images/g7.png?1478769195512", id:"g7"},
+		{src:"images/gun.png?1478769195512", id:"gun"},
+		{src:"images/hand.png?1478769195512", id:"hand"},
+		{src:"images/hat.png?1478769195512", id:"hat"},
+		{src:"images/led.png?1478769195512", id:"led"},
+		{src:"images/led5.png?1478769195512", id:"led5"},
+		{src:"images/pric.png?1478769195512", id:"pric"},
+		{src:"images/sock.png?1478769195512", id:"sock"},
+		{src:"images/wpod.png?1478769195512", id:"wpod"},
+		{src:"images/wxw.png?1478769195512", id:"wxw"}
 	],
 	preloads: []
 };
