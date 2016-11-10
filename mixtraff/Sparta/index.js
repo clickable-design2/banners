@@ -10,31 +10,31 @@ lib.properties = {
 	color: "#FFFFFF",
 	opacity: 1.00,
 	manifest: [
-		{src:"images/asd.png?1478272135183", id:"asd"},
-		{src:"images/back.jpg?1478272135184", id:"back"},
-		{src:"images/cvb.png?1478272135184", id:"cvb"},
-		{src:"images/dfgdf.png?1478272135184", id:"dfgdf"},
-		{src:"images/ert.png?1478272135184", id:"ert"},
-		{src:"images/ewr.png?1478272135184", id:"ewr"},
-		{src:"images/jhkjhk.png?1478272135184", id:"jhkjhk"},
-		{src:"images/jkjh.png?1478272135184", id:"jkjh"},
-		{src:"images/rty.png?1478272135184", id:"rty"},
-		{src:"images/sdf.png?1478272135184", id:"sdf"},
-		{src:"images/sdfd.png?1478272135184", id:"sdfd"},
-		{src:"images/sdfsdf.png?1478272135184", id:"sdfsdf"},
-		{src:"images/Sniper_03.png?1478272135184", id:"Sniper_03"},
-		{src:"images/Sniper_06.png?1478272135184", id:"Sniper_06"},
-		{src:"images/Sniper_09.png?1478272135184", id:"Sniper_09"},
-		{src:"images/Sniper_12.png?1478272135184", id:"Sniper_12"},
-		{src:"images/Sniper_19.png?1478272135184", id:"Sniper_19"},
-		{src:"images/Sniper_22.png?1478272135184", id:"Sniper_22"},
-		{src:"images/Sniper_25.png?1478272135184", id:"Sniper_25"},
-		{src:"images/tuman.png?1478272135184", id:"tuman"},
-		{src:"images/w256h2561380453915MouseOptions256x25632.png?1478272135184", id:"w256h2561380453915MouseOptions256x25632"},
-		{src:"images/wer.png?1478272135184", id:"wer"},
-		{src:"images/werer.png?1478272135184", id:"werer"},
-		{src:"images/wewee.png?1478272135184", id:"wewee"},
-		{src:"images/zdc.png?1478272135184", id:"zdc"}
+		{src:"images/asd.png?1478678268244", id:"asd"},
+		{src:"images/back.jpg?1478678268244", id:"back"},
+		{src:"images/cvb.png?1478678268244", id:"cvb"},
+		{src:"images/dfgdf.png?1478678268244", id:"dfgdf"},
+		{src:"images/ert.png?1478678268244", id:"ert"},
+		{src:"images/ewr.png?1478678268244", id:"ewr"},
+		{src:"images/jhkjhk.png?1478678268244", id:"jhkjhk"},
+		{src:"images/jkjh.png?1478678268244", id:"jkjh"},
+		{src:"images/rty.png?1478678268244", id:"rty"},
+		{src:"images/sdf.png?1478678268244", id:"sdf"},
+		{src:"images/sdfd.png?1478678268244", id:"sdfd"},
+		{src:"images/sdfsdf.png?1478678268244", id:"sdfsdf"},
+		{src:"images/Sniper_03.png?1478678268244", id:"Sniper_03"},
+		{src:"images/Sniper_06.png?1478678268244", id:"Sniper_06"},
+		{src:"images/Sniper_09.png?1478678268244", id:"Sniper_09"},
+		{src:"images/Sniper_12.png?1478678268244", id:"Sniper_12"},
+		{src:"images/Sniper_19.png?1478678268244", id:"Sniper_19"},
+		{src:"images/Sniper_22.png?1478678268244", id:"Sniper_22"},
+		{src:"images/Sniper_25.png?1478678268244", id:"Sniper_25"},
+		{src:"images/tuman.png?1478678268244", id:"tuman"},
+		{src:"images/w256h2561380453915MouseOptions256x25632.png?1478678268244", id:"w256h2561380453915MouseOptions256x25632"},
+		{src:"images/wer.png?1478678268244", id:"wer"},
+		{src:"images/werer.png?1478678268244", id:"werer"},
+		{src:"images/wewee.png?1478678268244", id:"wewee"},
+		{src:"images/zdc.png?1478678268244", id:"zdc"}
 	]
 };
 
@@ -292,7 +292,7 @@ p.nominalBounds = new cjs.Rectangle(0,0,145.2,60);
 	this.timeline.addTween(cjs.Tween.get(this.instance).wait(1));
 
 }).prototype = p = new cjs.MovieClip();
-p.nominalBounds = new cjs.Rectangle(-1612,-292,3234.2,572.9);
+p.nominalBounds = new cjs.Rectangle(-1612,-292,3234.1,572.9);
 
 
 (lib.Символ52 = function(mode,startPosition,loop) {
@@ -711,7 +711,7 @@ p.nominalBounds = new cjs.Rectangle(-47,-26,100,71);
 	this.timeline.addTween(cjs.Tween.get(this.instance).to({x:-3.2},1).to({x:-1601.2},498).wait(1));
 
 }).prototype = p = new cjs.MovieClip();
-p.nominalBounds = new cjs.Rectangle(-1612,-292,3234.2,572.9);
+p.nominalBounds = new cjs.Rectangle(-1612,-292,3234.1,572.9);
 
 
 (lib.Символ50 = function(mode,startPosition,loop) {
@@ -1584,8 +1584,8 @@ p.nominalBounds = new cjs.Rectangle(5,-117.7,39.1,38.1);
 		this.addEventListener("tick", fl_CustomMouseCursor.bind(this));
 		
 		function fl_CustomMouseCursor() {
-			this.pricel.x = stage.mouseX;
-			this.pricel.y = stage.mouseY;
+			this.pricel.x = stage.mouseX / window.devicePixelRatio;
+			this.pricel.y = stage.mouseY / window.devicePixelRatio;
 		}
 		//Чтобы восстановить курсор мыши по умолчанию, раскомментируйте следующие строки:
 		//this.removeEventListener("tick", fl_CustomMouseCursor.bind(this));
@@ -1687,7 +1687,7 @@ p.nominalBounds = new cjs.Rectangle(5,-117.7,39.1,38.1);
 	this.timeline.addTween(cjs.Tween.get(this.back).wait(1));
 
 }).prototype = p = new cjs.MovieClip();
-p.nominalBounds = new cjs.Rectangle(103.7,67.2,1699.8,435.5);
+p.nominalBounds = new cjs.Rectangle(103.7,67.2,1699.7,435.5);
 
 })(lib = lib||{}, images = images||{}, createjs = createjs||{}, ss = ss||{});
 var lib, images, createjs, ss;

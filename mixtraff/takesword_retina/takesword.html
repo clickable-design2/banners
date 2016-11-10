@@ -11,10 +11,10 @@
 <head>
 <meta charset="UTF-8">
 <meta name="authoring-tool" content="Adobe_Animate_CC">
-<title>index</title>
+<title>takesword</title>
 <!-- write your code here -->
 <script src="https://code.createjs.com/createjs-2015.11.26.min.js"></script>
-<script src="index.js?1478678268376"></script>
+<script src="takesword.js?1478679584556"></script>
 <script>
 var canvas, stage, exportRoot;
 function init() {
@@ -36,7 +36,7 @@ function handleComplete(evt) {
 	for(i=0; i<ssMetadata.length; i++) {
 		ss[ssMetadata[i].name] = new createjs.SpriteSheet( {"images": [queue.getResult(ssMetadata[i].name)], "frames": ssMetadata[i].frames} )
 	}
-	exportRoot = new lib.index();
+	exportRoot = new lib.takesword();
 	stage = new createjs.Stage(canvas);
 	stage.addChild(exportRoot);
 	stage.enableMouseOver();	
