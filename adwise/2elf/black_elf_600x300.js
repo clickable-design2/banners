@@ -1638,15 +1638,15 @@ p.nominalBounds = new cjs.Rectangle(-1.2,30,165.8,21.9);
 	// Слой 1
 	this.instance = new lib.sprite141();
 	this.instance.parent = this;
-	this.instance.setTransform(40.7,39.4,0.243,0.243);
+	this.instance.setTransform(41,39.1,0.396,0.396,0,0,0,0,0.1);
 
 	this.shape = new cjs.Shape();
 	this.shape.graphics.f("#FF0000").s().p("AgJAKQgEgEAAgGQAAgFAEgEQAEgEAFAAQAGAAAEAEQAEAEAAAFQAAAGgEAEQgEAEgGAAQgFAAgEgEg");
-	this.shape.setTransform(40.1,38.3);
+	this.shape.setTransform(40,37.2,1.631,1.631);
 
 	this.timeline.addTween(cjs.Tween.get({}).to({state:[{t:this.shape},{t:this.instance}]}).wait(1));
 
-}).prototype = getMCSymbolPrototype(lib.Символ8, new cjs.Rectangle(0,0,80.4,79.7), null);
+}).prototype = getMCSymbolPrototype(lib.Символ8, new cjs.Rectangle(-25.4,-25.2,131.1,129.9), null);
 
 
 (lib.Символ2 = function(mode,startPosition,loop) {
@@ -1771,7 +1771,7 @@ p.nominalBounds = new cjs.Rectangle(374.8,-48,318.7,384);
 	this.timeline.addTween(cjs.Tween.get(this.instance).to({x:48.6},9,cjs.Ease.get(-1)).to({x:80.2},10,cjs.Ease.get(1)).to({x:50.2},10,cjs.Ease.get(-1)).to({x:20.2},10,cjs.Ease.get(1)).wait(1));
 
 }).prototype = p = new cjs.MovieClip();
-p.nominalBounds = new cjs.Rectangle(-20,0,80.4,79.7);
+p.nominalBounds = new cjs.Rectangle(-45.4,-25.2,131.1,129.9);
 
 
 (lib.Символ3 = function(mode,startPosition,loop) {
@@ -1799,7 +1799,7 @@ p.nominalBounds = new cjs.Rectangle(-26.7,0,318.7,384);
 	this.timeline.addTween(cjs.Tween.get(this.instance).to({y:7.5},4,cjs.Ease.get(-1)).to({y:119.8},5,cjs.Ease.get(1)).to({y:56.2},5,cjs.Ease.get(-1)).to({y:-20.2},6,cjs.Ease.get(1)).wait(1));
 
 }).prototype = p = new cjs.MovieClip();
-p.nominalBounds = new cjs.Rectangle(0,-60,80.4,79.7);
+p.nominalBounds = new cjs.Rectangle(-25.4,-85.2,131.1,129.9);
 
 
 (lib.Символ9копия = function(mode,startPosition,loop) {
@@ -1870,7 +1870,7 @@ p.nominalBounds = null;
 	this.timeline.addTween(cjs.Tween.get(this.instance).to({_off:true},1).wait(1));
 
 }).prototype = p = new cjs.MovieClip();
-p.nominalBounds = new cjs.Rectangle(-20,-60,80.4,79.7);
+p.nominalBounds = new cjs.Rectangle(-45.4,-85.2,131.1,129.9);
 
 
 (lib.Символ7 = function(mode,startPosition,loop) {
@@ -2054,26 +2054,26 @@ lib.properties = {
 	color: "#FFFFFF",
 	opacity: 1.00,
 	manifest: [
-		{src:"images/arr.png?1479112469308", id:"arr"},
-		{src:"images/arrow.png?1479112469308", id:"arrow"},
-		{src:"images/bey.png?1479112469308", id:"bey"},
-		{src:"images/bf434.png?1479112469308", id:"bf434"},
-		{src:"images/bfgbr5.png?1479112469308", id:"bfgbr5"},
-		{src:"images/bod5.png?1479112469308", id:"bod5"},
-		{src:"images/body.png?1479112469308", id:"body"},
-		{src:"images/fon.jpg?1479112469308", id:"fon"},
-		{src:"images/hand4.png?1479112469308", id:"hand4"},
-		{src:"images/hang1.png?1479112469308", id:"hang1"},
-		{src:"images/hang3.png?1479112469308", id:"hang3"},
-		{src:"images/hat3.png?1479112469308", id:"hat3"},
-		{src:"images/hat4.png?1479112469308", id:"hat4"},
-		{src:"images/knife.png?1479112469308", id:"knife"},
-		{src:"images/oi8.png?1479112469308", id:"oi8"},
-		{src:"images/ple1.png?1479112469308", id:"ple1"},
-		{src:"images/ple2.png?1479112469308", id:"ple2"},
-		{src:"images/rain.png?1479112469308", id:"rain"},
-		{src:"images/sila.png?1479112469308", id:"sila"},
-		{src:"images/zastreli.png?1479112469308", id:"zastreli"}
+		{src:"images/arr.png?1479132856989", id:"arr"},
+		{src:"images/arrow.png?1479132856989", id:"arrow"},
+		{src:"images/bey.png?1479132856989", id:"bey"},
+		{src:"images/bf434.png?1479132856989", id:"bf434"},
+		{src:"images/bfgbr5.png?1479132856989", id:"bfgbr5"},
+		{src:"images/bod5.png?1479132856989", id:"bod5"},
+		{src:"images/body.png?1479132856989", id:"body"},
+		{src:"images/fon.jpg?1479132856989", id:"fon"},
+		{src:"images/hand4.png?1479132856989", id:"hand4"},
+		{src:"images/hang1.png?1479132856989", id:"hang1"},
+		{src:"images/hang3.png?1479132856989", id:"hang3"},
+		{src:"images/hat3.png?1479132856989", id:"hat3"},
+		{src:"images/hat4.png?1479132856989", id:"hat4"},
+		{src:"images/knife.png?1479132856989", id:"knife"},
+		{src:"images/oi8.png?1479132856989", id:"oi8"},
+		{src:"images/ple1.png?1479132856989", id:"ple1"},
+		{src:"images/ple2.png?1479132856989", id:"ple2"},
+		{src:"images/rain.png?1479132856989", id:"rain"},
+		{src:"images/sila.png?1479132856989", id:"sila"},
+		{src:"images/zastreli.png?1479132856989", id:"zastreli"}
 	],
 	preloads: []
 };
