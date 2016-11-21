@@ -1716,7 +1716,7 @@ p.nominalBounds = new cjs.Rectangle(-364.7,-169.5,776.9,385);
 	this.instance_3.parent = this;
 	this.instance_3.setTransform(-273.9,-20.2);
 
-	this.timeline.addTween(cjs.Tween.get(this.instance_3).to({x:-154.8},6,cjs.Ease.get(1)).wait(1).to({x:-273.9},6,cjs.Ease.get(1)).wait(1));
+	this.timeline.addTween(cjs.Tween.get(this.instance_3).to({x:-134.8},6,cjs.Ease.get(1)).wait(1).to({x:-273.9},6,cjs.Ease.get(1)).wait(1));
 
 	// Слой 4
 	this.instance_4 = new lib.Символ57();
@@ -1744,7 +1744,7 @@ p.nominalBounds = new cjs.Rectangle(-488.3,-275.8,870,751.4);
 
 
 // stage content:
-(lib.muha640x305 = function(mode,startPosition,loop) {
+(lib.muha600x300 = function(mode,startPosition,loop) {
 	this.initialize(mode,startPosition,loop,{});
 
 	// timeline functions:
@@ -1760,8 +1760,8 @@ p.nominalBounds = new cjs.Rectangle(-488.3,-275.8,870,751.4);
 		this.addEventListener("tick", fl_CustomMouseCursor.bind(this));
 		
 		function fl_CustomMouseCursor() {
-			this.prizel.x = stage.mouseX;
-			this.prizel.y = stage.mouseY;
+			this.prizel.x = stage.mouseX/window.devicePixelRatio;
+			this.prizel.y = stage.mouseY/window.devicePixelRatio;
 		}
 		
 		
@@ -1858,34 +1858,34 @@ p.nominalBounds = new cjs.Rectangle(-488.3,-275.8,870,751.4);
 	// Слой 1
 	this.main = new lib.Символ18();
 	this.main.parent = this;
-	this.main.setTransform(342.6,183.8);
+	this.main.setTransform(312.6,183.8);
 
 	this.timeline.addTween(cjs.Tween.get(this.main).wait(1));
 
 }).prototype = p = new cjs.MovieClip();
-p.nominalBounds = new cjs.Rectangle(174.3,60.5,870,751.3);
+p.nominalBounds = new cjs.Rectangle(124.3,58,870,751.3);
 // library properties:
 lib.properties = {
-	width: 640,
-	height: 305,
+	width: 600,
+	height: 300,
 	fps: 30,
 	color: "#FFFFFF",
 	opacity: 1.00,
 	manifest: [
-		{src:"images/fon.jpg?1478852698652", id:"fon"},
-		{src:"images/mish.png?1478852698652", id:"mish"},
-		{src:"images/muha2_01.png?1478852698652", id:"muha2_01"},
-		{src:"images/muha2_03.png?1478852698652", id:"muha2_03"},
-		{src:"images/muha2_04.png?1478852698652", id:"muha2_04"},
-		{src:"images/muha_01.png?1478852698652", id:"muha_01"},
-		{src:"images/muha_04.png?1478852698652", id:"muha_04"},
-		{src:"images/muha_07.png?1478852698652", id:"muha_07"},
-		{src:"images/muha_12.png?1478852698652", id:"muha_12"},
-		{src:"images/muha_15.png?1478852698652", id:"muha_15"},
-		{src:"images/muha_19.png?1478852698652", id:"muha_19"},
-		{src:"images/muha_22.png?1478852698652", id:"muha_22"},
-		{src:"images/muhoboyka.png?1478852698652", id:"muhoboyka"},
-		{src:"images/rot.png?1478852698652", id:"rot"}
+		{src:"images/fon.jpg?1479729966842", id:"fon"},
+		{src:"images/mish.png?1479729966842", id:"mish"},
+		{src:"images/muha2_01.png?1479729966842", id:"muha2_01"},
+		{src:"images/muha2_03.png?1479729966842", id:"muha2_03"},
+		{src:"images/muha2_04.png?1479729966842", id:"muha2_04"},
+		{src:"images/muha_01.png?1479729966842", id:"muha_01"},
+		{src:"images/muha_04.png?1479729966842", id:"muha_04"},
+		{src:"images/muha_07.png?1479729966842", id:"muha_07"},
+		{src:"images/muha_12.png?1479729966842", id:"muha_12"},
+		{src:"images/muha_15.png?1479729966842", id:"muha_15"},
+		{src:"images/muha_19.png?1479729966842", id:"muha_19"},
+		{src:"images/muha_22.png?1479729966842", id:"muha_22"},
+		{src:"images/muhoboyka.png?1479729966842", id:"muhoboyka"},
+		{src:"images/rot.png?1479729966842", id:"rot"}
 	],
 	preloads: []
 };
