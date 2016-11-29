@@ -10,20 +10,20 @@ lib.properties = {
 	color: "#FFFFFF",
 	opacity: 1.00,
 	manifest: [
-		{src:"images/background.jpg?1478771327632", id:"background"},
-		{src:"images/girl_by__001.png?1478771327632", id:"girl_by__001"},
-		{src:"images/girl_by__02.png?1478771327632", id:"girl_by__02"},
-		{src:"images/girl_by__05.png?1478771327632", id:"girl_by__05"},
-		{src:"images/girl_by__08.png?1478771327632", id:"girl_by__08"},
-		{src:"images/girl_by__12.png?1478771327633", id:"girl_by__12"},
-		{src:"images/girl_by__15.png?1478771327633", id:"girl_by__15"},
-		{src:"images/girl_by__19.png?1478771327633", id:"girl_by__19"},
-		{src:"images/girl_by__22.png?1478771327633", id:"girl_by__22"},
-		{src:"images/girl_by__29.png?1478771327633", id:"girl_by__29"},
-		{src:"images/girl_by__31.png?1478771327633", id:"girl_by__31"},
-		{src:"images/glass.png?1478771327633", id:"glass"},
-		{src:"images/hand.png?1478771327633", id:"hand"},
-		{src:"images/hands2.png?1478771327633", id:"hands2"}
+		{src:"images/background.jpg?1479111386576", id:"background"},
+		{src:"images/girl_by__001.png?1479111386576", id:"girl_by__001"},
+		{src:"images/girl_by__02.png?1479111386576", id:"girl_by__02"},
+		{src:"images/girl_by__05.png?1479111386576", id:"girl_by__05"},
+		{src:"images/girl_by__08.png?1479111386576", id:"girl_by__08"},
+		{src:"images/girl_by__12.png?1479111386576", id:"girl_by__12"},
+		{src:"images/girl_by__15.png?1479111386576", id:"girl_by__15"},
+		{src:"images/girl_by__19.png?1479111386576", id:"girl_by__19"},
+		{src:"images/girl_by__22.png?1479111386576", id:"girl_by__22"},
+		{src:"images/girl_by__29.png?1479111386576", id:"girl_by__29"},
+		{src:"images/girl_by__31.png?1479111386576", id:"girl_by__31"},
+		{src:"images/glass.png?1479111386576", id:"glass"},
+		{src:"images/hand.png?1479111386576", id:"hand"},
+		{src:"images/hands2.png?1479111386576", id:"hands2"}
 	]
 };
 
@@ -1257,14 +1257,14 @@ p.nominalBounds = new cjs.Rectangle(-0.7,-0.7,49.4,49.4);
 	// pricel2
 	this.pricel2 = new lib.Символ54();
 	this.pricel2.parent = this;
-	this.pricel2.setTransform(153.5,222.9,1,1,0,0,0,63.5,76.9);
+	this.pricel2.setTransform(191.2,246.6,1.595,1.595,0,0,0,63.5,76.9);
 
 	this.timeline.addTween(cjs.Tween.get(this.pricel2).wait(1));
 
 	// pricel
 	this.pricel = new lib.Символ53();
 	this.pricel.parent = this;
-	this.pricel.setTransform(300.4,160.2,1,1,0,0,0,24,24.2);
+	this.pricel.setTransform(309.1,168.9,1.354,1.354,0,0,0,24.1,24.3);
 
 	this.timeline.addTween(cjs.Tween.get(this.pricel).wait(1));
 
