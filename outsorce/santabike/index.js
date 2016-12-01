@@ -10,13 +10,13 @@ lib.properties = {
 	color: "#FFFFFF",
 	opacity: 1.00,
 	manifest: [
-		{src:"images/bg.jpg?1480587114252", id:"bg"},
-		{src:"images/iconsgame.jpg?1480587114252", id:"iconsgame"},
-		{src:"images/logo.png?1480587114252", id:"logo"},
-		{src:"images/machine.jpg?1480587114252", id:"machine"},
-		{src:"images/man.png?1480587114252", id:"man"},
-		{src:"images/ВамвыпалоlinesИзображение.png?1480587114252", id:"ВамвыпалоlinesИзображение"},
-		{src:"images/СпиновRectangle5Изображение.png?1480587114252", id:"СпиновRectangle5Изображение"}
+		{src:"images/bg.jpg?1480588072781", id:"bg"},
+		{src:"images/iconsgame.jpg?1480588072781", id:"iconsgame"},
+		{src:"images/logo.png?1480588072781", id:"logo"},
+		{src:"images/machine.jpg?1480588072781", id:"machine"},
+		{src:"images/man.png?1480588072781", id:"man"},
+		{src:"images/ВамвыпалоlinesИзображение.png?1480588072781", id:"ВамвыпалоlinesИзображение"},
+		{src:"images/СпиновRectangle5Изображение.png?1480588072781", id:"СпиновRectangle5Изображение"}
 	]
 };
 
@@ -657,7 +657,7 @@ p.nominalBounds = new cjs.Rectangle(-23,6.1,326.7,315.3);
 	this.instance.setTransform(178,235.1,1,1,0,0,0,178,235.1);
 	this.instance.alpha = 0;
 
-	this.timeline.addTween(cjs.Tween.get(this.instance).wait(295).to({y:277.4},0).to({x:215.5,y:307.4,alpha:1},5).to({x:216.1},1).to({x:215.5},1).wait(88).to({alpha:0},5).wait(6));
+	this.timeline.addTween(cjs.Tween.get(this.instance).wait(295).to({y:249.8},0).to({x:215.5,y:279.8,alpha:1},5).to({x:216.1},1).to({x:215.5},1).wait(88).to({alpha:0},5).wait(6));
 
 }).prototype = p = new cjs.MovieClip();
 p.nominalBounds = new cjs.Rectangle(-23.4,-18,328.8,431.5);
