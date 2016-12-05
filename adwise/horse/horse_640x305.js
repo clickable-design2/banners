@@ -1635,15 +1635,16 @@ p.nominalBounds = new cjs.Rectangle(-320.8,-309.7,633.4,627.1);
 	// timeline functions:
 	this.frame_0 = function() {
 		this.stop();
-		this.stop();
 	}
 	this.frame_1 = function() {
 		this.stop();
+	}
+	this.frame_2 = function() {
 		this.stop();
 	}
 
 	// actions tween:
-	this.timeline.addTween(cjs.Tween.get(this).call(this.frame_0).wait(1).call(this.frame_1).wait(1));
+	this.timeline.addTween(cjs.Tween.get(this).call(this.frame_0).wait(1).call(this.frame_1).wait(1).call(this.frame_2).wait(1));
 
 	// Слой 1
 	this.instance = new lib.Символ37();
@@ -1654,10 +1655,10 @@ p.nominalBounds = new cjs.Rectangle(-320.8,-309.7,633.4,627.1);
 	this.instance_1.parent = this;
 	this.instance_1.setTransform(24.7,24.4,0.504,0.504,0,0,0,48.9,48.4);
 
-	this.timeline.addTween(cjs.Tween.get({}).to({state:[{t:this.instance_1},{t:this.instance}]}).to({state:[]},1).wait(1));
+	this.timeline.addTween(cjs.Tween.get({}).to({state:[]}).to({state:[{t:this.instance_1},{t:this.instance}]},1).to({state:[]},1).wait(1));
 
 }).prototype = p = new cjs.MovieClip();
-p.nominalBounds = new cjs.Rectangle(0,-43.1,117.6,91.9);
+p.nominalBounds = null;
 
 
 (lib.Символ72 = function(mode,startPosition,loop) {
@@ -1739,7 +1740,7 @@ p.nominalBounds = new cjs.Rectangle(0,0,49.2,48.8);
 		function fl_ClickToGoToAndPlayFromFrame_3()
 		{
 		this.fon.gotoAndStop(1);
-			this.movieClip_2.gotoAndStop(1);
+		this.movieClip_2.gotoAndStop(2);
 		stage.canvas.style.cursor = "default";
 		}
 		
@@ -1748,16 +1749,16 @@ p.nominalBounds = new cjs.Rectangle(0,0,49.2,48.8);
 		
 		function fl_ClickToGoToAndPlayFromFrame_2()
 		{
-		this.fon.gotoAndStop(0);
-			this.movieClip_2.gotoAndStop(0);
+		this.fon.gotoAndStop(1);
+			this.movieClip_2.gotoAndStop(1);
 		}
 		
 		this.button2.addEventListener("mouseover", fl_ClickToGoToAndPlayFromFrame_0.bind(this));
 		
 		function fl_ClickToGoToAndPlayFromFrame_0()
 		{
-		this.fon.gotoAndStop(2);
-			this.movieClip_2.gotoAndStop(1);
+		this.fon.gotoAndStop(0);
+			this.movieClip_2.gotoAndStop(0);
 		}
 		
 		
@@ -1765,8 +1766,8 @@ p.nominalBounds = new cjs.Rectangle(0,0,49.2,48.8);
 		
 		function fl_ClickToGoToAndPlayFromFrame_1()
 		{
-		this.fon.gotoAndStop(0);
-			this.movieClip_2.gotoAndStop(0);
+		this.fon.gotoAndStop(1);
+			this.movieClip_2.gotoAndStop(1);
 		}
 		/* Пользовательский курсор мыши
 		Заменяет курсор мыши по умолчанию на указанный экземпляр символа.
@@ -1788,20 +1789,20 @@ p.nominalBounds = new cjs.Rectangle(0,0,49.2,48.8);
 		function fl_mouseover()
 		{
 		this.pop.gotoAndStop(1);
-			this.movieClip_2.gotoAndStop(0);
+		this.movieClip_2.gotoAndStop(1);
 		}
 		
 		stage.canvas.addEventListener("mouseout", fl_mouseout.bind(this));
 		
 		function fl_mouseout()
 		{
-		this.pop.gotoAndStop(0);
-				this.movieClip_2.gotoAndStop(1);
+		this.pop.gotoAndStop(1);
+		this.movieClip_2.gotoAndStop(0);
 		}
 	}
 
 	// actions tween:
-	this.timeline.addTween(cjs.Tween.get(this).call(this.frame_0).wait(2));
+	this.timeline.addTween(cjs.Tween.get(this).call(this.frame_0).wait(1));
 
 	// Слой 3
 	this.button = new lib.Символ43();
@@ -1809,7 +1810,7 @@ p.nominalBounds = new cjs.Rectangle(0,0,49.2,48.8);
 	this.button.setTransform(84,158,1,1,0,0,0,59,72);
 	new cjs.ButtonHelper(this.button, 0, 1, 2, false, new lib.Символ43(), 3);
 
-	this.timeline.addTween(cjs.Tween.get(this.button).wait(2));
+	this.timeline.addTween(cjs.Tween.get(this.button).wait(1));
 
 	// boot
 	this.button2 = new lib.Символ42();
@@ -1821,7 +1822,7 @@ p.nominalBounds = new cjs.Rectangle(0,0,49.2,48.8);
 	this.instance.parent = this;
 	this.instance.setTransform(564.7,268.2,0.57,0.57,0,0,0,53.6,29.7);
 
-	this.timeline.addTween(cjs.Tween.get({}).to({state:[{t:this.instance},{t:this.button2}]}).wait(2));
+	this.timeline.addTween(cjs.Tween.get({}).to({state:[{t:this.instance},{t:this.button2}]}).wait(1));
 
 	// Слой 4
 	this.instance_1 = new lib.Символ39();
@@ -1832,7 +1833,7 @@ p.nominalBounds = new cjs.Rectangle(0,0,49.2,48.8);
 	this.instance_2.parent = this;
 	this.instance_2.setTransform(320.1,25.1,0.786,0.786,0,0,0,309.2,18);
 
-	this.timeline.addTween(cjs.Tween.get({}).to({state:[{t:this.instance_2},{t:this.instance_1}]}).wait(2));
+	this.timeline.addTween(cjs.Tween.get({}).to({state:[{t:this.instance_2},{t:this.instance_1}]}).wait(1));
 
 	// Слой 2
 	this.pop = new lib.Символ76();
@@ -1843,17 +1844,17 @@ p.nominalBounds = new cjs.Rectangle(0,0,49.2,48.8);
 	this.movieClip_2.parent = this;
 	this.movieClip_2.setTransform(777.5,134.8,1,1,0,0,0,24.7,24.4);
 
-	this.timeline.addTween(cjs.Tween.get({}).to({state:[{t:this.movieClip_2},{t:this.pop}]}).wait(2));
+	this.timeline.addTween(cjs.Tween.get({}).to({state:[{t:this.movieClip_2},{t:this.pop}]}).wait(1));
 
 	// vs
 	this.fon = new lib.Символ15();
 	this.fon.parent = this;
 	this.fon.setTransform(-35.6,86.5,1,1,0,0,0,354,228.5);
 
-	this.timeline.addTween(cjs.Tween.get(this.fon).wait(2));
+	this.timeline.addTween(cjs.Tween.get(this.fon).wait(1));
 
 }).prototype = p = new cjs.MovieClip();
-p.nominalBounds = new cjs.Rectangle(252.5,-34.5,937.9,501);
+p.nominalBounds = new cjs.Rectangle(252.5,-34.5,776.2,501);
 // library properties:
 lib.properties = {
 	width: 640,
@@ -1862,24 +1863,24 @@ lib.properties = {
 	color: "#FFFFFF",
 	opacity: 1.00,
 	manifest: [
-		{src:"images/body.png?1480940245970", id:"body"},
-		{src:"images/boot.png?1480940245970", id:"boot"},
-		{src:"images/cigan.png?1480940245970", id:"cigan"},
-		{src:"images/fon.jpg?1480940245970", id:"fon"},
-		{src:"images/guitar.png?1480940245970", id:"guitar"},
-		{src:"images/hair.png?1480940245970", id:"hair"},
-		{src:"images/hand.png?1480940245970", id:"hand"},
-		{src:"images/head.png?1480940245973", id:"head"},
-		{src:"images/kist.png?1480940245973", id:"kist"},
-		{src:"images/kopito.png?1480940245973", id:"kopito"},
-		{src:"images/l9wka.png?1480940245973", id:"l9wka"},
-		{src:"images/leg.png?1480940245973", id:"leg"},
-		{src:"images/noga3.png?1480940245973", id:"noga3"},
-		{src:"images/noga4.png?1480940245973", id:"noga4"},
-		{src:"images/nogi.png?1480940245973", id:"nogi"},
-		{src:"images/ring.png?1480940245973", id:"ring"},
-		{src:"images/ruuuka.png?1480940245973", id:"ruuuka"},
-		{src:"images/tail.png?1480940245973", id:"tail"}
+		{src:"images/body.png?1480940796949", id:"body"},
+		{src:"images/boot.png?1480940796949", id:"boot"},
+		{src:"images/cigan.png?1480940796949", id:"cigan"},
+		{src:"images/fon.jpg?1480940796949", id:"fon"},
+		{src:"images/guitar.png?1480940796949", id:"guitar"},
+		{src:"images/hair.png?1480940796949", id:"hair"},
+		{src:"images/hand.png?1480940796949", id:"hand"},
+		{src:"images/head.png?1480940796949", id:"head"},
+		{src:"images/kist.png?1480940796949", id:"kist"},
+		{src:"images/kopito.png?1480940796949", id:"kopito"},
+		{src:"images/l9wka.png?1480940796949", id:"l9wka"},
+		{src:"images/leg.png?1480940796949", id:"leg"},
+		{src:"images/noga3.png?1480940796949", id:"noga3"},
+		{src:"images/noga4.png?1480940796949", id:"noga4"},
+		{src:"images/nogi.png?1480940796949", id:"nogi"},
+		{src:"images/ring.png?1480940796949", id:"ring"},
+		{src:"images/ruuuka.png?1480940796949", id:"ruuuka"},
+		{src:"images/tail.png?1480940796949", id:"tail"}
 	],
 	preloads: []
 };
