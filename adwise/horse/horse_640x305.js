@@ -135,14 +135,23 @@ function getMCSymbolPrototype(symbol, nominalBounds, frameBounds) {
 (lib.Символ65 = function(mode,startPosition,loop) {
 	this.initialize(mode,startPosition,loop,{});
 
+	// Слой 2
+	this.shape = new cjs.Shape();
+	this.shape.graphics.f("#000000").s().p("ACTAhIgPgFIgOgCQgIgBgFgEQgGgEgBgJQAAgIAFgFQAHgHAWgBQARgBAOgDQAUgEAKAAQASAAALAJQAGAFACAHQABAIgDAHQgGAJgNACIgXADIgUADIgMACIgHgBgAjAAXQgWAAgJgIQgGgHAAgJQABgLAHgGQAHgHAQgDQAKgBARAAIAagCIAWgCQAMAAAIAEQANAHACAPQABAOgLAJQgKAHgXAAg");
+	this.shape.setTransform(97.8,78.5);
+	this.shape._off = true;
+
+	this.timeline.addTween(cjs.Tween.get(this.shape).wait(23).to({_off:false},0).to({_off:true},1).wait(3).to({_off:false},0).to({_off:true},1).wait(1));
+
 	// Слой 1
 	this.instance = new lib.cigan();
 	this.instance.parent = this;
 	this.instance.setTransform(134,0,0.788,0.788,0,0,180);
 
-	this.timeline.addTween(cjs.Tween.get(this.instance).wait(1));
+	this.timeline.addTween(cjs.Tween.get(this.instance).wait(29));
 
-}).prototype = getMCSymbolPrototype(lib.Символ65, new cjs.Rectangle(0,0,134,156.1), null);
+}).prototype = p = new cjs.MovieClip();
+p.nominalBounds = new cjs.Rectangle(0,0,134,156.1);
 
 
 (lib.Символ63 = function(mode,startPosition,loop) {
@@ -1513,7 +1522,7 @@ p.nominalBounds = new cjs.Rectangle(0,0,104,103.3);
 
 	this.instance_5 = new lib.Символ64();
 	this.instance_5.parent = this;
-	this.instance_5.setTransform(773.2,357,1,1,0,0,0,85,99);
+	this.instance_5.setTransform(773.2,309,1,1,0,0,0,85,99);
 
 	this.instance_6 = new lib.Символ14();
 	this.instance_6.parent = this;
@@ -1572,6 +1581,31 @@ p.nominalBounds = new cjs.Rectangle(322.1,-45,776.2,501);
 
 }).prototype = p = new cjs.MovieClip();
 p.nominalBounds = new cjs.Rectangle(-152.8,-147.6,301.7,298.7);
+
+
+(lib.Символ78 = function(mode,startPosition,loop) {
+	this.initialize(mode,startPosition,loop,{});
+
+	// timeline functions:
+	this.frame_0 = function() {
+		this.stop();
+	}
+	this.frame_6 = function() {
+		this.stop();
+	}
+
+	// actions tween:
+	this.timeline.addTween(cjs.Tween.get(this).call(this.frame_0).wait(6).call(this.frame_6).wait(1));
+
+	// Слой 1
+	this.fon1 = new lib.Символ15();
+	this.fon1.parent = this;
+	this.fon1.setTransform(368,273.5,1,1,0,0,0,354,228.5);
+
+	this.timeline.addTween(cjs.Tween.get(this.fon1).to({scaleX:1.21,scaleY:1.21},6).wait(1));
+
+}).prototype = p = new cjs.MovieClip();
+p.nominalBounds = new cjs.Rectangle(336,0,776.2,501);
 
 
 (lib.sprite144 = function(mode,startPosition,loop) {
@@ -1728,8 +1762,8 @@ p.nominalBounds = new cjs.Rectangle(0,0,49.2,48.8);
 		
 		
 		
-		this.addEventListener("tick", fl_CustomMouseCursor.bind(this));
-		function fl_CustomMouseCursor() {
+		this.addEventListener("tick", fl_CustomMouseCursor1.bind(this));
+		function fl_CustomMouseCursor1() {
 		this.fon.x = -stage.mouseX / 10/window.devicePixelRatio;
 		}
 		
@@ -1739,7 +1773,7 @@ p.nominalBounds = new cjs.Rectangle(0,0,49.2,48.8);
 		
 		function fl_ClickToGoToAndPlayFromFrame_3()
 		{
-		this.fon.gotoAndStop(1);
+		this.fon.fon1.gotoAndStop(1);
 		this.movieClip_2.gotoAndStop(2);
 		stage.canvas.style.cursor = "default";
 		}
@@ -1749,7 +1783,7 @@ p.nominalBounds = new cjs.Rectangle(0,0,49.2,48.8);
 		
 		function fl_ClickToGoToAndPlayFromFrame_2()
 		{
-		this.fon.gotoAndStop(1);
+		this.fon.fon1.gotoAndStop(0);
 			this.movieClip_2.gotoAndStop(1);
 		}
 		
@@ -1757,7 +1791,7 @@ p.nominalBounds = new cjs.Rectangle(0,0,49.2,48.8);
 		
 		function fl_ClickToGoToAndPlayFromFrame_0()
 		{
-		this.fon.gotoAndStop(0);
+		this.fon.fon1.gotoAndStop(2);
 			this.movieClip_2.gotoAndStop(0);
 		}
 		
@@ -1766,7 +1800,7 @@ p.nominalBounds = new cjs.Rectangle(0,0,49.2,48.8);
 		
 		function fl_ClickToGoToAndPlayFromFrame_1()
 		{
-		this.fon.gotoAndStop(1);
+		this.fon.fon1.gotoAndStop(0);
 			this.movieClip_2.gotoAndStop(1);
 		}
 		/* Пользовательский курсор мыши
@@ -1785,17 +1819,19 @@ p.nominalBounds = new cjs.Rectangle(0,0,49.2,48.8);
 		//stage.removeChild(movieClip_2);
 		//stage.canvas.style.cursor = "default";
 		
-		stage.canvas.addEventListener("mouseover", fl_mouseover.bind(this));
-		function fl_mouseover()
+		stage.canvas.addEventListener("mouseover", fl_mouseovery.bind(this));
+		function fl_mouseovery()
 		{
+		this.fon.gotoAndPlay(1);
 		this.pop.gotoAndStop(1);
 		this.movieClip_2.gotoAndStop(1);
 		}
 		
-		stage.canvas.addEventListener("mouseout", fl_mouseout.bind(this));
+		stage.canvas.addEventListener("mouseout", fl_mouseouty.bind(this));
 		
-		function fl_mouseout()
+		function fl_mouseouty()
 		{
+		this.fon.gotoAndPlay(0);
 		this.pop.gotoAndStop(1);
 		this.movieClip_2.gotoAndStop(0);
 		}
@@ -1847,14 +1883,14 @@ p.nominalBounds = new cjs.Rectangle(0,0,49.2,48.8);
 	this.timeline.addTween(cjs.Tween.get({}).to({state:[{t:this.movieClip_2},{t:this.pop}]}).wait(1));
 
 	// vs
-	this.fon = new lib.Символ15();
+	this.fon = new lib.Символ78();
 	this.fon.parent = this;
-	this.fon.setTransform(-35.6,86.5,1,1,0,0,0,354,228.5);
+	this.fon.setTransform(18.8,63.5,1,1,0,0,0,388.1,250.5);
 
 	this.timeline.addTween(cjs.Tween.get(this.fon).wait(1));
 
 }).prototype = p = new cjs.MovieClip();
-p.nominalBounds = new cjs.Rectangle(252.5,-34.5,776.2,501);
+p.nominalBounds = new cjs.Rectangle(286.7,-34.5,776.2,501);
 // library properties:
 lib.properties = {
 	width: 640,
@@ -1863,24 +1899,24 @@ lib.properties = {
 	color: "#FFFFFF",
 	opacity: 1.00,
 	manifest: [
-		{src:"images/body.png?1480940796949", id:"body"},
-		{src:"images/boot.png?1480940796949", id:"boot"},
-		{src:"images/cigan.png?1480940796949", id:"cigan"},
-		{src:"images/fon.jpg?1480940796949", id:"fon"},
-		{src:"images/guitar.png?1480940796949", id:"guitar"},
-		{src:"images/hair.png?1480940796949", id:"hair"},
-		{src:"images/hand.png?1480940796949", id:"hand"},
-		{src:"images/head.png?1480940796949", id:"head"},
-		{src:"images/kist.png?1480940796949", id:"kist"},
-		{src:"images/kopito.png?1480940796949", id:"kopito"},
-		{src:"images/l9wka.png?1480940796949", id:"l9wka"},
-		{src:"images/leg.png?1480940796949", id:"leg"},
-		{src:"images/noga3.png?1480940796949", id:"noga3"},
-		{src:"images/noga4.png?1480940796949", id:"noga4"},
-		{src:"images/nogi.png?1480940796949", id:"nogi"},
-		{src:"images/ring.png?1480940796949", id:"ring"},
-		{src:"images/ruuuka.png?1480940796949", id:"ruuuka"},
-		{src:"images/tail.png?1480940796949", id:"tail"}
+		{src:"images/body.png?1480942237766", id:"body"},
+		{src:"images/boot.png?1480942237766", id:"boot"},
+		{src:"images/cigan.png?1480942237766", id:"cigan"},
+		{src:"images/fon.jpg?1480942237766", id:"fon"},
+		{src:"images/guitar.png?1480942237766", id:"guitar"},
+		{src:"images/hair.png?1480942237766", id:"hair"},
+		{src:"images/hand.png?1480942237766", id:"hand"},
+		{src:"images/head.png?1480942237766", id:"head"},
+		{src:"images/kist.png?1480942237766", id:"kist"},
+		{src:"images/kopito.png?1480942237766", id:"kopito"},
+		{src:"images/l9wka.png?1480942237766", id:"l9wka"},
+		{src:"images/leg.png?1480942237766", id:"leg"},
+		{src:"images/noga3.png?1480942237766", id:"noga3"},
+		{src:"images/noga4.png?1480942237766", id:"noga4"},
+		{src:"images/nogi.png?1480942237766", id:"nogi"},
+		{src:"images/ring.png?1480942237766", id:"ring"},
+		{src:"images/ruuuka.png?1480942237766", id:"ruuuka"},
+		{src:"images/tail.png?1480942237766", id:"tail"}
 	],
 	preloads: []
 };
