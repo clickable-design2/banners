@@ -62,6 +62,12 @@ p.nominalBounds = new cjs.Rectangle(0,0,69,47);
 p.nominalBounds = new cjs.Rectangle(0,0,95,83);
 
 
+(lib.recept = function() {
+	this.initialize(img.recept);
+}).prototype = p = new cjs.Bitmap();
+p.nominalBounds = new cjs.Rectangle(0,0,264,21);
+
+
 (lib.sushi = function() {
 	this.initialize(img.sushi);
 }).prototype = p = new cjs.Bitmap();
@@ -394,23 +400,23 @@ p.nominalBounds = new cjs.Rectangle(2,0,243.1,50.5);
 	// sushi
 	this.instance_1 = new lib.sushi_1();
 	this.instance_1.parent = this;
-	this.instance_1.setTransform(222.6,294.7);
+	this.instance_1.setTransform(222.6,318.2);
 
-	this.timeline.addTween(cjs.Tween.get(this.instance_1).wait(47).to({y:166.7},7).to({y:184.7},4).wait(38).to({y:174.7},4).to({y:294.7},4).wait(67));
+	this.timeline.addTween(cjs.Tween.get(this.instance_1).wait(47).to({y:322.2},0).to({y:166.7},7).to({y:184.7},4).wait(38).to({y:174.7},4).to({y:320.9},4).wait(67));
 
 	// mint
 	this.instance_2 = new lib.Символ4();
 	this.instance_2.parent = this;
 	this.instance_2.setTransform(111,237.6,1,1,0,0,0,47.5,41.5);
 
-	this.timeline.addTween(cjs.Tween.get(this.instance_2).wait(38).to({y:227.6},4).to({y:297.6},5).wait(113).to({y:227.6},8).to({y:237.6},2).wait(1));
+	this.timeline.addTween(cjs.Tween.get(this.instance_2).wait(38).to({y:227.6},4).to({y:313.3},5).wait(113).to({y:297.6},0).to({y:227.6},8).to({y:237.6},2).wait(1));
 
 	// cake
 	this.instance_3 = new lib.Символ3();
 	this.instance_3.parent = this;
 	this.instance_3.setTransform(198.1,184.5,1,1,0,0,0,134,99.5);
 
-	this.timeline.addTween(cjs.Tween.get(this.instance_3).wait(32).to({x:188.1},6).to({x:397.1},9).wait(113).to({x:190.1},8).to({x:198.1},2).wait(1));
+	this.timeline.addTween(cjs.Tween.get(this.instance_3).wait(32).to({x:188.1},6).to({x:423.3},9).wait(113).to({x:397.1},0).to({x:190.1},8).to({x:198.1},2).wait(1));
 
 	// tvorog
 	this.instance_4 = new lib.tvorog_1();
@@ -420,43 +426,50 @@ p.nominalBounds = new cjs.Rectangle(2,0,243.1,50.5);
 	this.timeline.addTween(cjs.Tween.get(this.instance_4).wait(32).to({x:84.5},6).to({x:-87.5},9).to({x:82.5},7).to({x:72.5},4).wait(31).to({x:84.5},6).to({x:-87.5},9).to({x:82.5},7).to({x:72.5},4).wait(29).to({x:84.5},6).to({x:-87.5},9).to({x:82.5},9).to({x:72.5},2).wait(1));
 
 }).prototype = p = new cjs.MovieClip();
-p.nominalBounds = new cjs.Rectangle(0,85,465.1,270.7);
+p.nominalBounds = new cjs.Rectangle(0,85,465.1,294.2);
 
 
 // stage content:
 (lib.hoch_300x250 = function(mode,startPosition,loop) {
 	this.initialize(mode,startPosition,loop,{});
 
-	// lawash
-	this.instance = new lib.Символ8();
+	// Слой 1
+	this.instance = new lib.recept();
 	this.instance.parent = this;
-	this.instance.setTransform(289.6,148,1,1,0,0,0,282.6,142);
+	this.instance.setTransform(18,225);
 
 	this.timeline.addTween(cjs.Tween.get(this.instance).wait(1));
 
-	// logo
-	this.instance_1 = new lib.logo_1();
+	// lawash
+	this.instance_1 = new lib.Символ8();
 	this.instance_1.parent = this;
-	this.instance_1.setTransform(150,29.5);
+	this.instance_1.setTransform(278.8,137.6,0.876,0.876,0,0,0,282.7,142.1);
 
 	this.timeline.addTween(cjs.Tween.get(this.instance_1).wait(1));
 
-	// got
-	this.instance_2 = new lib.Символ6();
+	// logo
+	this.instance_2 = new lib.logo_1();
 	this.instance_2.parent = this;
-	this.instance_2.setTransform(159,82.9,1,1,0,0,0,122.5,27.4);
+	this.instance_2.setTransform(150,29.5);
 
 	this.timeline.addTween(cjs.Tween.get(this.instance_2).wait(1));
 
-	// fon
-	this.instance_3 = new lib.Символ5();
+	// got
+	this.instance_3 = new lib.Символ6();
 	this.instance_3.parent = this;
-	this.instance_3.setTransform(246,125,1,1,0,0,0,330,125);
+	this.instance_3.setTransform(159,82.9,1,1,0,0,0,122.5,27.4);
 
 	this.timeline.addTween(cjs.Tween.get(this.instance_3).wait(1));
 
+	// fon
+	this.instance_4 = new lib.Символ5();
+	this.instance_4.parent = this;
+	this.instance_4.setTransform(246,125,1,1,0,0,0,330,125);
+
+	this.timeline.addTween(cjs.Tween.get(this.instance_4).wait(1));
+
 }).prototype = p = new cjs.MovieClip();
-p.nominalBounds = new cjs.Rectangle(66,91.6,660,395.2);
+p.nominalBounds = new cjs.Rectangle(66,91.6,660,378.8);
 // library properties:
 lib.properties = {
 	width: 300,
@@ -465,18 +478,19 @@ lib.properties = {
 	color: "#FFFFFF",
 	opacity: 1.00,
 	manifest: [
-		{src:"images/blick.png?1479128959240", id:"blick"},
-		{src:"images/cake.png?1479128959240", id:"cake"},
-		{src:"images/fon1.jpg?1479128959240", id:"fon1"},
-		{src:"images/got.png?1479128959240", id:"got"},
-		{src:"images/gots.png?1479128959240", id:"gots"},
-		{src:"images/hoch.png?1479128959240", id:"hoch"},
-		{src:"images/lawash.png?1479128959240", id:"lawash"},
-		{src:"images/logo.png?1479128959240", id:"logo"},
-		{src:"images/mint.png?1479128959240", id:"mint"},
-		{src:"images/sushi.png?1479128959240", id:"sushi"},
-		{src:"images/tvorog.png?1479128959240", id:"tvorog"},
-		{src:"images/vkus.png?1479128959240", id:"vkus"}
+		{src:"images/blick.png?1479919757135", id:"blick"},
+		{src:"images/cake.png?1479919757135", id:"cake"},
+		{src:"images/fon1.jpg?1479919757135", id:"fon1"},
+		{src:"images/got.png?1479919757135", id:"got"},
+		{src:"images/gots.png?1479919757135", id:"gots"},
+		{src:"images/hoch.png?1479919757135", id:"hoch"},
+		{src:"images/lawash.png?1479919757135", id:"lawash"},
+		{src:"images/logo.png?1479919757135", id:"logo"},
+		{src:"images/mint.png?1479919757135", id:"mint"},
+		{src:"images/recept.png?1479919757135", id:"recept"},
+		{src:"images/sushi.png?1479919757135", id:"sushi"},
+		{src:"images/tvorog.png?1479919757135", id:"tvorog"},
+		{src:"images/vkus.png?1479919757135", id:"vkus"}
 	],
 	preloads: []
 };
