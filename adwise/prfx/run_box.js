@@ -1240,7 +1240,7 @@ p.nominalBounds = new cjs.Rectangle(-320.8,-309.7,633.4,627.1);
 	// Слой 1
 	this.instance_3 = new lib.Символ36_1();
 	this.instance_3.parent = this;
-	this.instance_3.setTransform(-31.1,95.5,0.978,1,0,0,180,77,79.5);
+	this.instance_3.setTransform(58.4,178.5,0.978,1,0,0,180,77,79.5);
 	this.instance_3._off = true;
 
 	this.timeline.addTween(cjs.Tween.get(this.instance_3).wait(1).to({_off:false},0).wait(1));
@@ -1370,17 +1370,17 @@ lib.properties = {
 	color: "#FFFFFF",
 	opacity: 1.00,
 	manifest: [
-		{src:"images/bedro.png?1481550288646", id:"bedro"},
-		{src:"images/biox.png?1481550288646", id:"biox"},
-		{src:"images/doola.png?1481550288646", id:"doola"},
-		{src:"images/fon.jpg?1481550288646", id:"fon"},
-		{src:"images/handdd.png?1481550288646", id:"handdd"},
-		{src:"images/head.png?1481550288646", id:"head"},
-		{src:"images/noga.png?1481550288646", id:"noga"},
-		{src:"images/ruka.png?1481550288646", id:"ruka"},
-		{src:"images/sheki.png?1481550288646", id:"sheki"},
-		{src:"images/telo.png?1481550288646", id:"telo"},
-		{src:"images/wing.png?1481550288646", id:"wing"}
+		{src:"images/bedro.png?1481550605202", id:"bedro"},
+		{src:"images/biox.png?1481550605202", id:"biox"},
+		{src:"images/doola.png?1481550605202", id:"doola"},
+		{src:"images/fon.jpg?1481550605202", id:"fon"},
+		{src:"images/handdd.png?1481550605202", id:"handdd"},
+		{src:"images/head.png?1481550605202", id:"head"},
+		{src:"images/noga.png?1481550605202", id:"noga"},
+		{src:"images/ruka.png?1481550605202", id:"ruka"},
+		{src:"images/sheki.png?1481550605202", id:"sheki"},
+		{src:"images/telo.png?1481550605202", id:"telo"},
+		{src:"images/wing.png?1481550605202", id:"wing"}
 	],
 	preloads: []
 };
