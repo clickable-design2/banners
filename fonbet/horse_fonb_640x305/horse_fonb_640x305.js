@@ -200,10 +200,10 @@ p.nominalBounds = new cjs.Rectangle(0,0,92,55);
 p.nominalBounds = new cjs.Rectangle(0,0,49,37);
 
 
-(lib.ps41 = function() {
-	this.initialize(img.ps41);
+(lib.ps411 = function() {
+	this.initialize(img.ps411);
 }).prototype = p = new cjs.Bitmap();
-p.nominalBounds = new cjs.Rectangle(0,0,158,248);
+p.nominalBounds = new cjs.Rectangle(0,0,194,269);
 
 
 (lib.rou = function() {
@@ -1711,8 +1711,8 @@ p.nominalBounds = new cjs.Rectangle(-48.6,-2.1,412.5,104.6);
 	// Слой 2 (mask)
 	var mask = new cjs.Shape();
 	mask._off = true;
-	mask.graphics.p("ApqN/IAA9XIGfAAIBBAPIgVc+IAVBgIpQAEgACwPQQgsupAsuoIHbBxIAAZxIBQBvg");
-	mask.setTransform(73.1,100.5);
+	mask.graphics.p("AB4PUQgsupAsunIHbBxIAAZwIBQBvgAqivTIGfAAIBBAPIgRYWQgqhJg9gNQg8gNgiA+IhNABIhsAUIgqALQgXAGgQAKg");
+	mask.setTransform(78.7,100.1);
 
 	// Слой 3
 	this.instance = new lib.Символ71();
@@ -1729,13 +1729,13 @@ p.nominalBounds = new cjs.Rectangle(-48.6,-2.1,412.5,104.6);
 	this.timeline.addTween(cjs.Tween.get(this.instance).wait(1));
 
 	// Слой 1
-	this.instance_1 = new lib.ps41();
+	this.instance_1 = new lib.ps411();
 	this.instance_1.parent = this;
-	this.instance_1.setTransform(0,-49);
+	this.instance_1.setTransform(-36,-49);
 
 	this.timeline.addTween(cjs.Tween.get(this.instance_1).wait(1));
 
-}).prototype = getMCSymbolPrototype(lib.Символ25, new cjs.Rectangle(0,-49,158,248), null);
+}).prototype = getMCSymbolPrototype(lib.Символ25, new cjs.Rectangle(-36,-49,194,269), null);
 
 
 (lib.Символ19 = function(mode,startPosition,loop) {
@@ -2525,7 +2525,7 @@ p.nominalBounds = new cjs.Rectangle(0,2.6,215,130.5);
 	this.timeline.addTween(cjs.Tween.get(this.instance_1).to({x:68},1).to({x:194},3).to({x:68},3).to({x:74},1).wait(1));
 
 }).prototype = p = new cjs.MovieClip();
-p.nominalBounds = new cjs.Rectangle(-149.7,-129.3,476.4,328.4);
+p.nominalBounds = new cjs.Rectangle(-149.7,-129.3,476.4,349.4);
 
 
 (lib.Символ24 = function(mode,startPosition,loop) {
@@ -2689,40 +2689,40 @@ lib.properties = {
 	color: "#FFFFFF",
 	opacity: 1.00,
 	manifest: [
-		{src:"images/bo.png?1482160568360", id:"bo"},
-		{src:"images/body.png?1482160568360", id:"body"},
-		{src:"images/bulka.png?1482160568360", id:"bulka"},
-		{src:"images/bulka1.png?1482160568360", id:"bulka1"},
-		{src:"images/fon2.jpg?1482160568360", id:"fon2"},
-		{src:"images/g1ng2.png?1482160568360", id:"g1ng2"},
-		{src:"images/gn3.png?1482160568360", id:"gn3"},
-		{src:"images/Group0.png?1482160568360", id:"Group0"},
-		{src:"images/handcursor.png?1482160568360", id:"handcursor"},
-		{src:"images/head.png?1482160568360", id:"head"},
-		{src:"images/head_horse.png?1482160568360", id:"head_horse"},
-		{src:"images/hv1.png?1482160568360", id:"hv1"},
-		{src:"images/logo_03.png?1482160568360", id:"logo_03"},
-		{src:"images/n1g7.png?1482160568360", id:"n1g7"},
-		{src:"images/n1ng4.png?1482160568360", id:"n1ng4"},
-		{src:"images/nbo.png?1482160568360", id:"nbo"},
-		{src:"images/nbody.png?1482160568360", id:"nbody"},
-		{src:"images/ng1.png?1482160568360", id:"ng1"},
-		{src:"images/ng177.png?1482160568360", id:"ng177"},
-		{src:"images/ng18.png?1482160568360", id:"ng18"},
-		{src:"images/ng2.png?1482160568360", id:"ng2"},
-		{src:"images/ng4.png?1482160568360", id:"ng4"},
-		{src:"images/ng7.png?1482160568360", id:"ng7"},
-		{src:"images/ng77.png?1482160568360", id:"ng77"},
-		{src:"images/ng8.png?1482160568360", id:"ng8"},
-		{src:"images/ng919.png?1482160568360", id:"ng919"},
-		{src:"images/ng99.png?1482160568360", id:"ng99"},
-		{src:"images/ngn3.png?1482160568360", id:"ngn3"},
-		{src:"images/nhead.png?1482160568360", id:"nhead"},
-		{src:"images/nhead_horse.png?1482160568360", id:"nhead_horse"},
-		{src:"images/nhv1.png?1482160568360", id:"nhv1"},
-		{src:"images/nng1.png?1482160568360", id:"nng1"},
-		{src:"images/ps41.png?1482160568360", id:"ps41"},
-		{src:"images/rou.png?1482160568360", id:"rou"}
+		{src:"images/bo.png?1482161096982", id:"bo"},
+		{src:"images/body.png?1482161096982", id:"body"},
+		{src:"images/bulka.png?1482161096982", id:"bulka"},
+		{src:"images/bulka1.png?1482161096982", id:"bulka1"},
+		{src:"images/fon2.jpg?1482161096982", id:"fon2"},
+		{src:"images/g1ng2.png?1482161096982", id:"g1ng2"},
+		{src:"images/gn3.png?1482161096982", id:"gn3"},
+		{src:"images/Group0.png?1482161096982", id:"Group0"},
+		{src:"images/handcursor.png?1482161096982", id:"handcursor"},
+		{src:"images/head.png?1482161096982", id:"head"},
+		{src:"images/head_horse.png?1482161096982", id:"head_horse"},
+		{src:"images/hv1.png?1482161096982", id:"hv1"},
+		{src:"images/logo_03.png?1482161096982", id:"logo_03"},
+		{src:"images/n1g7.png?1482161096982", id:"n1g7"},
+		{src:"images/n1ng4.png?1482161096982", id:"n1ng4"},
+		{src:"images/nbo.png?1482161096982", id:"nbo"},
+		{src:"images/nbody.png?1482161096982", id:"nbody"},
+		{src:"images/ng1.png?1482161096982", id:"ng1"},
+		{src:"images/ng177.png?1482161096982", id:"ng177"},
+		{src:"images/ng18.png?1482161096982", id:"ng18"},
+		{src:"images/ng2.png?1482161096982", id:"ng2"},
+		{src:"images/ng4.png?1482161096982", id:"ng4"},
+		{src:"images/ng7.png?1482161096982", id:"ng7"},
+		{src:"images/ng77.png?1482161096982", id:"ng77"},
+		{src:"images/ng8.png?1482161096982", id:"ng8"},
+		{src:"images/ng919.png?1482161096982", id:"ng919"},
+		{src:"images/ng99.png?1482161096982", id:"ng99"},
+		{src:"images/ngn3.png?1482161096982", id:"ngn3"},
+		{src:"images/nhead.png?1482161096982", id:"nhead"},
+		{src:"images/nhead_horse.png?1482161096982", id:"nhead_horse"},
+		{src:"images/nhv1.png?1482161096982", id:"nhv1"},
+		{src:"images/nng1.png?1482161096982", id:"nng1"},
+		{src:"images/ps411.png?1482161096982", id:"ps411"},
+		{src:"images/rou.png?1482161096982", id:"rou"}
 	],
 	preloads: []
 };
