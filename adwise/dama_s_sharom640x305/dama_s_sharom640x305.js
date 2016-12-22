@@ -1376,10 +1376,12 @@ p.nominalBounds = new cjs.Rectangle(-23.7,-24.4,47.4,48.9);
 	// Слой 1
 	this.instance = new lib.Символ66();
 	this.instance.parent = this;
+	this.instance.setTransform(-34.5,-14,1,1,0,0,0,-34.5,-14);
 
-	this.timeline.addTween(cjs.Tween.get(this.instance).wait(1));
+	this.timeline.addTween(cjs.Tween.get(this.instance).wait(1).to({regX:0,regY:0,rotation:15,x:-4.8,y:8.5},0).wait(1).to({rotation:30,x:-11.6,y:15.4},0).wait(1).to({rotation:45,x:-20,y:20.3},0).wait(1).to({rotation:60,x:-29.4,y:22.9},0).wait(1).to({rotation:75,x:-39.1},0).wait(1).to({rotation:90,x:-48.5,y:20.5},0).wait(1).to({rotation:105,x:-57,y:15.7},0).wait(1).to({rotation:120,x:-63.9,y:8.9},0).wait(1).to({rotation:135,x:-68.8,y:0.5},0).wait(1).to({rotation:150,x:-71.4,y:-8.9},0).wait(1).to({rotation:165,y:-18.6},0).wait(1).to({rotation:180,x:-69,y:-28},0).wait(1).to({rotation:195,x:-64.2,y:-36.5},0).wait(1).to({rotation:210,x:-57.4,y:-43.4},0).wait(1).to({rotation:225,x:-49,y:-48.3},0).wait(1).to({rotation:240,x:-39.6,y:-50.9},0).wait(1).to({rotation:255,x:-29.9},0).wait(1).to({rotation:270,x:-20.5,y:-48.5},0).wait(1).to({rotation:285,x:-12,y:-43.7},0).wait(1).to({rotation:300,x:-5.1,y:-36.9},0).wait(1).to({rotation:315,x:-0.2,y:-28.5},0).wait(1).to({rotation:330,x:2.4,y:-19.1},0).wait(1).to({rotation:345,y:-9.4},0).wait(1).to({rotation:360,x:0,y:0},0).wait(1));
 
-}).prototype = getMCSymbolPrototype(lib.Символ65, new cjs.Rectangle(-22.7,-22.7,45.5,45.5), null);
+}).prototype = p = new cjs.MovieClip();
+p.nominalBounds = new cjs.Rectangle(-22.7,-22.7,45.5,45.5);
 
 
 (lib.Символ60 = function(mode,startPosition,loop) {
@@ -1816,19 +1818,19 @@ lib.properties = {
 	color: "#FFFFFF",
 	opacity: 1.00,
 	manifest: [
-		{src:"images/dsergwergwsh_14.png?1480428372968", id:"dsergwergwsh_14"},
-		{src:"images/dss132h_16.png?1480428372968", id:"dss132h_16"},
-		{src:"images/dss1qwe32h_16.png?1480428372968", id:"dss1qwe32h_16"},
-		{src:"images/dssh_02.png?1480428372968", id:"dssh_02"},
-		{src:"images/dssh_05.png?1480428372968", id:"dssh_05"},
-		{src:"images/dssh_08.png?1480428372968", id:"dssh_08"},
-		{src:"images/dssh_14.png?1480428372968", id:"dssh_14"},
-		{src:"images/dssh_16.png?1480428372968", id:"dssh_16"},
-		{src:"images/dssh_19.png?1480428372968", id:"dssh_19"},
-		{src:"images/fon.jpg?1480428372968", id:"fon"},
-		{src:"images/sha_03.png?1480428372968", id:"sha_03"},
-		{src:"images/sha_04.png?1480428372968", id:"sha_04"},
-		{src:"images/sha_06.png?1480428372968", id:"sha_06"}
+		{src:"images/dsergwergwsh_14.png?1481699995193", id:"dsergwergwsh_14"},
+		{src:"images/dss132h_16.png?1481699995193", id:"dss132h_16"},
+		{src:"images/dss1qwe32h_16.png?1481699995193", id:"dss1qwe32h_16"},
+		{src:"images/dssh_02.png?1481699995193", id:"dssh_02"},
+		{src:"images/dssh_05.png?1481699995193", id:"dssh_05"},
+		{src:"images/dssh_08.png?1481699995193", id:"dssh_08"},
+		{src:"images/dssh_14.png?1481699995193", id:"dssh_14"},
+		{src:"images/dssh_16.png?1481699995193", id:"dssh_16"},
+		{src:"images/dssh_19.png?1481699995193", id:"dssh_19"},
+		{src:"images/fon.jpg?1481699995193", id:"fon"},
+		{src:"images/sha_03.png?1481699995193", id:"sha_03"},
+		{src:"images/sha_04.png?1481699995193", id:"sha_04"},
+		{src:"images/sha_06.png?1481699995193", id:"sha_06"}
 	],
 	preloads: []
 };
