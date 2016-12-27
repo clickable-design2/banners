@@ -1563,8 +1563,8 @@ p.nominalBounds = new cjs.Rectangle(0,0,738,98.9);
 		this.addEventListener("tick", fl_CustomMouseCursor.bind(this));
 		
 		function fl_CustomMouseCursor() {
-			this.kur.x = stage.mouseX;
-			this.kur.y = stage.mouseY;
+			this.kur.x = stage.mouseX/window.devicePixelRatio;
+			this.kur.y = stage.mouseY/window.devicePixelRatio;
 		}
 		//To restore the default mouse pointer, uncomment the following lines:
 		//this.removeEventListener("tick", fl_CustomMouseCursor.bind(this));
