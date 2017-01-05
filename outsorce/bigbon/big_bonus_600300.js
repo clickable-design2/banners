@@ -1489,7 +1489,7 @@ p.nominalBounds = new cjs.Rectangle(104.2,-18.9,309.1,482.3);
 
 
 // stage content:
-(lib.big_bonus_600x300 = function(mode,startPosition,loop) {
+(lib.big_bonus_600300 = function(mode,startPosition,loop) {
 	this.initialize(mode,startPosition,loop,{});
 
 	// timeline functions:
@@ -1598,27 +1598,27 @@ lib.properties = {
 	color: "#330000",
 	opacity: 1.00,
 	manifest: [
-		{src:"images/b1.png?1483626395051", id:"b1"},
-		{src:"images/b2.png?1483626395051", id:"b2"},
-		{src:"images/b3.png?1483626395051", id:"b3"},
-		{src:"images/bak1.png?1483626395051", id:"bak1"},
-		{src:"images/bak2.png?1483626395051", id:"bak2"},
-		{src:"images/bak3.png?1483626395051", id:"bak3"},
-		{src:"images/bonus.png?1483626395051", id:"bonus"},
-		{src:"images/buty.png?1483626395051", id:"buty"},
-		{src:"images/fon.jpg?1483626395051", id:"fon"},
-		{src:"images/girl1.png?1483626395051", id:"girl1"},
-		{src:"images/hand1.png?1483626395051", id:"hand1"},
-		{src:"images/icons.png?1483626395051", id:"icons"},
-		{src:"images/mew.png?1483626395051", id:"mew"},
-		{src:"images/ssss_01.png?1483626395051", id:"ssss_01"},
-		{src:"images/ssss_04.png?1483626395051", id:"ssss_04"},
-		{src:"images/ssss_09.png?1483626395051", id:"ssss_09"},
-		{src:"images/ssss_17.png?1483626395051", id:"ssss_17"},
-		{src:"images/ssss_20.png?1483626395051", id:"ssss_20"},
-		{src:"images/star.png?1483626395051", id:"star"},
-		{src:"images/wawa.png?1483626395051", id:"wawa"},
-		{src:"images/window.jpg?1483626395051", id:"window"}
+		{src:"images/b1.png?1483628796486", id:"b1"},
+		{src:"images/b2.png?1483628796486", id:"b2"},
+		{src:"images/b3.png?1483628796486", id:"b3"},
+		{src:"images/bak1.png?1483628796486", id:"bak1"},
+		{src:"images/bak2.png?1483628796486", id:"bak2"},
+		{src:"images/bak3.png?1483628796486", id:"bak3"},
+		{src:"images/bonus.png?1483628796486", id:"bonus"},
+		{src:"images/buty.png?1483628796486", id:"buty"},
+		{src:"images/fon.jpg?1483628796486", id:"fon"},
+		{src:"images/girl1.png?1483628796486", id:"girl1"},
+		{src:"images/hand1.png?1483628796486", id:"hand1"},
+		{src:"images/icons.png?1483628796486", id:"icons"},
+		{src:"images/mew.png?1483628796486", id:"mew"},
+		{src:"images/ssss_01.png?1483628796486", id:"ssss_01"},
+		{src:"images/ssss_04.png?1483628796486", id:"ssss_04"},
+		{src:"images/ssss_09.png?1483628796486", id:"ssss_09"},
+		{src:"images/ssss_17.png?1483628796486", id:"ssss_17"},
+		{src:"images/ssss_20.png?1483628796486", id:"ssss_20"},
+		{src:"images/star.png?1483628796486", id:"star"},
+		{src:"images/wawa.png?1483628796486", id:"wawa"},
+		{src:"images/window.jpg?1483628796486", id:"window"}
 	],
 	preloads: []
 };
