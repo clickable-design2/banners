@@ -437,7 +437,7 @@ p.nominalBounds = new cjs.Rectangle(0,0,18.9,18.7);
 	this.timeline.addTween(cjs.Tween.get(this.instance).to({rotation:-8,x:40.6,y:388},24,cjs.Ease.get(-1)).to({rotation:-32.5,x:-100.8,y:389.6},25,cjs.Ease.get(1)).to({regY:369.3,scaleX:1,scaleY:1,rotation:-8.5,x:37.7,y:388.2},25,cjs.Ease.get(-1)).to({regY:369.2,scaleX:1,scaleY:1,rotation:15.5,x:176.1,y:386.4},25,cjs.Ease.get(1)).wait(1));
 
 }).prototype = p = new cjs.MovieClip();
-p.nominalBounds = new cjs.Rectangle(-3.5,7.2,359.3,758.4);
+p.nominalBounds = new cjs.Rectangle(-3.5,7.2,359.2,758.4);
 
 
 (lib.Символ24 = function(mode,startPosition,loop) {
@@ -494,7 +494,7 @@ p.nominalBounds = new cjs.Rectangle(0.3,-8.2,203,746.6);
 	this.timeline.addTween(cjs.Tween.get({}).to({state:[{t:this.instance_1}]}).to({state:[{t:this.instance_2,p:{scaleX:1.01,rotation:0,skewX:-30.7,skewY:-22.6,x:-101.4,y:-110.9,regX:83.9,regY:368.6}}]},1).to({state:[{t:this.instance_2,p:{scaleX:1,rotation:-5,skewX:0,skewY:0,x:52.3,y:-155,regX:83.9,regY:368.6}}]},1).to({state:[{t:this.instance_2,p:{scaleX:1.006,rotation:0,skewX:17.4,skewY:11.1,x:223.5,y:-156.9,regX:84,regY:368.2}}]},1).wait(1));
 
 }).prototype = p = new cjs.MovieClip();
-p.nominalBounds = new cjs.Rectangle(3.4,-511.1,359.3,758.4);
+p.nominalBounds = new cjs.Rectangle(3.4,-511.1,359.2,758.4);
 
 
 (lib.Символ19 = function(mode,startPosition,loop) {
@@ -706,6 +706,20 @@ p.nominalBounds = null;
 }).prototype = getMCSymbolPrototype(lib.Символ8, new cjs.Rectangle(-2.2,-2.4,122.2,104.7), null);
 
 
+(lib.Символ57 = function(mode,startPosition,loop) {
+	this.initialize(mode,startPosition,loop,{});
+
+	// Слой 1
+	this.pric = new lib.Символ45();
+	this.pric.parent = this;
+	this.pric.setTransform(60.8,59.6,0.639,0.855,0,14.2,-0.6,-0.5,-0.4);
+
+	this.timeline.addTween(cjs.Tween.get(this.pric).to({skewX:14.1,skewY:-0.5,x:41.9,y:59.7},9,cjs.Ease.get(-1)).to({skewX:14.2,skewY:-0.6,x:20.8,y:59.6},10,cjs.Ease.get(1)).to({skewX:14.1,skewY:-0.5,x:40.8,y:59.7},10,cjs.Ease.get(-1)).to({skewX:14.2,skewY:-0.6,x:60.8,y:59.6},10,cjs.Ease.get(1)).wait(1));
+
+}).prototype = p = new cjs.MovieClip();
+p.nominalBounds = new cjs.Rectangle(10.8,-2.2,100.2,124.1);
+
+
 (lib.Символ32 = function(mode,startPosition,loop) {
 	this.initialize(mode,startPosition,loop,{});
 
@@ -887,6 +901,7 @@ p.nominalBounds = new cjs.Rectangle(194.3,-1.7,94.9,106.4);
 		
 			this.wall.alpha=0;
 			this.pric.alpha=1;
+			this.pric2.alpha=0;
 			
 		
 		
@@ -902,7 +917,7 @@ p.nominalBounds = new cjs.Rectangle(194.3,-1.7,94.9,106.4);
 			this.wall.gotoAndPlay(0);;
 			this.arrow.gotoAndStop(0);
 			this.pric.alpha=0;
-		
+		    this.pric2.alpha=1;
 		}
 		
 		//---------------------
@@ -942,11 +957,15 @@ p.nominalBounds = new cjs.Rectangle(194.3,-1.7,94.9,106.4);
 	this.timeline.addTween(cjs.Tween.get(this).call(this.frame_0).wait(1));
 
 	// Слой 9
+	this.pric2 = new lib.Символ57();
+	this.pric2.parent = this;
+	this.pric2.setTransform(487,66.5,1,1,0,0,0,61,60);
+
 	this.pric = new lib.Символ45();
 	this.pric.parent = this;
-	this.pric.setTransform(-186.1,84.4,0.473,0.591,0,0,-25.7,-0.4,-0.4);
+	this.pric.setTransform(-186.1,84.3,0.639,0.855,0,14.2,-0.6,-0.5,-0.4);
 
-	this.timeline.addTween(cjs.Tween.get(this.pric).wait(1));
+	this.timeline.addTween(cjs.Tween.get({}).to({state:[{t:this.pric},{t:this.pric2}]}).wait(1));
 
 	// Символ 1
 	this.instance = new lib.Символ1();
@@ -995,7 +1014,7 @@ p.nominalBounds = new cjs.Rectangle(194.3,-1.7,94.9,106.4);
 	// Символ 2
 	this.instance_2 = new lib.Символ2();
 	this.instance_2.parent = this;
-	this.instance_2.setTransform(505.9,41,1,1,0,0,0,79.9,28);
+	this.instance_2.setTransform(505.9,-86,1,1,0,0,0,79.9,28);
 
 	this.timeline.addTween(cjs.Tween.get(this.instance_2).wait(1));
 
@@ -1007,7 +1026,7 @@ p.nominalBounds = new cjs.Rectangle(194.3,-1.7,94.9,106.4);
 	this.timeline.addTween(cjs.Tween.get(this.instance_3).wait(1));
 
 }).prototype = p = new cjs.MovieClip();
-p.nominalBounds = new cjs.Rectangle(82.2,139.1,823.3,326.9);
+p.nominalBounds = new cjs.Rectangle(64.1,36,841.4,430);
 // library properties:
 lib.properties = {
 	width: 600,
@@ -1016,10 +1035,10 @@ lib.properties = {
 	color: "#FFFFFF",
 	opacity: 1.00,
 	manifest: [
-		{src:"images/back.png?1484582296025", id:"back"},
-		{src:"images/kata.png?1484582296025", id:"kata"},
-		{src:"images/logo.png?1484582296025", id:"logo"},
-		{src:"images/palka.png?1484582296025", id:"palka"}
+		{src:"images/back.png?1484655478262", id:"back"},
+		{src:"images/kata.png?1484655478262", id:"kata"},
+		{src:"images/logo.png?1484655478262", id:"logo"},
+		{src:"images/palka.png?1484655478262", id:"palka"}
 	],
 	preloads: []
 };
