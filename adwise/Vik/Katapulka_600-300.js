@@ -714,7 +714,7 @@ p.nominalBounds = null;
 	this.pric.parent = this;
 	this.pric.setTransform(60.8,59.6,0.639,0.855,0,14.2,-0.6,-0.5,-0.4);
 
-	this.timeline.addTween(cjs.Tween.get(this.pric).to({skewX:14.1,skewY:-0.5,x:41.9,y:59.7},9,cjs.Ease.get(-1)).to({skewX:14.2,skewY:-0.6,x:20.8,y:59.6},10,cjs.Ease.get(1)).to({skewX:14.1,skewY:-0.5,x:40.8,y:59.7},10,cjs.Ease.get(-1)).to({skewX:14.2,skewY:-0.6,x:60.8,y:59.6},10,cjs.Ease.get(1)).wait(1));
+	this.timeline.addTween(cjs.Tween.get(this.pric).to({regX:-0.6,skewX:14.1,skewY:-0.5,x:-44.4,y:106.2},24,cjs.Ease.get(-1)).to({regX:-0.5,skewX:14.2,skewY:-0.6,x:-153.9,y:154.6},25,cjs.Ease.get(1)).to({regY:-0.3,skewX:14.1,skewY:-0.5,x:-46.7,y:107.2},25,cjs.Ease.get(-1)).to({regY:-0.4,skewX:14.2,skewY:-0.6,x:60.8,y:59.6},25,cjs.Ease.get(1)).wait(1));
 
 }).prototype = p = new cjs.MovieClip();
 p.nominalBounds = new cjs.Rectangle(10.8,-2.2,100.2,124.1);
@@ -914,10 +914,11 @@ p.nominalBounds = new cjs.Rectangle(194.3,-1.7,94.9,106.4);
 		{
 		
 			this.wall.alpha=1;
-			this.wall.gotoAndPlay(0);;
+			this.wall.gotoAndPlay(0);
 			this.arrow.gotoAndStop(0);
 			this.pric.alpha=0;
 		    this.pric2.alpha=1;
+			this.pric2.gotoAndPlay(0);
 		}
 		
 		//---------------------
@@ -959,7 +960,7 @@ p.nominalBounds = new cjs.Rectangle(194.3,-1.7,94.9,106.4);
 	// Слой 9
 	this.pric2 = new lib.Символ57();
 	this.pric2.parent = this;
-	this.pric2.setTransform(487,66.5,1,1,0,0,0,61,60);
+	this.pric2.setTransform(258,75.9,0.852,0.852,0,0,0,61,60);
 
 	this.pric = new lib.Символ45();
 	this.pric.parent = this;
@@ -1035,10 +1036,10 @@ lib.properties = {
 	color: "#FFFFFF",
 	opacity: 1.00,
 	manifest: [
-		{src:"images/back.png?1484655478262", id:"back"},
-		{src:"images/kata.png?1484655478262", id:"kata"},
-		{src:"images/logo.png?1484655478262", id:"logo"},
-		{src:"images/palka.png?1484655478262", id:"palka"}
+		{src:"images/back.png?1484661836048", id:"back"},
+		{src:"images/kata.png?1484661836048", id:"kata"},
+		{src:"images/logo.png?1484661836048", id:"logo"},
+		{src:"images/palka.png?1484661836048", id:"palka"}
 	],
 	preloads: []
 };
