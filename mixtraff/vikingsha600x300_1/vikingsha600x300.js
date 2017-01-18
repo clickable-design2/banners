@@ -1526,7 +1526,7 @@ p.nominalBounds = new cjs.Rectangle(-456.5,-290.9,716.5,472);
 		this.addEventListener("tick", fl_CustomMouseCursor.bind(this));
 		
 		function fl_CustomMouseCursor() {
-			this.rog.x = stage.mouseX;
+			this.rog.x = stage.mouseX/window.devicePixelRatio;
 		}
 		
 		stage.canvas.style.cursor = "none";
@@ -1534,8 +1534,8 @@ p.nominalBounds = new cjs.Rectangle(-456.5,-290.9,716.5,472);
 		this.addEventListener("tick", fl_CustomMouseCursor_2.bind(this));
 		
 		function fl_CustomMouseCursor_2() {
-			this.priz.x = stage.mouseX;
-			this.priz.y = stage.mouseY;
+			this.priz.x = stage.mouseX/window.devicePixelRatio;
+			this.priz.y = stage.mouseY/window.devicePixelRatio;
 		}
 		
 		 this.vlevo.cursor = "none";
