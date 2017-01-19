@@ -10,10 +10,10 @@ lib.properties = {
 	color: "#333333",
 	opacity: 0.00,
 	manifest: [
-		{src:"images/_case.png?1484822319895", id:"_case"},
-		{src:"images/hover.png?1484822319895", id:"hover"},
-		{src:"images/logo.png?1484822319895", id:"logo"},
-		{src:"images/normal.png?1484822319895", id:"normal"}
+		{src:"images/hover.png?1484822780287", id:"hover"},
+		{src:"images/korobka.png?1484822780287", id:"korobka"},
+		{src:"images/logo.png?1484822780287", id:"logo"},
+		{src:"images/normal.png?1484822780287", id:"normal"}
 	]
 };
 
@@ -26,16 +26,16 @@ lib.ssMetadata = [];
 
 
 
-(lib._case = function() {
-	this.initialize(img._case);
-}).prototype = p = new cjs.Bitmap();
-p.nominalBounds = new cjs.Rectangle(0,0,161,101);
-
-
 (lib.hover = function() {
 	this.initialize(img.hover);
 }).prototype = p = new cjs.Bitmap();
 p.nominalBounds = new cjs.Rectangle(0,0,265,72);
+
+
+(lib.korobka = function() {
+	this.initialize(img.korobka);
+}).prototype = p = new cjs.Bitmap();
+p.nominalBounds = new cjs.Rectangle(0,0,161,101);
 
 
 (lib.logo = function() {
@@ -95,7 +95,7 @@ p.nominalBounds = new cjs.Rectangle(0,0,232,93);
 	this.initialize(mode,startPosition,loop,{});
 
 	// Слой 1
-	this.instance = new lib._case();
+	this.instance = new lib.korobka();
 	this.instance.parent = this;
 	this.instance.setTransform(-80.5,-50.5);
 
@@ -109,7 +109,7 @@ p.nominalBounds = new cjs.Rectangle(-80.5,-50.5,161,101);
 	this.initialize(mode,startPosition,loop,{});
 
 	// Слой 1
-	this.instance = new lib._case();
+	this.instance = new lib.korobka();
 	this.instance.parent = this;
 	this.instance.setTransform(-80.5,-50.5);
 
@@ -251,7 +251,7 @@ p.nominalBounds = new cjs.Rectangle(0,3,175.2,47.6);
 	this.instance_3.parent = this;
 	this.instance_3.setTransform(80.5,50.5);
 
-	this.instance_4 = new lib._case();
+	this.instance_4 = new lib.korobka();
 	this.instance_4.parent = this;
 
 	this.timeline.addTween(cjs.Tween.get({}).to({state:[{t:this.instance_2}]}).to({state:[{t:this.instance_2}]},24).to({state:[{t:this.instance_3}]},25).to({state:[{t:this.instance_4}]},30).to({state:[{t:this.instance_4}]},1).wait(1));
