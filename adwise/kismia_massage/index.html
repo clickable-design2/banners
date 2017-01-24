@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>test</title>
+    <style>
+        #anim_box{
+            position: absolute;
+            width: 600px;
+            height: 300px;
+            top: 0px;
+            left: 0px;
+            background-image: -moz-linear-gradient( 90deg, rgb(82,42,76) 0%, rgb(104,55,97) 100%);
+            background-image: -webkit-linear-gradient( 90deg, rgb(82,42,76) 0%, rgb(104,55,97) 100%);
+            background-image: -ms-linear-gradient( 90deg, rgb(82,42,76) 0%, rgb(104,55,97) 100%);
+        }
+        #bg_logo{
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0px;
+            left: 0px;
+            z-index: 1;
+            background: url(data:image/png;base64,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) center no-repeat;
+            background-size: auto;
+           
+                
+        }
+    
+    </style>
+    <script src="https://code.createjs.com/createjs-2015.11.26.min.js"></script>
+    <script src="index.js"></script>
+    <script>
+    var canvas, stage, exportRoot, fnStartAnimation;
+    function init() {
+        canvas = document.getElementById("canvas");
+        images = images||{};
+        var loader = new createjs.LoadQueue(false);
+        loader.addEventListener("fileload", handleFileLoad);
+        loader.addEventListener("complete", handleComplete);
+        loader.loadManifest(lib.properties.manifest);
+    }
+    function handleFileLoad(evt) {	
+        if (evt.item.type == "image") { images[evt.item.id] = evt.result; }	
+    }
+    function handleComplete(evt) {
+        var queue = evt.target;
+        var ssMetadata = lib.ssMetadata;
+        for(i=0; i<ssMetadata.length; i++) {
+            ss[ssMetadata[i].name] = new createjs.SpriteSheet( {"images": [queue.getResult(ssMetadata[i].name)], "frames": ssMetadata[i].frames} )
+        }
+        exportRoot = new lib.index();
+        stage = new createjs.Stage(canvas);
+        stage.addChild(exportRoot);
+        stage.enableMouseOver();	
+        fnStartAnimation = function() {
+            createjs.Ticker.setFPS(lib.properties.fps);
+            createjs.Ticker.addEventListener("tick", stage);
+        }	    
+        fnStartAnimation();
+    }
+    </script>
+</head>
+<body onload="init();" style="margin:0px;">
+	<div id="anim_box">
+    <canvas id="canvas" width="600" height="300" style="position: absolute; display: block; background-color:rgba(102, 0, 153, 0.00); z-index: 2;"></canvas>
+    <div id="bg_logo"></div>
+    </div>
+</body>
+</html>
