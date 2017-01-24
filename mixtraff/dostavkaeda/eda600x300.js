@@ -299,6 +299,7 @@ p.nominalBounds = null;
 }).prototype = getMCSymbolPrototype(lib.Символ3, new cjs.Rectangle(-167.6,-142,335.3,284.2), null);
 
 
+<<<<<<< HEAD:mixtraff/dostavkaeda/eda600x300.js
 (lib.Symbol2 = function(mode,startPosition,loop) {
 	this.initialize(mode,startPosition,loop,{});
 
@@ -353,6 +354,45 @@ p.nominalBounds = new cjs.Rectangle(-16,-23,32,46);
 
 	this.timeline.addTween(cjs.Tween.get(this.instance).to({scaleX:1.02,skewY:7.5,x:-4.8,y:6.9},7,cjs.Ease.get(-1)).to({scaleX:1.04,skewY:15.1,x:-9.7,y:13.7},7,cjs.Ease.get(1)).to({scaleX:1.02,skewY:8,x:-5.2,y:7.3},7,cjs.Ease.get(-1)).to({scaleX:1,skewY:0,x:0,y:0},8,cjs.Ease.get(1)).wait(1));
 
+=======
+(lib.Символ45 = function(mode,startPosition,loop) {
+	this.initialize(mode,startPosition,loop,{});
+
+	// Слой 1
+	this.instance = new lib.Символ39();
+	this.instance.parent = this;
+	this.instance.setTransform(-11.8,18.1,1,1,0,0,0,-11.8,18.1);
+
+	this.timeline.addTween(cjs.Tween.get(this.instance).to({regX:-11.6,scaleY:0.71,rotation:18.2,x:-11.6,y:18.2},14).to({regX:-11.8,scaleY:1,rotation:0,x:-11.8,y:18.1},15).wait(1));
+
+}).prototype = p = new cjs.MovieClip();
+p.nominalBounds = new cjs.Rectangle(-15,-27,30,54);
+
+
+(lib.Символ44 = function(mode,startPosition,loop) {
+	this.initialize(mode,startPosition,loop,{});
+
+	// Слой 1
+	this.instance = new lib.Символ38();
+	this.instance.parent = this;
+	this.instance.setTransform(-10.6,20.1,1,1,0,0,0,-10.6,20.1);
+
+	this.timeline.addTween(cjs.Tween.get(this.instance).to({scaleY:0.85,rotation:5.5,x:-10.9,y:20.7},7,cjs.Ease.get(-1)).to({regX:-10.5,regY:20.2,scaleY:0.71,rotation:11.2,x:-11,y:21},7,cjs.Ease.get(1)).to({regX:-10.6,scaleY:0.84,rotation:5.8,x:-10.9,y:20.6},7,cjs.Ease.get(-1)).to({regY:20.1,scaleY:1,rotation:0,x:-10.6,y:20.1},8,cjs.Ease.get(1)).wait(1));
+
+}).prototype = p = new cjs.MovieClip();
+p.nominalBounds = new cjs.Rectangle(-16,-23,32,46);
+
+
+(lib.Символ43 = function(mode,startPosition,loop) {
+	this.initialize(mode,startPosition,loop,{});
+
+	// Слой 1
+	this.instance = new lib.Символ37();
+	this.instance.parent = this;
+
+	this.timeline.addTween(cjs.Tween.get(this.instance).to({scaleX:1.02,skewY:7.5,x:-4.8,y:6.9},7,cjs.Ease.get(-1)).to({scaleX:1.04,skewY:15.1,x:-9.7,y:13.7},7,cjs.Ease.get(1)).to({scaleX:1.02,skewY:8,x:-5.2,y:7.3},7,cjs.Ease.get(-1)).to({scaleX:1,skewY:0,x:0,y:0},8,cjs.Ease.get(1)).wait(1));
+
+>>>>>>> origin/gh-pages:mixtraff/dostavkaeda600x300/eda600x300.js
 }).prototype = p = new cjs.MovieClip();
 p.nominalBounds = new cjs.Rectangle(-19.5,-25,39,50);
 
@@ -555,6 +595,7 @@ p.nominalBounds = new cjs.Rectangle(-38.8,-39,77.5,77.5);
 
 }).prototype = p = new cjs.MovieClip();
 p.nominalBounds = new cjs.Rectangle(-300,-150,600,300);
+<<<<<<< HEAD:mixtraff/dostavkaeda/eda600x300.js
 
 
 (lib.Symbol1 = function(mode,startPosition,loop) {
@@ -569,6 +610,8 @@ p.nominalBounds = new cjs.Rectangle(-300,-150,600,300);
 	this.timeline.addTween(cjs.Tween.get(this.instance).wait(1));
 
 }).prototype = getMCSymbolPrototype(lib.Symbol1, new cjs.Rectangle(-0.5,-4.1,520,27), null);
+=======
+>>>>>>> origin/gh-pages:mixtraff/dostavkaeda600x300/eda600x300.js
 
 
 (lib.Символ46 = function(mode,startPosition,loop) {
@@ -859,6 +902,7 @@ p.nominalBounds = new cjs.Rectangle(-191,-175.2,382.1,323.9);
 	this.timeline.addTween(cjs.Tween.get(this.instance).to({y:215.1},6,cjs.Ease.get(-1)).to({y:206.2},1).to({y:179.5},6,cjs.Ease.get(1)).wait(1));
 
 	// Слой 4
+<<<<<<< HEAD:mixtraff/dostavkaeda/eda600x300.js
 	this.instance_1 = new lib.Символ11();
 	this.instance_1.parent = this;
 	this.instance_1.setTransform(16.4,-102.9);
@@ -871,6 +915,20 @@ p.nominalBounds = new cjs.Rectangle(-191,-175.2,382.1,323.9);
 	this.instance_2.setTransform(236.5,-49);
 
 	this.timeline.addTween(cjs.Tween.get(this.instance_2).to({alpha:0},6).wait(1).to({alpha:1},6).wait(1));
+=======
+	this.instance = new lib.Символ11();
+	this.instance.parent = this;
+	this.instance.setTransform(16.4,-102.9);
+
+	this.timeline.addTween(cjs.Tween.get(this.instance).to({x:16.5,y:-238.4},6,cjs.Ease.get(1)).wait(1).to({x:16.4,y:-102.9},6,cjs.Ease.get(1)).wait(1));
+
+	// Символ 47
+	this.instance_1 = new lib.Символ24();
+	this.instance_1.parent = this;
+	this.instance_1.setTransform(236.5,-49);
+
+	this.timeline.addTween(cjs.Tween.get(this.instance_1).to({alpha:0},6).wait(1).to({alpha:1},6).wait(1));
+>>>>>>> origin/gh-pages:mixtraff/dostavkaeda600x300/eda600x300.js
 
 	// Слой 3
 	this.damapizza = new lib.Символ8();
@@ -880,6 +938,7 @@ p.nominalBounds = new cjs.Rectangle(-191,-175.2,382.1,323.9);
 	this.timeline.addTween(cjs.Tween.get(this.damapizza).to({scaleX:1.08,scaleY:1.08,x:126.6,y:1.1},6,cjs.Ease.get(1)).wait(1).to({scaleX:1,scaleY:1,x:117.6,y:0.1},6,cjs.Ease.get(1)).wait(1));
 
 	// Слой 6
+<<<<<<< HEAD:mixtraff/dostavkaeda/eda600x300.js
 	this.instance_3 = new lib.Символ22();
 	this.instance_3.parent = this;
 	this.instance_3.setTransform(9.5,2.5);
@@ -892,6 +951,20 @@ p.nominalBounds = new cjs.Rectangle(-191,-175.2,382.1,323.9);
 	this.instance_4.parent = this;
 
 	this.timeline.addTween(cjs.Tween.get(this.instance_4).to({scaleX:1.08,scaleY:1.08,x:-0.3,y:1},6,cjs.Ease.get(1)).wait(1).to({scaleX:1,scaleY:1,x:0,y:0},6,cjs.Ease.get(1)).wait(1));
+=======
+	this.instance_2 = new lib.Символ22();
+	this.instance_2.parent = this;
+	this.instance_2.setTransform(9.5,2.5);
+	this.instance_2.alpha = 0;
+
+	this.timeline.addTween(cjs.Tween.get(this.instance_2).to({alpha:0.309},6,cjs.Ease.get(1)).wait(1).to({alpha:0},6,cjs.Ease.get(1)).wait(1));
+
+	// Слой 1
+	this.instance_3 = new lib.Символ2();
+	this.instance_3.parent = this;
+
+	this.timeline.addTween(cjs.Tween.get(this.instance_3).to({scaleX:1.08,scaleY:1.08,x:-0.3,y:1},6,cjs.Ease.get(1)).wait(1).to({scaleX:1,scaleY:1,x:0,y:0},6,cjs.Ease.get(1)).wait(1));
+>>>>>>> origin/gh-pages:mixtraff/dostavkaeda600x300/eda600x300.js
 
 }).prototype = p = new cjs.MovieClip();
 p.nominalBounds = new cjs.Rectangle(-300,-175.1,632.9,325.2);
@@ -1012,6 +1085,7 @@ lib.properties = {
 	color: "#FFFFFF",
 	opacity: 1.00,
 	manifest: [
+<<<<<<< HEAD:mixtraff/dostavkaeda/eda600x300.js
 		{src:"images/dama.png?1485244857258", id:"dama"},
 		{src:"images/fon.jpg?1485244857258", id:"fon"},
 		{src:"images/lapa_03.png?1485244857258", id:"lapa_03"},
@@ -1021,6 +1095,17 @@ lib.properties = {
 		{src:"images/lapa_18.png?1485244857258", id:"lapa_18"},
 		{src:"images/lapa_21.png?1485244857258", id:"lapa_21"},
 		{src:"images/pizza.png?1485244857258", id:"pizza"}
+=======
+		{src:"images/dama.png?1485167160255", id:"dama"},
+		{src:"images/fon.jpg?1485167160255", id:"fon"},
+		{src:"images/lapa_03.png?1485167160255", id:"lapa_03"},
+		{src:"images/lapa_06.png?1485167160255", id:"lapa_06"},
+		{src:"images/lapa_09.png?1485167160255", id:"lapa_09"},
+		{src:"images/lapa_12.png?1485167160255", id:"lapa_12"},
+		{src:"images/lapa_18.png?1485167160255", id:"lapa_18"},
+		{src:"images/lapa_21.png?1485167160255", id:"lapa_21"},
+		{src:"images/pizza.png?1485167160255", id:"pizza"}
+>>>>>>> origin/gh-pages:mixtraff/dostavkaeda600x300/eda600x300.js
 	],
 	preloads: []
 };
