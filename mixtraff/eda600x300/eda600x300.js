@@ -905,7 +905,7 @@ lib.properties = {
 	opacity: 1.00,
 	manifest: [
 		{src:"images/bonus.png?1485274763642", id:"bonus"},
-		{src:"images/_catch.png?1485274763642", id:"_catch"},
+		{src:"images/catch.png?1485274763642", id:"_catch"},
 		{src:"images/dama.png?1485274763642", id:"dama"},
 		{src:"images/fon.jpg?1485274763642", id:"fon"},
 		{src:"images/lapa_03.png?1485274763642", id:"lapa_03"},
