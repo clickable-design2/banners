@@ -1,70 +1,9 @@
 (function (lib, img, cjs, ss, an) {
 
 var p; // shortcut to reference prototypes
-lib.webFontTxtInst = {}; 
-var loadedTypekitCount = 0;
-var loadedGoogleCount = 0;
-var gFontsUpdateCacheList = [];
-var tFontsUpdateCacheList = [];
 lib.ssMetadata = [];
 
 
-
-lib.updateListCache = function (cacheList) {		
-	for(var i = 0; i < cacheList.length; i++) {		
-		if(cacheList[i].cacheCanvas)		
-			cacheList[i].updateCache();		
-	}		
-};		
-
-lib.addElementsToCache = function (textInst, cacheList) {		
-	var cur = textInst;		
-	while(cur != exportRoot) {		
-		if(cacheList.indexOf(cur) != -1)		
-			break;		
-		cur = cur.parent;		
-	}		
-	if(cur != exportRoot) {		
-		var cur2 = textInst;		
-		var index = cacheList.indexOf(cur);		
-		while(cur2 != cur) {		
-			cacheList.splice(index, 0, cur2);		
-			cur2 = cur2.parent;		
-			index++;		
-		}		
-	}		
-	else {		
-		cur = textInst;		
-		while(cur != exportRoot) {		
-			cacheList.push(cur);		
-			cur = cur.parent;		
-		}		
-	}		
-};		
-
-lib.gfontAvailable = function(family, totalGoogleCount) {		
-	lib.properties.webfonts[family] = true;		
-	var txtInst = lib.webFontTxtInst && lib.webFontTxtInst[family] || [];		
-	for(var f = 0; f < txtInst.length; ++f)		
-		lib.addElementsToCache(txtInst[f], gFontsUpdateCacheList);		
-
-	loadedGoogleCount++;		
-	if(loadedGoogleCount == totalGoogleCount) {		
-		lib.updateListCache(gFontsUpdateCacheList);		
-	}		
-};		
-
-lib.tfontAvailable = function(family, totalTypekitCount) {		
-	lib.properties.webfonts[family] = true;		
-	var txtInst = lib.webFontTxtInst && lib.webFontTxtInst[family] || [];		
-	for(var f = 0; f < txtInst.length; ++f)		
-		lib.addElementsToCache(txtInst[f], tFontsUpdateCacheList);		
-
-	loadedTypekitCount++;		
-	if(loadedTypekitCount == totalTypekitCount) {		
-		lib.updateListCache(tFontsUpdateCacheList);		
-	}		
-};
 // symbols:
 
 
@@ -454,12 +393,15 @@ p.nominalBounds = new cjs.Rectangle(14.1,14.1,108.9,108.9);
 	this.initialize(mode,startPosition,loop,{});
 
 	// timeline functions:
+	this.frame_0 = function() {
+		this.stop();
+	}
 	this.frame_39 = function() {
 		this.stop();
 	}
 
 	// actions tween:
-	this.timeline.addTween(cjs.Tween.get(this).wait(39).call(this.frame_39).wait(1));
+	this.timeline.addTween(cjs.Tween.get(this).call(this.frame_0).wait(39).call(this.frame_39).wait(1));
 
 	// Layer 1
 	this.icon = new lib.Symbol4();
@@ -526,15 +468,20 @@ p.nominalBounds = new cjs.Rectangle(-0.5,-0.5,135.3,43.2);
 	this.initialize(mode,startPosition,loop,{});
 
 	// timeline functions:
+	this.frame_0 = function() {
+		this.stop();
+	}
 	this.frame_14 = function() {
 		this.parent.tekst.gotoAndPlay(1);
+		this.parent.massage_icon.gotoAndPlay(1);
+		this.parent.ava.gotoAndPlay(1);
 	}
 	this.frame_105 = function() {
 		this.gotoAndPlay(19);
 	}
 
 	// actions tween:
-	this.timeline.addTween(cjs.Tween.get(this).wait(14).call(this.frame_14).wait(91).call(this.frame_105).wait(1));
+	this.timeline.addTween(cjs.Tween.get(this).call(this.frame_0).wait(14).call(this.frame_14).wait(91).call(this.frame_105).wait(1));
 
 	// Layer 1
 	this.instance = new lib.Symbol2();
@@ -552,12 +499,15 @@ p.nominalBounds = null;
 	this.initialize(mode,startPosition,loop,{});
 
 	// timeline functions:
+	this.frame_0 = function() {
+		this.stop();
+	}
 	this.frame_34 = function() {
 		this.stop();
 	}
 
 	// actions tween:
-	this.timeline.addTween(cjs.Tween.get(this).wait(34).call(this.frame_34).wait(1));
+	this.timeline.addTween(cjs.Tween.get(this).call(this.frame_0).wait(34).call(this.frame_34).wait(1));
 
 	// Layer 1
 	this.instance = new lib.moon_1();
@@ -659,7 +609,6 @@ p.nominalBounds = new cjs.Rectangle(-363.3,0,137,31);
 	this.frame_0 = function() {
 		var _this = this;
 		
-		
 		if(window.devicePixelRatio == 1){
 			stage.scaleX = stage.scaleY = 2;
 			stage.canvas.width = 600 * 2;
@@ -676,14 +625,26 @@ p.nominalBounds = new cjs.Rectangle(-363.3,0,137,31);
 			stage.canvas.style.height = '300px';
 		}
 		
+		
 		this.read.alpha = 0;
 		this.del.alpha = 0;
+		this.dialog.alpha = 0;
 		
-		var target = this.read;
-		var tween = createjs.Tween.get(target, {loop: false}).to({alpha: 1}, 700);
+		setTimeout(function(){ 
+			
+			_this.cicrcle.gotoAndPlay(1);
 		
-		var target2 = this.del;
-		var twee2n = createjs.Tween.get(target2, {loop: false}).to({alpha: 1}, 700);
+			var target = _this.read;
+			var tween = createjs.Tween.get(target, {loop: false}).to({alpha: 1}, 700);
+		
+			var target2 = _this.del;
+			var twee2n = createjs.Tween.get(target2, {loop: false}).to({alpha: 1}, 700);
+		
+			var target3 = _this.dialog;
+			var twee3n = createjs.Tween.get(target3, {loop: false}).to({alpha: 1}, 700);
+		
+		
+		}, 1000);
 		
 		
 		this.dialog.addEventListener("mouseover", function(){_this.massage_icon.icon.gotoAndPlay(58);});
@@ -758,13 +719,12 @@ lib.properties = {
 	fps: 30,
 	color: "#660099",
 	opacity: 0.00,
-	webfonts: {},
 	manifest: [
-		{src:"images/ava.png", id:"ava"},
-		{src:"images/letter.png", id:"letter"},
-		{src:"images/logo.png", id:"logo"},
-		{src:"images/moon.png", id:"moon"},
-		{src:"images/sign.png", id:"sign"}
+		{src:"images/ava.png?1485259463788", id:"ava"},
+		{src:"images/letter.png?1485259463789", id:"letter"},
+		{src:"images/logo.png?1485259463789", id:"logo"},
+		{src:"images/moon.png?1485259463789", id:"moon"},
+		{src:"images/sign.png?1485259463789", id:"sign"}
 	],
 	preloads: []
 };
