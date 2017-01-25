@@ -14,7 +14,7 @@
 <title>vzdanii_640x305</title>
 <!-- write your code here -->
 <script src="https://code.createjs.com/createjs-2015.11.26.min.js"></script>
-<script src="vzdanii_640x305.js?1485351139202"></script>
+<script src="vzdanii_640x305.js?1485356552786"></script>
 <script>
 var canvas, stage, exportRoot, anim_container, dom_overlay_container, fnStartAnimation;
 function init() {
@@ -39,7 +39,8 @@ function handleComplete(evt) {
 	}
 	exportRoot = new lib.vzdanii_640x305();
 	stage = new createjs.Stage(canvas);
-	stage.addChild(exportRoot);	
+	stage.addChild(exportRoot);
+	stage.enableMouseOver();	
 	//Registers the "tick" event listener.
 	fnStartAnimation = function() {
 		createjs.Ticker.setFPS(lib.properties.fps);
