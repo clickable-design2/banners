@@ -462,6 +462,20 @@ p.nominalBounds = new cjs.Rectangle(-180.2,-113.2,360.6,226.5);
 }).prototype = getMCSymbolPrototype(lib.Symbol3, new cjs.Rectangle(0,0,353,235), null);
 
 
+(lib.Symbol38 = function(mode,startPosition,loop) {
+	this.initialize(mode,startPosition,loop,{});
+
+	// Layer 1
+	this.instance = new lib.Symbol6();
+	this.instance.parent = this;
+	this.instance.setTransform(229,168.7,1,1,0,0,0,229,168.7);
+
+	this.timeline.addTween(cjs.Tween.get(this.instance).to({y:155.7},19).to({scaleX:1.02,scaleY:1.02,y:168.7},20).to({scaleX:1,scaleY:1,y:181.7},20).to({y:168.7},20).wait(1));
+
+}).prototype = p = new cjs.MovieClip();
+p.nominalBounds = new cjs.Rectangle(0,0,458,337.4);
+
+
 (lib.Symbol36 = function(mode,startPosition,loop) {
 	this.initialize(mode,startPosition,loop,{});
 
@@ -691,16 +705,16 @@ p.nominalBounds = new cjs.Rectangle(0,0,176,131);
 	// Layer 3
 	this.instance = new lib.Symbol7();
 	this.instance.parent = this;
-	this.instance.setTransform(415,177.5,1,1,180,0,0,183,225.5);
+	this.instance.setTransform(435.5,177.9,1.109,1.109,180,0,0,183,225.5);
 
 	this.instance_1 = new lib.Symbol7();
 	this.instance_1.parent = this;
-	this.instance_1.setTransform(41,169.6,1,1,0,0,0,183,225.5);
+	this.instance_1.setTransform(20.6,169.2,1.109,1.109,0,0,0,183,225.5);
 
 	this.timeline.addTween(cjs.Tween.get({}).to({state:[{t:this.instance_1},{t:this.instance}]}).wait(1));
 
 	// Layer 1
-	this.instance_2 = new lib.Symbol6();
+	this.instance_2 = new lib.Symbol38();
 	this.instance_2.parent = this;
 	this.instance_2.setTransform(229,168.7,1,1,0,0,0,229,168.7);
 
@@ -708,12 +722,12 @@ p.nominalBounds = new cjs.Rectangle(0,0,176,131);
 
 	// Layer 2
 	this.shape = new cjs.Shape();
-	this.shape.graphics.f("rgba(0,0,0,0.6)").s().p("EhA6AinMAAAhFNMCB1AAAMAAABFNgAl33fQlgAQkIBdQiaA3iBBSQiJBYhlByQiYCuhLDxQhFDhAID6QADBMAPCWIAWDjQASCxASBZQAdCSA3BqQA9B2BsBiQBjBZCCBCQBxA6CPArQBxAiCcAfQDXAqCqAOQDRARCygXQDKgZCthOQC7hUCBiHQA2g4BAhYIBtiYIAog3QAWggANgbQARghAZhOQAviPAVhIQBzmHg6lEQgRhZghhoQgZhLgshvQglhggdg7QgohTgsg9QhniPiwhkQiXhWjHg0QiegoiegQQhxgLh9AAQhDAAhHADg");
+	this.shape.graphics.f("rgba(0,0,0,0.6)").s().p("EhA6AinMAAAhFNMCB1AAAMAAABFNgAl33fQlgAQkIBdQiaA3iBBSQiJBYhlByQiYCuhLDxQhFDhAID6QADBMAPCWIAWDjQA+CeAyBqQAyBqBXBrQBWBsBwBhQBvBhAuBSQAuBRB3ApQB2ApCcAfQDXAqCqAOQDRARCygXQDKgZCthOQC7hUCBiHQA2g4BAhYIBtiYIAog3QAWggANgbQARghAZhOQAviPAVhIQBzmHg6lEQgRhZghhoQgZhLgshvQglhggdg7QgohTgsg9QhniPiwhkQiXhWjHg0QiegoiegQQhxgLh9AAQhDAAhHADg");
 	this.shape.setTransform(258.5,176.5);
 
 	this.timeline.addTween(cjs.Tween.get(this.shape).wait(1));
 
-}).prototype = getMCSymbolPrototype(lib.Symbol5, new cjs.Rectangle(-157,-55.9,831,458.9), null);
+}).prototype = getMCSymbolPrototype(lib.Symbol5, new cjs.Rectangle(-182.4,-80.9,856.4,509), null);
 
 
 (lib.Symbol35 = function(mode,startPosition,loop) {
@@ -878,7 +892,7 @@ p.nominalBounds = new cjs.Rectangle(-3,0,759,414);
 
 	this.timeline.addTween(cjs.Tween.get(this.instance_2).wait(1));
 
-}).prototype = getMCSymbolPrototype(lib.Symbol4, new cjs.Rectangle(-157,-55.9,831,458.9), null);
+}).prototype = getMCSymbolPrototype(lib.Symbol4, new cjs.Rectangle(-182.4,-80.9,856.4,509), null);
 
 
 (lib.Symbol2 = function(mode,startPosition,loop) {
@@ -1044,16 +1058,16 @@ lib.properties = {
 	color: "#FFFFFF",
 	opacity: 1.00,
 	manifest: [
-		{src:"images/ammo.png?1485349002749", id:"ammo"},
-		{src:"images/back.jpg?1485349002749", id:"back"},
-		{src:"images/backzoom.jpg?1485349002749", id:"backzoom"},
-		{src:"images/gilza.png?1485349002749", id:"gilza"},
-		{src:"images/hand2.png?1485349002749", id:"hand2"},
-		{src:"images/HP.png?1485349002749", id:"HP"},
-		{src:"images/pricel.png?1485349002749", id:"pricel"},
-		{src:"images/puha.png?1485349002749", id:"puha"},
-		{src:"images/solder.png?1485349002749", id:"solder"},
-		{src:"images/vspih.png?1485349002749", id:"vspih"}
+		{src:"images/ammo.png?1485350008123", id:"ammo"},
+		{src:"images/back.jpg?1485350008123", id:"back"},
+		{src:"images/backzoom.jpg?1485350008123", id:"backzoom"},
+		{src:"images/gilza.png?1485350008123", id:"gilza"},
+		{src:"images/hand2.png?1485350008123", id:"hand2"},
+		{src:"images/HP.png?1485350008123", id:"HP"},
+		{src:"images/pricel.png?1485350008123", id:"pricel"},
+		{src:"images/puha.png?1485350008123", id:"puha"},
+		{src:"images/solder.png?1485350008123", id:"solder"},
+		{src:"images/vspih.png?1485350008123", id:"vspih"}
 	],
 	preloads: []
 };
