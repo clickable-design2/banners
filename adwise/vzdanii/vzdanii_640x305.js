@@ -1302,7 +1302,7 @@ p.nominalBounds = new cjs.Rectangle(394.1,240.1,1986.5,1172.7);
 	// Слой 3
 	this.instance = new lib.Символ6();
 	this.instance.parent = this;
-	this.instance.setTransform(77.3,42.6,0.111,0.111,0,0,0,81.4,81.4);
+	this.instance.setTransform(77.3,42.7,0.214,0.214,0,0,0,81.9,81.9);
 
 	this.timeline.addTween(cjs.Tween.get(this.instance).wait(1));
 
@@ -1339,7 +1339,7 @@ p.nominalBounds = new cjs.Rectangle(394.1,240.1,1986.5,1172.7);
 
 	this.timeline.addTween(cjs.Tween.get(this.instance_3).wait(1));
 
-}).prototype = getMCSymbolPrototype(lib.Symbol, new cjs.Rectangle(0,20,319.8,235.8), null);
+}).prototype = getMCSymbolPrototype(lib.Symbol, new cjs.Rectangle(0,18.4,319.8,237.4), null);
 
 
 (lib.Символ7 = function(mode,startPosition,loop) {
@@ -1353,7 +1353,7 @@ p.nominalBounds = new cjs.Rectangle(394.1,240.1,1986.5,1172.7);
 	this.timeline.addTween(cjs.Tween.get(this.instance).to({rotation:-4.8,x:155.4,y:144},22,cjs.Ease.get(-1)).to({regX:159.8,rotation:-10,x:150.7,y:169.9},21,cjs.Ease.get(1)).to({rotation:-4.5,x:155.6,y:142.2},30,cjs.Ease.get(-1)).to({regY:118,rotation:-1.3,x:158.7,y:125},12,cjs.Ease.get(1)).to({regX:159.9,regY:117.9,rotation:0,x:159.9,y:117.9},14).wait(1));
 
 }).prototype = p = new cjs.MovieClip();
-p.nominalBounds = new cjs.Rectangle(0,20,319.8,235.8);
+p.nominalBounds = new cjs.Rectangle(0,18.4,319.8,237.4);
 
 
 (lib.sprite17 = function(mode,startPosition,loop) {
@@ -1415,7 +1415,7 @@ p.nominalBounds = new cjs.Rectangle(-32.9,-12,198.2,12.1);
 	this.timeline.addTween(cjs.Tween.get(this.instance_1).to({regX:159.8,regY:117.7,scaleX:2.15,scaleY:2.15,rotation:-10.9,x:-95.1,y:111.7,alpha:0.281},6).to({alpha:0},1).to({alpha:0.281},1).to({regX:159.9,regY:117.9,scaleX:1,scaleY:1,rotation:0,x:159.9,y:117.9,alpha:1},5).wait(1));
 
 }).prototype = p = new cjs.MovieClip();
-p.nominalBounds = new cjs.Rectangle(0,20,319.8,235.8);
+p.nominalBounds = new cjs.Rectangle(0,18.4,319.8,237.4);
 
 
 (lib.sprite18 = function(mode,startPosition,loop) {
@@ -1827,14 +1827,14 @@ lib.properties = {
 	color: "#000000",
 	opacity: 1.00,
 	manifest: [
-		{src:"images/bullet1.png?1485356552782", id:"bullet1"},
-		{src:"images/fire.png?1485356552782", id:"fire"},
-		{src:"images/fon.jpg?1485356552782", id:"fon"},
-		{src:"images/r2.png?1485356552782", id:"r2"},
-		{src:"images/rifle1.png?1485356552782", id:"rifle1"},
-		{src:"images/soldddr.png?1485356552782", id:"soldddr"},
-		{src:"images/soll.png?1485356552782", id:"soll"},
-		{src:"images/statu91.png?1485356552782", id:"statu91"}
+		{src:"images/bullet1.png?1485422867079", id:"bullet1"},
+		{src:"images/fire.png?1485422867079", id:"fire"},
+		{src:"images/fon.jpg?1485422867079", id:"fon"},
+		{src:"images/r2.png?1485422867079", id:"r2"},
+		{src:"images/rifle1.png?1485422867079", id:"rifle1"},
+		{src:"images/soldddr.png?1485422867079", id:"soldddr"},
+		{src:"images/soll.png?1485422867079", id:"soll"},
+		{src:"images/statu91.png?1485422867079", id:"statu91"}
 	],
 	preloads: []
 };
