@@ -107,7 +107,7 @@ function getMCSymbolPrototype(symbol, nominalBounds, frameBounds) {
 
 	// Слой 1
 	this.shape = new cjs.Shape();
-	this.shape.graphics.f().s("#FF3300").ss(4,1,1).p("AAUAAQAAAJgGAFQgFAGgJAAQgIAAgGgGQgFgFAAgJQAAgIAFgGQAGgFAIAAQAJAAAFAFQAGAGAAAIg");
+	this.shape.graphics.f().s("#EA2937").ss(4,1,1).p("AAUAAQAAAJgGAFQgFAGgJAAQgIAAgGgGQgFgFAAgJQAAgIAFgGQAGgFAIAAQAJAAAFAFQAGAGAAAIg");
 	this.shape.setTransform(2,2);
 
 	this.shape_1 = new cjs.Shape();
@@ -124,7 +124,7 @@ function getMCSymbolPrototype(symbol, nominalBounds, frameBounds) {
 
 	// Слой 1
 	this.shape = new cjs.Shape();
-	this.shape.graphics.f().s("#FF3300").ss(5,1,1).p("AAAmtIAABaAAAFKIAABk");
+	this.shape.graphics.f().s("#EA2937").ss(5,1,1).p("AAAmtIAABaAAAFKIAABk");
 	this.shape.setTransform(0,43);
 
 	this.timeline.addTween(cjs.Tween.get(this.shape).wait(1));
@@ -360,7 +360,7 @@ p.nominalBounds = new cjs.Rectangle(0,0,263,384);
 
 	// Слой 1
 	this.shape = new cjs.Shape();
-	this.shape.graphics.f().s("#FF0000").ss(1,1,1).p("ABQAAQAAAhgXAYQgYAXghAAQggAAgYgXQgXgYAAghQAAggAXgYQAYgXAgAAQAhAAAYAXQAXAYAAAgg");
+	this.shape.graphics.f().s("#EA2937").ss(1,1,1).p("ABQAAQAAAhgXAYQgYAXghAAQggAAgYgXQgXgYAAghQAAggAXgYQAYgXAgAAQAhAAAYAXQAXAYAAAgg");
 
 	this.timeline.addTween(cjs.Tween.get(this.shape).wait(1));
 
@@ -1260,11 +1260,10 @@ p.nominalBounds = new cjs.Rectangle(0,0,499.4,309.9);
 	this.arrow = new lib.sprite152();
 	this.arrow.parent = this;
 	this.arrow.setTransform(6.4,23,0.228,0.342);
-	this.arrow.shadow = new cjs.Shadow("#FFFFFF",0,0,11);
 
 	this.timeline.addTween(cjs.Tween.get(this.arrow).wait(1));
 
-}).prototype = getMCSymbolPrototype(lib.U, new cjs.Rectangle(-12.3,-27.6,39,63), null);
+}).prototype = getMCSymbolPrototype(lib.U, new cjs.Rectangle(-6.3,-21.6,23.7,48.6), null);
 
 
 (lib.Символ66 = function(mode,startPosition,loop) {
@@ -1277,7 +1276,7 @@ p.nominalBounds = new cjs.Rectangle(0,0,499.4,309.9);
 
 	this.timeline.addTween(cjs.Tween.get(this.instance).wait(1));
 
-}).prototype = getMCSymbolPrototype(lib.Символ66, new cjs.Rectangle(16,-8.4,62,46), null);
+}).prototype = getMCSymbolPrototype(lib.Символ66, new cjs.Rectangle(22,-2.4,46.2,30.9), null);
 
 
 (lib.Символ38 = function(mode,startPosition,loop) {
@@ -1329,7 +1328,7 @@ p.nominalBounds = new cjs.Rectangle(0,0,499.4,309.9);
 	this.timeline.addTween(cjs.Tween.get(this.instance_2).to({x:-123.8,alpha:0},6,cjs.Ease.get(-1)).to({x:115.3,alpha:1},5,cjs.Ease.get(-1)).wait(1));
 
 }).prototype = p = new cjs.MovieClip();
-p.nominalBounds = new cjs.Rectangle(19.5,0,260.6,164.7);
+p.nominalBounds = new cjs.Rectangle(19.5,0,250.8,164.7);
 
 
 (lib.Символ25 = function(mode,startPosition,loop) {
@@ -1477,19 +1476,19 @@ lib.properties = {
 	color: "#FFFFFF",
 	opacity: 1.00,
 	manifest: [
-		{src:"images/deva.png?1485525531522", id:"deva"},
-		{src:"images/divava.png?1485525531522", id:"divava"},
-		{src:"images/dol1.png?1485525531522", id:"dol1"},
-		{src:"images/dol3.png?1485525531522", id:"dol3"},
-		{src:"images/dol5.png?1485525531522", id:"dol5"},
-		{src:"images/dol8.png?1485525531522", id:"dol8"},
-		{src:"images/dol_pop.png?1485525531522", id:"dol_pop"},
-		{src:"images/fon_600.jpg?1485525531522", id:"fon_600"},
-		{src:"images/hand.png?1485525531522", id:"hand"},
-		{src:"images/hand_p.png?1485525531522", id:"hand_p"},
-		{src:"images/kabl.png?1485525531522", id:"kabl"},
-		{src:"images/logo_pokerdom.png?1485525531522", id:"logo_pokerdom"},
-		{src:"images/nog.png?1485525531522", id:"nog"}
+		{src:"images/deva.png?1485526218731", id:"deva"},
+		{src:"images/divava.png?1485526218731", id:"divava"},
+		{src:"images/dol1.png?1485526218731", id:"dol1"},
+		{src:"images/dol3.png?1485526218731", id:"dol3"},
+		{src:"images/dol5.png?1485526218731", id:"dol5"},
+		{src:"images/dol8.png?1485526218731", id:"dol8"},
+		{src:"images/dol_pop.png?1485526218731", id:"dol_pop"},
+		{src:"images/fon_600.jpg?1485526218731", id:"fon_600"},
+		{src:"images/hand.png?1485526218731", id:"hand"},
+		{src:"images/hand_p.png?1485526218731", id:"hand_p"},
+		{src:"images/kabl.png?1485526218731", id:"kabl"},
+		{src:"images/logo_pokerdom.png?1485526218731", id:"logo_pokerdom"},
+		{src:"images/nog.png?1485526218731", id:"nog"}
 	],
 	preloads: []
 };
