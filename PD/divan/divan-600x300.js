@@ -605,12 +605,12 @@ p.nominalBounds = new cjs.Rectangle(0,0,219.7,83.4);
 	// Слой 4
 	this.instance = new lib.Символ43();
 	this.instance.parent = this;
-	this.instance.setTransform(67.8,35.2,1,1,0,0,0,99.4,23.7);
+	this.instance.setTransform(-156.6,-89,1,1,0,0,0,99.4,23.7);
 
-	this.timeline.addTween(cjs.Tween.get(this.instance).to({y:3.4},3,cjs.Ease.get(-1)).to({y:-28.4},3,cjs.Ease.get(1)).to({y:35.2},5).wait(1));
+	this.timeline.addTween(cjs.Tween.get(this.instance).to({x:78.3},6).to({x:-156.6},5).wait(1));
 
 }).prototype = p = new cjs.MovieClip();
-p.nominalBounds = new cjs.Rectangle(-31.6,11.5,198.9,47.4);
+p.nominalBounds = new cjs.Rectangle(-256,-112.7,198.9,47.4);
 
 
 (lib.Символ18 = function(mode,startPosition,loop) {
@@ -1236,7 +1236,7 @@ p.nominalBounds = new cjs.Rectangle(0,0,499.4,309.9);
 	// Слой 10
 	this.txt2 = new lib.Символ29копия();
 	this.txt2.parent = this;
-	this.txt2.setTransform(137.6,366.9,0.88,0.88,0,0,0,109.9,83.2);
+	this.txt2.setTransform(137.6,336.9,0.88,0.88,0,0,0,109.9,83.2);
 
 	this.txt = new lib.Символ29();
 	this.txt.parent = this;
@@ -1266,7 +1266,7 @@ p.nominalBounds = new cjs.Rectangle(0,0,499.4,309.9);
 	this.timeline.addTween(cjs.Tween.get(this.fon).wait(1));
 
 }).prototype = p = new cjs.MovieClip();
-p.nominalBounds = new cjs.Rectangle(241,9,1285.1,543.6);
+p.nominalBounds = new cjs.Rectangle(115.6,9,1410.5,543.6);
 // library properties:
 lib.properties = {
 	width: 600,
@@ -1275,19 +1275,19 @@ lib.properties = {
 	color: "#FFFFFF",
 	opacity: 1.00,
 	manifest: [
-		{src:"images/deva.png?1485514053864", id:"deva"},
-		{src:"images/divava.png?1485514053864", id:"divava"},
-		{src:"images/dol1.png?1485514053864", id:"dol1"},
-		{src:"images/dol3.png?1485514053864", id:"dol3"},
-		{src:"images/dol5.png?1485514053864", id:"dol5"},
-		{src:"images/dol8.png?1485514053864", id:"dol8"},
-		{src:"images/dol_pop.png?1485514053864", id:"dol_pop"},
-		{src:"images/fon_600.jpg?1485514053864", id:"fon_600"},
-		{src:"images/hand.png?1485514053864", id:"hand"},
-		{src:"images/hand_p.png?1485514053864", id:"hand_p"},
-		{src:"images/kabl.png?1485514053864", id:"kabl"},
-		{src:"images/logo_pokerdom.png?1485514053864", id:"logo_pokerdom"},
-		{src:"images/nog.png?1485514053864", id:"nog"}
+		{src:"images/deva.png?1485514674966", id:"deva"},
+		{src:"images/divava.png?1485514674966", id:"divava"},
+		{src:"images/dol1.png?1485514674966", id:"dol1"},
+		{src:"images/dol3.png?1485514674967", id:"dol3"},
+		{src:"images/dol5.png?1485514674967", id:"dol5"},
+		{src:"images/dol8.png?1485514674967", id:"dol8"},
+		{src:"images/dol_pop.png?1485514674967", id:"dol_pop"},
+		{src:"images/fon_600.jpg?1485514674967", id:"fon_600"},
+		{src:"images/hand.png?1485514674967", id:"hand"},
+		{src:"images/hand_p.png?1485514674967", id:"hand_p"},
+		{src:"images/kabl.png?1485514674967", id:"kabl"},
+		{src:"images/logo_pokerdom.png?1485514674967", id:"logo_pokerdom"},
+		{src:"images/nog.png?1485514674967", id:"nog"}
 	],
 	preloads: []
 };
