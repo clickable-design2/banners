@@ -8,8 +8,8 @@ lib.ssMetadata = [];
 
 
 
-(lib.body = function() {
-	this.initialize(img.body);
+(lib.body1 = function() {
+	this.initialize(img.body1);
 }).prototype = p = new cjs.Bitmap();
 p.nominalBounds = new cjs.Rectangle(0,0,274,705);
 
@@ -652,12 +652,12 @@ p.nominalBounds = new cjs.Rectangle(0,0,38.3,316.9);
 (lib.Символ18 = function(mode,startPosition,loop) {
 	this.initialize(mode,startPosition,loop,{});
 
-	// Слой 1
+	// Слой 2
 	this.instance = new lib.Символ24();
 	this.instance.parent = this;
 	this.instance.setTransform(31.5,126,1,1,0,0,0,31.5,126);
 
-	this.timeline.addTween(cjs.Tween.get(this.instance).to({rotation:1.3,x:29.4,y:126.3},7,cjs.Ease.get(-1)).to({rotation:2.7,x:27.2,y:126.5},7,cjs.Ease.get(1)).to({rotation:1.3,x:29.6,y:126.4},8,cjs.Ease.get(-1)).to({rotation:0,x:31.5,y:126},7,cjs.Ease.get(1)).wait(1));
+	this.timeline.addTween(cjs.Tween.get(this.instance).to({regX:31.6,scaleY:1,skewX:1.3,skewY:-2,x:35.3,y:123.9},19).to({regX:31.5,scaleY:1,skewX:0,skewY:0,x:31.5,y:126},20).wait(1));
 
 }).prototype = p = new cjs.MovieClip();
 p.nominalBounds = new cjs.Rectangle(0,0,63,252);
@@ -675,7 +675,7 @@ p.nominalBounds = new cjs.Rectangle(0,0,63,252);
 	this.timeline.addTween(cjs.Tween.get(this.instance).wait(29).to({_off:false},0).wait(1).to({alpha:0.559},0).to({_off:true},1).wait(39));
 
 	// Слой 1
-	this.instance_1 = new lib.body();
+	this.instance_1 = new lib.body1();
 	this.instance_1.parent = this;
 	this.instance_1.setTransform(0,0,0.775,0.775);
 
@@ -1526,18 +1526,18 @@ lib.properties = {
 	color: "#FFFFFF",
 	opacity: 1.00,
 	manifest: [
-		{src:"images/body.png?1485533865222", id:"body"},
-		{src:"images/dolars.png?1485533865222", id:"dolars"},
-		{src:"images/fon.jpg?1485533865223", id:"fon"},
-		{src:"images/hand.png?1485533865223", id:"hand"},
-		{src:"images/hand_curs.png?1485533865223", id:"hand_curs"},
-		{src:"images/hannd.png?1485533865223", id:"hannd"},
-		{src:"images/is3.png?1485533865223", id:"is3"},
-		{src:"images/is4.png?1485533865223", id:"is4"},
-		{src:"images/is6.png?1485533865223", id:"is6"},
-		{src:"images/is7.png?1485533865223", id:"is7"},
-		{src:"images/shadow.png?1485533865223", id:"shadow"},
-		{src:"images/tst.png?1485533865223", id:"tst"}
+		{src:"images/body1.png?1485534258022", id:"body1"},
+		{src:"images/dolars.png?1485534258022", id:"dolars"},
+		{src:"images/fon.jpg?1485534258022", id:"fon"},
+		{src:"images/hand.png?1485534258022", id:"hand"},
+		{src:"images/hand_curs.png?1485534258022", id:"hand_curs"},
+		{src:"images/hannd.png?1485534258022", id:"hannd"},
+		{src:"images/is3.png?1485534258022", id:"is3"},
+		{src:"images/is4.png?1485534258022", id:"is4"},
+		{src:"images/is6.png?1485534258022", id:"is6"},
+		{src:"images/is7.png?1485534258022", id:"is7"},
+		{src:"images/shadow.png?1485534258022", id:"shadow"},
+		{src:"images/tst.png?1485534258022", id:"tst"}
 	],
 	preloads: []
 };
