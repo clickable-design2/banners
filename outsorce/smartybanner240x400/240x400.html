@@ -16,6 +16,13 @@
 <script src="https://code.createjs.com/createjs-2015.11.26.min.js"></script>
 <script src="240x400.js?1485852347257"></script>
 <script>
+document.addEventListener("click", fl_ClickToGoToWebPage);
+
+function fl_ClickToGoToWebPage() {
+window.open(clickTAG, "_blank");
+}
+</script>
+<script>
 var canvas, stage, exportRoot, anim_container, dom_overlay_container, fnStartAnimation;
 function init() {
 	canvas = document.getElementById("canvas");
