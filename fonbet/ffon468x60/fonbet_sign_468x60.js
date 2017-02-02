@@ -1278,7 +1278,7 @@ p.nominalBounds = new cjs.Rectangle(-391.7,-159.3,719.9,367.3);
 		
 			var script = document.createElement('script');
 			script.type = "text/javascript";
-			script.src = "http://root-srv.fonbet.com/BetsService/line/news/all/ru?callback=fonbet_callback&" + Math.random();
+			script.src = "https://root-srv.fonbet.com/BetsService/line/news/all/ru?callback=fonbet_callback&" + Math.random();
 		
 			document.head.appendChild(script);
 		}
