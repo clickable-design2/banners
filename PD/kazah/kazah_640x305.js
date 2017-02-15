@@ -44,6 +44,12 @@ p.nominalBounds = new cjs.Rectangle(0,0,176,180);
 p.nominalBounds = new cjs.Rectangle(0,0,146,200);
 
 
+(lib.logo = function() {
+	this.initialize(img.logo);
+}).prototype = p = new cjs.Bitmap();
+p.nominalBounds = new cjs.Rectangle(0,0,258,58);
+
+
 (lib.queen = function() {
 	this.initialize(img.queen);
 }).prototype = p = new cjs.Bitmap();
@@ -59,13 +65,7 @@ p.nominalBounds = new cjs.Rectangle(0,0,40,273);
 (lib.valet = function() {
 	this.initialize(img.valet);
 }).prototype = p = new cjs.Bitmap();
-p.nominalBounds = new cjs.Rectangle(0,0,146,200);
-
-
-(lib.Растровоеизображение18 = function() {
-	this.initialize(img.Растровоеизображение18);
-}).prototype = p = new cjs.Bitmap();
-p.nominalBounds = new cjs.Rectangle(0,0,258,58);// helper functions:
+p.nominalBounds = new cjs.Rectangle(0,0,146,200);// helper functions:
 
 function mc_symbol_clone() {
 	var clone = this._cloneProps(new this.constructor(this.mode, this.startPosition, this.loop));
@@ -240,7 +240,7 @@ function getMCSymbolPrototype(symbol, nominalBounds, frameBounds) {
 	this.initialize(mode,startPosition,loop,{});
 
 	// Слой 1
-	this.instance = new lib.Растровоеизображение18();
+	this.instance = new lib.logo();
 	this.instance.parent = this;
 
 	this.timeline.addTween(cjs.Tween.get(this.instance).wait(1));
@@ -997,16 +997,16 @@ lib.properties = {
 	color: "#FFFFFF",
 	opacity: 1.00,
 	manifest: [
-		{src:"images/_10.png?1487173447665", id:"_10"},
-		{src:"images/back_card.png?1487173447665", id:"back_card"},
-		{src:"images/bg.jpg?1487173447665", id:"bg"},
-		{src:"images/btn.jpg?1487173447665", id:"btn"},
-		{src:"images/chip1.png?1487173447665", id:"chip1"},
-		{src:"images/king.jpg?1487173447665", id:"king"},
-		{src:"images/queen.jpg?1487173447665", id:"queen"},
-		{src:"images/uzor.png?1487173447665", id:"uzor"},
-		{src:"images/valet.jpg?1487173447665", id:"valet"},
-		{src:"images/Растровоеизображение18.png?1487173447665", id:"Растровоеизображение18"}
+		{src:"images/_10.png?1487173530826", id:"_10"},
+		{src:"images/back_card.png?1487173530826", id:"back_card"},
+		{src:"images/bg.jpg?1487173530826", id:"bg"},
+		{src:"images/btn.jpg?1487173530826", id:"btn"},
+		{src:"images/chip1.png?1487173530826", id:"chip1"},
+		{src:"images/king.jpg?1487173530826", id:"king"},
+		{src:"images/logo.png?1487173530826", id:"logo"},
+		{src:"images/queen.jpg?1487173530826", id:"queen"},
+		{src:"images/uzor.png?1487173530826", id:"uzor"},
+		{src:"images/valet.jpg?1487173530826", id:"valet"}
 	],
 	preloads: []
 };
