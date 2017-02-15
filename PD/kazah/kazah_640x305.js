@@ -8,8 +8,8 @@ lib.ssMetadata = [];
 
 
 
-(lib._10 = function() {
-	this.initialize(img._10);
+(lib.b10 = function() {
+	this.initialize(img.b10);
 }).prototype = p = new cjs.Bitmap();
 p.nominalBounds = new cjs.Rectangle(0,0,129,100);
 
@@ -629,7 +629,7 @@ p.nominalBounds = new cjs.Rectangle(5.1,9.5,291.3,14.2);
 	this.timeline.addTween(cjs.Tween.get(this.instance).wait(1));
 
 	// Слой 1
-	this.instance_1 = new lib._10();
+	this.instance_1 = new lib.b10();
 	this.instance_1.parent = this;
 
 	this.timeline.addTween(cjs.Tween.get(this.instance_1).wait(1));
@@ -997,16 +997,16 @@ lib.properties = {
 	color: "#FFFFFF",
 	opacity: 1.00,
 	manifest: [
-		{src:"images/_10.png?1487173530826", id:"_10"},
-		{src:"images/back_card.png?1487173530826", id:"back_card"},
-		{src:"images/bg.jpg?1487173530826", id:"bg"},
-		{src:"images/btn.jpg?1487173530826", id:"btn"},
-		{src:"images/chip1.png?1487173530826", id:"chip1"},
-		{src:"images/king.jpg?1487173530826", id:"king"},
-		{src:"images/logo.png?1487173530826", id:"logo"},
-		{src:"images/queen.jpg?1487173530826", id:"queen"},
-		{src:"images/uzor.png?1487173530826", id:"uzor"},
-		{src:"images/valet.jpg?1487173530826", id:"valet"}
+		{src:"images/b10.png?1487173651384", id:"b10"},
+		{src:"images/back_card.png?1487173651384", id:"back_card"},
+		{src:"images/bg.jpg?1487173651384", id:"bg"},
+		{src:"images/btn.jpg?1487173651384", id:"btn"},
+		{src:"images/chip1.png?1487173651384", id:"chip1"},
+		{src:"images/king.jpg?1487173651384", id:"king"},
+		{src:"images/logo.png?1487173651384", id:"logo"},
+		{src:"images/queen.jpg?1487173651384", id:"queen"},
+		{src:"images/uzor.png?1487173651384", id:"uzor"},
+		{src:"images/valet.jpg?1487173651384", id:"valet"}
 	],
 	preloads: []
 };
