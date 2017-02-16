@@ -126,40 +126,76 @@ function getMCSymbolPrototype(symbol, nominalBounds, frameBounds) {
 (lib.Символ38 = function(mode,startPosition,loop) {
 	this.initialize(mode,startPosition,loop,{});
 
+	// Слой 2 (mask)
+	var mask = new cjs.Shape();
+	mask._off = true;
+	mask.graphics.p("ApPtwISfAAQAMAAALAFQALAEAIAIQAIAIAEALQAFALAAAMIAAZzQAAAMgFALQgEALgIAIQgIAIgLAEQgLAFgMAAIyfAAQgZgBgRgQQgQgRgBgZIAA5zQAAgMAFgLQAEgLAIgIQAIgIALgEQALgFAMAAg");
+	mask.setTransform(65.1,88.9);
+
 	// Слой 1
 	this.instance = new lib.valet();
 	this.instance.parent = this;
 	this.instance.setTransform(0,0,0.892,0.892);
 
+	var maskedShapeInstanceList = [this.instance];
+
+	for(var shapedInstanceItr = 0; shapedInstanceItr < maskedShapeInstanceList.length; shapedInstanceItr++) {
+		maskedShapeInstanceList[shapedInstanceItr].mask = mask;
+	}
+
 	this.timeline.addTween(cjs.Tween.get(this.instance).wait(1));
 
-}).prototype = getMCSymbolPrototype(lib.Символ38, new cjs.Rectangle(0,0,130.2,178.4), null);
+}).prototype = getMCSymbolPrototype(lib.Символ38, new cjs.Rectangle(0,0.8,130.2,177), null);
 
 
 (lib.Символ37 = function(mode,startPosition,loop) {
 	this.initialize(mode,startPosition,loop,{});
+
+	// Слой 2 (mask)
+	var mask = new cjs.Shape();
+	mask._off = true;
+	mask.graphics.p("ApPtwISfAAQAMAAALAFQALAEAIAIQAIAIAEALQAFALAAAMIAAZzQAAAMgFALQgEALgIAIQgIAIgLAEQgLAFgMAAIyfAAQgZgBgRgQQgQgRgBgZIAA5zQAAgMAFgLQAEgLAIgIQAIgIALgEQALgFAMAAg");
+	mask.setTransform(65.1,88.9);
 
 	// Слой 1
 	this.instance = new lib.queen();
 	this.instance.parent = this;
 	this.instance.setTransform(0,0,0.892,0.892);
 
+	var maskedShapeInstanceList = [this.instance];
+
+	for(var shapedInstanceItr = 0; shapedInstanceItr < maskedShapeInstanceList.length; shapedInstanceItr++) {
+		maskedShapeInstanceList[shapedInstanceItr].mask = mask;
+	}
+
 	this.timeline.addTween(cjs.Tween.get(this.instance).wait(1));
 
-}).prototype = getMCSymbolPrototype(lib.Символ37, new cjs.Rectangle(0,0,130.2,178.4), null);
+}).prototype = getMCSymbolPrototype(lib.Символ37, new cjs.Rectangle(0,0.8,130.2,177), null);
 
 
 (lib.Символ36 = function(mode,startPosition,loop) {
 	this.initialize(mode,startPosition,loop,{});
+
+	// Слой 2 (mask)
+	var mask = new cjs.Shape();
+	mask._off = true;
+	mask.graphics.p("ApPtwISfAAQAMAAALAFQALAEAIAIQAIAIAEALQAFALAAAMIAAZzQAAAMgFALQgEALgIAIQgIAIgLAEQgLAFgMAAIyfAAQgZgBgRgQQgQgRgBgZIAA5zQAAgMAFgLQAEgLAIgIQAIgIALgEQALgFAMAAg");
+	mask.setTransform(65.1,88.9);
 
 	// Слой 1
 	this.instance = new lib.king();
 	this.instance.parent = this;
 	this.instance.setTransform(0,0,0.892,0.892);
 
+	var maskedShapeInstanceList = [this.instance];
+
+	for(var shapedInstanceItr = 0; shapedInstanceItr < maskedShapeInstanceList.length; shapedInstanceItr++) {
+		maskedShapeInstanceList[shapedInstanceItr].mask = mask;
+	}
+
 	this.timeline.addTween(cjs.Tween.get(this.instance).wait(1));
 
-}).prototype = getMCSymbolPrototype(lib.Символ36, new cjs.Rectangle(0,0,130.2,178.4), null);
+}).prototype = getMCSymbolPrototype(lib.Символ36, new cjs.Rectangle(0,0.8,130.2,177), null);
 
 
 (lib.Символ26 = function(mode,startPosition,loop) {
@@ -997,16 +1033,16 @@ lib.properties = {
 	color: "#FFFFFF",
 	opacity: 1.00,
 	manifest: [
-		{src:"images/b10.png?1487173651384", id:"b10"},
-		{src:"images/back_card.png?1487173651384", id:"back_card"},
-		{src:"images/bg.jpg?1487173651384", id:"bg"},
-		{src:"images/btn.jpg?1487173651384", id:"btn"},
-		{src:"images/chip1.png?1487173651384", id:"chip1"},
-		{src:"images/king.jpg?1487173651384", id:"king"},
-		{src:"images/logo.png?1487173651384", id:"logo"},
-		{src:"images/queen.jpg?1487173651384", id:"queen"},
-		{src:"images/uzor.png?1487173651384", id:"uzor"},
-		{src:"images/valet.jpg?1487173651384", id:"valet"}
+		{src:"images/b10.png?1487236141170", id:"b10"},
+		{src:"images/back_card.png?1487236141170", id:"back_card"},
+		{src:"images/bg.jpg?1487236141170", id:"bg"},
+		{src:"images/btn.jpg?1487236141170", id:"btn"},
+		{src:"images/chip1.png?1487236141170", id:"chip1"},
+		{src:"images/king.jpg?1487236141170", id:"king"},
+		{src:"images/logo.png?1487236141170", id:"logo"},
+		{src:"images/queen.jpg?1487236141170", id:"queen"},
+		{src:"images/uzor.png?1487236141170", id:"uzor"},
+		{src:"images/valet.jpg?1487236141170", id:"valet"}
 	],
 	preloads: []
 };
