@@ -652,7 +652,7 @@ p.nominalBounds = new cjs.Rectangle(-135.5,-305,271,610);
 	this.instance.parent = this;
 	this.instance.setTransform(240.5,62.5,1,1,0,0,0,240.5,62.5);
 
-	this.timeline.addTween(cjs.Tween.get(this.instance).wait(1).to({scaleX:1.19,scaleY:1.19,y:62.6},0).wait(1));
+	this.timeline.addTween(cjs.Tween.get(this.instance).wait(1).to({regX:240.3,scaleX:1.02,scaleY:1.02,y:62.6},0).wait(1));
 
 }).prototype = p = new cjs.MovieClip();
 p.nominalBounds = new cjs.Rectangle(0,0,481,125);
@@ -1202,20 +1202,20 @@ lib.properties = {
 	color: "#400200",
 	opacity: 1.00,
 	manifest: [
-		{src:"images/back.jpg?1487773651469", id:"back"},
-		{src:"images/basket.png?1487773651469", id:"basket"},
-		{src:"images/button.png?1487773651469", id:"button"},
-		{src:"images/chel.png?1487773651469", id:"chel"},
-		{src:"images/foot.png?1487773651469", id:"foot"},
-		{src:"images/footer.png?1487773651469", id:"footer"},
-		{src:"images/logo.png?1487773651469", id:"logo"},
-		{src:"images/logo1.png?1487773651469", id:"logo1"},
-		{src:"images/logo2.png?1487773651469", id:"logo2"},
-		{src:"images/logo3.png?1487773651469", id:"logo3"},
-		{src:"images/logo4.png?1487773651469", id:"logo4"},
-		{src:"images/logo5.png?1487773651469", id:"logo5"},
-		{src:"images/LogosSportsbig.png?1487773651469", id:"LogosSportsbig"},
-		{src:"images/LogosSports_small.png?1487773651469", id:"LogosSports_small"}
+		{src:"images/back.jpg?1487774335306", id:"back"},
+		{src:"images/basket.png?1487774335306", id:"basket"},
+		{src:"images/button.png?1487774335306", id:"button"},
+		{src:"images/chel.png?1487774335306", id:"chel"},
+		{src:"images/foot.png?1487774335306", id:"foot"},
+		{src:"images/footer.png?1487774335306", id:"footer"},
+		{src:"images/logo.png?1487774335306", id:"logo"},
+		{src:"images/logo1.png?1487774335306", id:"logo1"},
+		{src:"images/logo2.png?1487774335306", id:"logo2"},
+		{src:"images/logo3.png?1487774335306", id:"logo3"},
+		{src:"images/logo4.png?1487774335306", id:"logo4"},
+		{src:"images/logo5.png?1487774335306", id:"logo5"},
+		{src:"images/LogosSportsbig.png?1487774335306", id:"LogosSportsbig"},
+		{src:"images/LogosSports_small.png?1487774335306", id:"LogosSports_small"}
 	],
 	preloads: []
 };
