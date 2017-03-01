@@ -724,11 +724,30 @@ p.nominalBounds = new cjs.Rectangle(0,0,175,54);
 
 	this.timeline.addTween(cjs.Tween.get(this.instance).wait(1));
 
-	// Слой 1
-	this.instance_1 = new lib.cup();
+	// Слой 4 (mask)
+	var mask_1 = new cjs.Shape();
+	mask_1._off = true;
+	mask_1.graphics.p("AA/FqQhngEhagHQgQgBgGgGIgHgKQgDgHgDgDQgFgEgIgBIgPgBQgIgBgFgFQgGgGACgGIhBgoQgugcgSgVQg1g7APhvQALhRArhKIAdgyQAFgKAIgUIAMgeQAVgqAkggQAkgfAtgPQAbgJAjgEQAXgCAqgCQBLgCAvACQBEACA2AKQAkAHAWANQAhAVASAvQAMAgAGA3QANCAABB6QABAxgDAeQgFArgNAhQgQAogaAUQgMAKgiAQIg5AZQggAMgbAFQgWAEgjAAIglgBgAhnFMIA3AAIhLgCQAHACANAAg");
+	mask_1.setTransform(213.9,118.1);
+
+	// Слой 5
+	this.instance_1 = new lib.logo();
 	this.instance_1.parent = this;
+	this.instance_1.setTransform(208,82.2,0.779,0.779,26.7);
+
+	var maskedShapeInstanceList = [this.instance_1];
+
+	for(var shapedInstanceItr = 0; shapedInstanceItr < maskedShapeInstanceList.length; shapedInstanceItr++) {
+		maskedShapeInstanceList[shapedInstanceItr].mask = mask_1;
+	}
 
 	this.timeline.addTween(cjs.Tween.get(this.instance_1).wait(1));
+
+	// Слой 1
+	this.instance_2 = new lib.cup();
+	this.instance_2.parent = this;
+
+	this.timeline.addTween(cjs.Tween.get(this.instance_2).wait(1));
 
 }).prototype = getMCSymbolPrototype(lib.Символ34, new cjs.Rectangle(0,0,345,466), null);
 
@@ -891,7 +910,7 @@ p.nominalBounds = new cjs.Rectangle(683,272.1,162,141);
 	this.timeline.addTween(cjs.Tween.get(this.instance).to({x:167.8,y:242.5},9,cjs.Ease.get(-1)).to({x:162.5,y:253},10,cjs.Ease.get(1)).to({x:167.5,y:243},10,cjs.Ease.get(-1)).to({x:172.5,y:233},10,cjs.Ease.get(1)).wait(1));
 
 }).prototype = p = new cjs.MovieClip();
-p.nominalBounds = new cjs.Rectangle(-172.4,0,517.4,627.3);
+p.nominalBounds = new cjs.Rectangle(-172.4,0,574,627.3);
 
 
 (lib.Символ33 = function(mode,startPosition,loop) {
@@ -904,7 +923,7 @@ p.nominalBounds = new cjs.Rectangle(-172.4,0,517.4,627.3);
 
 	this.timeline.addTween(cjs.Tween.get(this.instance).wait(1));
 
-}).prototype = getMCSymbolPrototype(lib.Символ33, new cjs.Rectangle(-144.4,0,517.4,627.3), null);
+}).prototype = getMCSymbolPrototype(lib.Символ33, new cjs.Rectangle(-144.4,0,574,627.3), null);
 
 
 (lib.Символ13 = function(mode,startPosition,loop) {
@@ -1114,17 +1133,17 @@ lib.properties = {
 	color: "#FFFFFF",
 	opacity: 1.00,
 	manifest: [
-		{src:"images/BasketballPNG.png?1487771517620", id:"BasketballPNG"},
-		{src:"images/bball.png?1487771517620", id:"bball"},
-		{src:"images/btn.png?1487771517620", id:"btn"},
-		{src:"images/card.png?1487771517620", id:"card"},
-		{src:"images/cup.png?1487771517620", id:"cup"},
-		{src:"images/fball.png?1487771517621", id:"fball"},
-		{src:"images/hokey.png?1487771517621", id:"hokey"},
-		{src:"images/like.png?1487771517621", id:"like"},
-		{src:"images/logo.png?1487771517621", id:"logo"},
-		{src:"images/photo.jpg?1487771517621", id:"photo"},
-		{src:"images/tennis_PNG10405.png?1487771517621", id:"tennis_PNG10405"}
+		{src:"images/BasketballPNG.png?1488362041288", id:"BasketballPNG"},
+		{src:"images/bball.png?1488362041288", id:"bball"},
+		{src:"images/btn.png?1488362041288", id:"btn"},
+		{src:"images/card.png?1488362041288", id:"card"},
+		{src:"images/cup.png?1488362041288", id:"cup"},
+		{src:"images/fball.png?1488362041288", id:"fball"},
+		{src:"images/hokey.png?1488362041288", id:"hokey"},
+		{src:"images/like.png?1488362041288", id:"like"},
+		{src:"images/logo.png?1488362041288", id:"logo"},
+		{src:"images/photo.jpg?1488362041288", id:"photo"},
+		{src:"images/tennis_PNG10405.png?1488362041288", id:"tennis_PNG10405"}
 	],
 	preloads: []
 };
