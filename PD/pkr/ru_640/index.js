@@ -1,9 +1,7 @@
 (function (lib, img, cjs, ss, an) {
 
 var p; // shortcut to reference prototypes
-lib.ssMetadata = [
-		{name:"index_atlas_", frames: [[0,0,703,305],[602,307,331,96],[0,307,600,168],[705,222,210,37],[719,405,109,109],[830,405,105,112],[705,0,298,220],[602,405,115,114]]}
-];
+lib.ssMetadata = [];
 
 
 // symbols:
@@ -11,59 +9,45 @@ lib.ssMetadata = [
 
 
 (lib.bg = function() {
-	this.spriteSheet = ss["index_atlas_"];
-	this.gotoAndStop(0);
-}).prototype = p = new cjs.Sprite();
-
+	this.initialize(img.bg);
+}).prototype = p = new cjs.Bitmap();
+p.nominalBounds = new cjs.Rectangle(0,0,703,305);
 
 
 (lib.btn = function() {
-	this.spriteSheet = ss["index_atlas_"];
-	this.gotoAndStop(1);
-}).prototype = p = new cjs.Sprite();
-
+	this.initialize(img.btn);
+}).prototype = p = new cjs.Bitmap();
+p.nominalBounds = new cjs.Rectangle(0,0,331,96);
 
 
 (lib.eu1000 = function() {
-	this.spriteSheet = ss["index_atlas_"];
-	this.gotoAndStop(2);
-}).prototype = p = new cjs.Sprite();
-
+	this.initialize(img.eu1000);
+}).prototype = p = new cjs.Bitmap();
+p.nominalBounds = new cjs.Rectangle(0,0,600,168);
 
 
 (lib.logo = function() {
-	this.spriteSheet = ss["index_atlas_"];
-	this.gotoAndStop(3);
-}).prototype = p = new cjs.Sprite();
-
+	this.initialize(img.logo);
+}).prototype = p = new cjs.Bitmap();
+p.nominalBounds = new cjs.Rectangle(0,0,210,37);
 
 
 (lib.percent = function() {
-	this.spriteSheet = ss["index_atlas_"];
-	this.gotoAndStop(4);
-}).prototype = p = new cjs.Sprite();
-
+	this.initialize(img.percent);
+}).prototype = p = new cjs.Bitmap();
+p.nominalBounds = new cjs.Rectangle(0,0,109,109);
 
 
 (lib.slot = function() {
-	this.spriteSheet = ss["index_atlas_"];
-	this.gotoAndStop(5);
-}).prototype = p = new cjs.Sprite();
-
-
-
-(lib.table = function() {
-	this.spriteSheet = ss["index_atlas_"];
-	this.gotoAndStop(6);
-}).prototype = p = new cjs.Sprite();
-
+	this.initialize(img.slot);
+}).prototype = p = new cjs.Bitmap();
+p.nominalBounds = new cjs.Rectangle(0,0,105,112);
 
 
 (lib.vip = function() {
-	this.spriteSheet = ss["index_atlas_"];
-	this.gotoAndStop(7);
-}).prototype = p = new cjs.Sprite();
-// helper functions:
+	this.initialize(img.vip);
+}).prototype = p = new cjs.Bitmap();
+p.nominalBounds = new cjs.Rectangle(0,0,115,114);// helper functions:
 
 function mc_symbol_clone() {
 	var clone = this._cloneProps(new this.constructor(this.mode, this.startPosition, this.loop));
@@ -375,18 +359,6 @@ function getMCSymbolPrototype(symbol, nominalBounds, frameBounds) {
 	this.timeline.addTween(cjs.Tween.get(this.instance).wait(1));
 
 }).prototype = getMCSymbolPrototype(lib.Символ6, new cjs.Rectangle(0,0,331,96), null);
-
-
-(lib.Символ3 = function(mode,startPosition,loop) {
-	this.initialize(mode,startPosition,loop,{});
-
-	// Слой 1
-	this.instance = new lib.table();
-	this.instance.parent = this;
-
-	this.timeline.addTween(cjs.Tween.get(this.instance).wait(1));
-
-}).prototype = getMCSymbolPrototype(lib.Символ3, new cjs.Rectangle(0,0,298,220), null);
 
 
 (lib.Символ2 = function(mode,startPosition,loop) {
@@ -740,23 +712,15 @@ p.nominalBounds = new cjs.Rectangle(-34,-10,536.1,224.6);
 
 	this.timeline.addTween(cjs.Tween.get(this.instance_1).wait(1));
 
-	// Слой 1
-	this.instance_2 = new lib.Символ3();
+	// Слой 2
+	this.instance_2 = new lib.Символ1();
 	this.instance_2.parent = this;
-	this.instance_2.setTransform(828.2,398.6,1,1,0,0,0,149,110);
-	this.instance_2.alpha = 0.52;
+	this.instance_2.setTransform(320,152.5,1,1,0,0,0,351.5,152.5);
 
 	this.timeline.addTween(cjs.Tween.get(this.instance_2).wait(1));
 
-	// Слой 2
-	this.instance_3 = new lib.Символ1();
-	this.instance_3.parent = this;
-	this.instance_3.setTransform(320,152.5,1,1,0,0,0,351.5,152.5);
-
-	this.timeline.addTween(cjs.Tween.get(this.instance_3).wait(1));
-
 }).prototype = p = new cjs.MovieClip();
-p.nominalBounds = new cjs.Rectangle(288.5,152.5,1008.7,508.6);
+p.nominalBounds = new cjs.Rectangle(288.5,152.5,703,305);
 // library properties:
 lib.properties = {
 	width: 640,
@@ -765,7 +729,13 @@ lib.properties = {
 	color: "#FFFFFF",
 	opacity: 1.00,
 	manifest: [
-		{src:"images/index_atlas_.png?1488528555474", id:"index_atlas_"}
+		{src:"images/bg.jpg?1488528767742", id:"bg"},
+		{src:"images/btn.png?1488528767742", id:"btn"},
+		{src:"images/eu1000.png?1488528767742", id:"eu1000"},
+		{src:"images/logo.png?1488528767742", id:"logo"},
+		{src:"images/percent.png?1488528767742", id:"percent"},
+		{src:"images/slot.png?1488528767742", id:"slot"},
+		{src:"images/vip.png?1488528767742", id:"vip"}
 	],
 	preloads: []
 };
