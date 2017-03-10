@@ -1,0 +1,51 @@
+lamodaFeed([
+	{
+		"name": "Костюм спортивный Aarhon",
+		"description": "Костюм спортивный Aarhon. Цвет: серый. Сезон: Осень-зима 2016/2017. С бесплатной доставкой и примеркой на Lamoda.",
+		"picture": "http://pi.lmcdn.ru/img600x866/A/A/AA002EMNFH60_3980426_1_v2.jpg",
+		"price": "2567.28",
+        "oldprice": "4286.10",
+	},
+	{
+		"name": "Костюм спортивный Aarhon",
+		"description": "Костюм спортивный Aarhon. Цвет: серый. Сезон: Осень-зима 2016/2017. С бесплатной доставкой и примеркой на Lamoda.",
+		"picture": "http://pi.lmcdn.ru/img600x866/A/A/AA002EMNFH60_3980426_1_v2.jpg",
+		"price": "2567.28",
+        "oldprice": "4286.10",
+	},
+    {
+		"name": "Костюм спортивный Aarhon",
+		"description": "Костюм спортивный Aarhon. Цвет: серый. Сезон: Осень-зима 2016/2017. С бесплатной доставкой и примеркой на Lamoda.",
+		"picture": "http://pi.lmcdn.ru/img600x866/A/A/AA002EMNFH60_3980426_1_v2.jpg",
+		"price": "2567.28",
+        "oldprice": "4286.10",
+	},
+    {
+		"name": "Костюм спортивный Aarhon",
+		"description": "Костюм спортивный Aarhon. Цвет: серый. Сезон: Осень-зима 2016/2017. С бесплатной доставкой и примеркой на Lamoda.",
+		"picture": "http://pi.lmcdn.ru/img600x866/A/A/AA002EMNFH60_3980426_1_v2.jpg",
+		"price": "2567.28",
+        "oldprice": "4286.10",
+	},
+    {
+		"name": "Костюм спортивный Aarhon",
+		"description": "Костюм спортивный Aarhon. Цвет: серый. Сезон: Осень-зима 2016/2017. С бесплатной доставкой и примеркой на Lamoda.",
+		"picture": "http://pi.lmcdn.ru/img600x866/A/A/AA002EMNFH60_3980426_1_v2.jpg",
+		"price": "2567.28",
+        "oldprice": "4286.10",
+	},
+    {
+		"name": "Костюм спортивный Aarhon",
+		"description": "Костюм спортивный Aarhon. Цвет: серый. Сезон: Осень-зима 2016/2017. С бесплатной доставкой и примеркой на Lamoda.",
+		"picture": "http://pi.lmcdn.ru/img600x866/A/A/AA002EMNFH60_3980426_1_v2.jpg",
+		"price": "2567.28",
+        "oldprice": "4286.10",
+	},
+    {
+		"name": "Костюм спортивный Aarhon",
+		"description": "Костюм спортивный Aarhon. Цвет: серый. Сезон: Осень-зима 2016/2017. С бесплатной доставкой и примеркой на Lamoda.",
+		"picture": "http://pi.lmcdn.ru/img600x866/A/A/AA002EMNFH60_3980426_1_v2.jpg",
+		"price": "2567.28",
+        "oldprice": "4286.10",
+	},
+]);
