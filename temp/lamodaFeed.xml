@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE yml_catalog SYSTEM "shops.dtd">
+<yml_catalog date="2017-03-02 08:41:42">
+  <shop>
+    <name>lamoda.ru</name>
+    <company>ООО Купишуз</company>
+    <url>http://www.lamoda.ru</url>
+    <currencies>
+      <currency id="RUB"/>
+    </currencies>
+    <categories>
+      <category id="201">Кроссовки</category>
+    </categories>
+    <offers>
+      <offer id="3111167">
+        <name>Костюм спортивный Aarhon</name>
+        <categoryId>201</categoryId>
+        <picture>http://pi.lmcdn.ru/img600x866/A/A/AA002EMNFH60_3980426_1_v2.jpg</picture>
+        <description>Костюм спортивный Aarhon. Цвет: серый. Сезон: Осень-зима 2016/2017. С бесплатной доставкой и примеркой на Lamoda.</description>
+        <price>2567.28</price>
+        <oldprice>4286.10</oldprice>
+        <currencyId>UAH</currencyId>
+        <currencyategoryId>201</currencyategoryId>
+      </offer>
+      <offer id="3111168">
+        <name>Костюм спортивный Aarhon</name>
+        <categoryId>201</categoryId>
+        <picture>http://pi.lmcdn.ru/img600x866/A/A/AA002EMNFH60_3980426_1_v2.jpg</picture>
+        <description>Костюм спортивный Aarhon. Цвет: серый. Сезон: Осень-зима 2016/2017. С бесплатной доставкой и примеркой на Lamoda.</description>
+        <price>2567.28</price>
+        <oldprice>4286.10</oldprice>
+        <currencyId>UAH</currencyId>
+        <currencyategoryId>201</currencyategoryId>
+      </offer>
+      <offer id="3111175">
+        <name>Костюм спортивный Aarhon</name>
+        <categoryId>201</categoryId>
+        <picture>http://pi.lmcdn.ru/img600x866/A/A/AA002EMNFH67_3980428_1_v2.jpg</picture>
+        <description>Костюм спортивный Aarhon. Цвет: черный. Сезон: Осень-зима 2016/2017. С бесплатной доставкой и примеркой на Lamoda.</description>
+        <price>3424.59</price>
+        <oldprice>4286.10</oldprice>
+        <currencyId>UAH</currencyId>
+        <currencyategoryId>201</currencyategoryId>
+      </offer>
+      <offer id="3111174">
+        <name>Костюм спортивный Aarhon</name>
+        <categoryId>201</categoryId>
+        <picture>http://pi.lmcdn.ru/img600x866/A/A/AA002EMNFH67_3980428_1_v2.jpg</picture>
+        <description>Костюм спортивный Aarhon. Цвет: черный. Сезон: Осень-зима 2016/2017. С бесплатной доставкой и примеркой на Lamoda.</description>
+        <price>3424.59</price>
+        <oldprice>4286.10</oldprice>
+        <currencyId>UAH</currencyId>
+        <currencyategoryId>201</currencyategoryId>
+      </offer>
+      <offer id="3111176">
+        <name>Костюм спортивный Aarhon</name>
+        <categoryId>201</categoryId>
+        <picture>http://pi.lmcdn.ru/img600x866/A/A/AA002EMNFH67_3980428_1_v2.jpg</picture>
+        <description>Костюм спортивный Aarhon. Цвет: черный. Сезон: Осень-зима 2016/2017. С бесплатной доставкой и примеркой на Lamoda.</description>
+        <price>3424.59</price>
+        <oldprice>4286.10</oldprice>
+        <currencyId>UAH</currencyId>
+        <currencyategoryId>201</currencyategoryId>
+      </offer>
+      <offer id="3245870">
+        <name>Костюм спортивный Aarhon</name>
+        <categoryId>201</categoryId>
+        <picture>http://pi.lmcdn.ru/img600x866/A/A/AA002EMNFH67_3980428_1_v2.jpg</picture>
+        <description>Костюм спортивный Aarhon. Цвет: черный. Сезон: Осень-зима 2016/2017. С бесплатной доставкой и примеркой на Lamoda.</description>
+        <price>3424.59</price>
+        <oldprice>4286.10</oldprice>
+        <currencyId>UAH</currencyId>
+        <currencyategoryId>201</currencyategoryId>
+      </offer>
+      <offer id="3114881">
+        <name>Костюм спортивный Aarhon</name>
+        <categoryId>201</categoryId>
+        <picture>http://pi.lmcdn.ru/img600x866/A/A/AA002EMNFH62_3983101_1_v2.jpg</picture>
+        <description>Костюм спортивный Aarhon. Цвет: синий. Сезон: Осень-зима 2016/2017. С бесплатной доставкой и примеркой на Lamoda.</description>
+        <price>4286.10</price>
+        <oldprice/>
+        <currencyId>UAH</currencyId>
+        <currencyategoryId>201</currencyategoryId>
+      </offer>
+      <offer id="3114877">
+        <name>Костюм спортивный Aarhon</name>
+        <categoryId>201</categoryId>
+        <picture>http://pi.lmcdn.ru/img600x866/A/A/AA002EMNFH61_3983100_1_v2.jpg</picture>
+        <description>Костюм спортивный Aarhon. Цвет: черный. Сезон: Осень-зима 2016/2017. С бесплатной доставкой и примеркой на Lamoda.</description>
+        <price>3424.59</price>
+        <oldprice>4286.10</oldprice>
+        <currencyId>UAH</currencyId>
+        <currencyategoryId>201</currencyategoryId>
+      </offer>
+      <offer id="3114883">
+        <name>Костюм спортивный Aarhon</name>
+        <categoryId>201</categoryId>
+        <picture>http://pi.lmcdn.ru/img600x866/A/A/AA002EMNFH63_3983102_1_v2.jpg</picture>
+        <description>Костюм спортивный Aarhon. Цвет: серый. Сезон: Осень-зима 2016/2017. С бесплатной доставкой и примеркой на Lamoda.</description>
+        <price>4286.10</price>
+        <oldprice/>
+        <currencyId>UAH</currencyId>
+        <currencyategoryId>201</currencyategoryId>
+      </offer>
+      <offer id="3111171">
+        <name>Костюм спортивный Aarhon</name>
+        <categoryId>201</categoryId>
+        <picture>http://pi.lmcdn.ru/img600x866/A/A/AA002EMNFH64_3980427_1_v2.jpg</picture>
+        <description>Костюм спортивный Aarhon. Цвет: серый. Сезон: Осень-зима 2016/2017. С бесплатной доставкой и примеркой на Lamoda.</description>
+        <price>3853.25</price>
+        <oldprice>4286.10</oldprice>
+        <currencyId>UAH</currencyId>
+        <currencyategoryId>201</currencyategoryId>
+      </offer>
+      <offer id="3111173">
+        <name>Костюм спортивный Aarhon</name>
+        <categoryId>201</categoryId>
+        <picture>http://pi.lmcdn.ru/img600x866/A/A/AA002EMNFH64_3980427_1_v2.jpg</picture>
+        <description>Костюм спортивный Aarhon. Цвет: серый. Сезон: Осень-зима 2016/2017. С бесплатной доставкой и примеркой на Lamoda.</description>
+        <price>3853.25</price>
+        <oldprice>4286.10</oldprice>
+        <currencyId>UAH</currencyId>
+        <currencyategoryId>201</currencyategoryId>
+      </offer>
+      <offer id="3111172">
+        <name>Костюм спортивный Aarhon</name>
+        <categoryId>201</categoryId>
+        <picture>http://pi.lmcdn.ru/img600x866/A/A/AA002EMNFH64_3980427_1_v2.jpg</picture>
+        <description>Костюм спортивный Aarhon. Цвет: серый. Сезон: Осень-зима 2016/2017. С бесплатной доставкой и примеркой на Lamoda.</description>
+        <price>3853.25</price>
+        <oldprice>4286.10</oldprice>
+        <currencyId>UAH</currencyId>
+        <currencyategoryId>201</currencyategoryId>
+      </offer>
+      <offer id="3111170">
+        <name>Костюм спортивный Aarhon</name>
+        <categoryId>201</categoryId>
+        <picture>http://pi.lmcdn.ru/img600x866/A/A/AA002EMNFH64_3980427_1_v2.jpg</picture>
+        <description>Костюм спортивный Aarhon. Цвет: серый. Сезон: Осень-зима 2016/2017. С бесплатной доставкой и примеркой на Lamoda.</description>
+        <price>3853.25</price>
+        <oldprice>4286.10</oldprice>
+        <currencyId>UAH</currencyId>
+        <currencyategoryId>201</currencyategoryId>
+      </offer>
+      <offer id="3114888">
+        <name>Костюм спортивный Aarhon</name>
+        <categoryId>201</categoryId>
+        <picture>http://pi.lmcdn.ru/img600x866/A/A/AA002EMNFH66_3983103_1_v2.jpg</picture>
+        <description>Костюм спортивный Aarhon. Цвет: бордовый. Сезон: Осень-зима 2016/2017. С бесплатной доставкой и примеркой на Lamoda.</description>
+        <price>3853.25</price>
+        <oldprice>4286.10</oldprice>
+        <currencyId>UAH</currencyId>
+        <currencyategoryId>201</currencyategoryId>
+      </offer>
+      <offer id="3114901">
+        <name>Костюм спортивный Aarhon</name>
+        <categoryId>201</categoryId>
+        <picture>http://pi.lmcdn.ru/img600x866/A/A/AA002EMNFH70_3983106_1_v2.jpg</picture>
+        <description>Костюм спортивный Aarhon. Цвет: серый. Сезон: Осень-зима 2016/2017. С бесплатной доставкой и примеркой на Lamoda.</description>
+        <price>3424.59</price>
+        <oldprice>4286.10</oldprice>
+        <currencyId>UAH</currencyId>
+        <currencyategoryId>201</currencyategoryId>
+      </offer>
+      <offer id="3114898">
+        <name>Костюм спортивный Aarhon</name>
+        <categoryId>201</categoryId>
+        <picture>http://pi.lmcdn.ru/img600x866/A/A/AA002EMNFH69_3983105_1_v2.jpg</picture>
+        <description>Костюм спортивный Aarhon. Цвет: черный. Сезон: Осень-зима 2016/2017. С бесплатной доставкой и примеркой на Lamoda.</description>
+        <price>3424.59</price>
+        <oldprice>4286.10</oldprice>
+        <currencyId>UAH</currencyId>
+        <currencyategoryId>201</currencyategoryId>
+      </offer>
+      <offer id="3114897">
+        <name>Костюм спортивный Aarhon</name>
+        <categoryId>201</categoryId>
+        <picture>http://pi.lmcdn.ru/img600x866/A/A/AA002EMNFH69_3983105_1_v2.jpg</picture>
+        <description>Костюм спортивный Aarhon. Цвет: черный. Сезон: Осень-зима 2016/2017. С бесплатной доставкой и примеркой на Lamoda.</description>
+        <price>3424.59</price>
+        <oldprice>4286.10</oldprice>
+        <currencyId>UAH</currencyId>
+        <currencyategoryId>201</currencyategoryId>
+      </offer>
+    </offers>
+  </shop>
+</yml_catalog>
