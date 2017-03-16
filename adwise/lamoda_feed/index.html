@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+    <!--Head-->
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+        <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <!--Body-->
+    <body style="margin:0px;">
+        <div id="content_box" style="webkit-touch-callout: none; -webkit-user-select: none; -khtml-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none;">
+            <!--Title-->
+            <div id="title_box"><div></div></div>
+            <!--Pag Buttons-->
+            <div id="pag_buttons" class="remove">
+                <div id="left_pag_button" onclick="" style="left: 0px;"><div></div></div>
+                <div id="right_pag_button" onclick="" style="right: 0px;"><div style="transform: rotateY(180deg);"></div></div>
+            </div>
+            <!--Offers Feed Container-->
+            <div id="offers_feed_container">
+                <div id="slider" class="swipe">
+                    <div class="swipe-wrap">
+                        
+                    </div>
+                </div>
+            </div>
+            <!--Background-->
+            <div id="background_motion">
+                <div class="flash" style="background-color: rgb(255,97,97); z-index: 2;"></div>
+                <div style="background-color: rgb(241,241,241); z-index: 1;"></div>
+            </div>
+        </div>
+    </body>
+    <script src="swipe.min.js"></script>
+    <script>
+        
+        //Pag Buttons
+        var content_box = document.getElementById("content_box");
+        var pag_buttons = document.getElementById("pag_buttons");
+        
+        var prevBtn = document.getElementById("left_pag_button");
+        var nextBtn = document.getElementById("right_pag_button");
+        
+        prevBtn.addEventListener("click", function(){mySwipe.prev(); console.log("prev");});
+        nextBtn.addEventListener("click", function(){mySwipe.next(); console.log("next");});
+        
+        /*content_box.addEventListener("mouseover", function(){
+            pag_buttons.classList.remove("remove");
+            pag_buttons.classList.add("add");
+        });
+        
+        content_box.addEventListener("mouseout", function(){
+            pag_buttons.classList.remove("add");
+            pag_buttons.classList.add("remove");
+        })*/
+        
+        var offerTemplate = '<div class="offer_box">'
+                           + '<div class="offer_box_content">'
+                               + '<div class="offer_description">'
+                                   + '<span class="offer_description_title">%title%</span>'
+                                   + '<span class="offer_description_text">%description%</span>'
+                               + '</div>'
+                               + '<div class="offer_price">'
+                                   + '<span class="offer_old_price"><span>%old_price% %currency%</span></span>'
+                                   + '<span class="offer_new_price">%new_price% %currency%</span>'
+                                   + '<div onclick="__click(\'%click_url%\');" class="offer_button">'
+                                       + '<span>В корзину</span>'
+                                      +  '<div></div>'
+                                   + '</div>'
+                               + '</div>'
+                               + '<div class="offer_img">'
+                                   + '<img src="%image_url%" class="img_src">'
+                               + '</div>'
+                           + '</div>'
+                       + '</div>'
+        
+        function createOffer(offer) {
+			
+			return offerTemplate
+				.replace(/%image_url%/g, offer.picture)
+				.replace(/%new_price%/g, offer.new_price)
+                .replace(/%old_price%/g, offer.old_price)
+                .replace(/%currency%/g, offer.currency)
+				.replace(/%title%/g, offer.name)
+				.replace(/%description%/g, offer.description)
+				.replace(/%click_url%/g, offer.url)
+				;
+		}
+        
+        function __click(url) {
+			window.open('' + url , '_blank');
+		}
+        
+        function start(feeds) {
+			
+			var feedsHtml = '';
+			for(var i = 0; i < feeds.length; i ++) {
+				feedsHtml += createOffer(feeds[i]);
+			}
+            
+			document.querySelector('.swipe-wrap').innerHTML = feedsHtml;
+			
+            window.mySwipe = new Swipe(document.getElementById("slider"), {
+                startSlide: 0,
+                speed: 600,
+                auto: 0,
+                continuous: true,
+                disableScroll: true,
+                stopPropagation: false,
+                callback: function(index, elem) {},
+                transitionEnd: function(index, elem) {}
+            });
+            
+            var stopSwipe = false;
+            
+            content_box.addEventListener("mouseover", function(){
+                pag_buttons.classList.remove("remove");
+                pag_buttons.classList.add("add");
+                stopSwipe = true;
+            });
+        
+            content_box.addEventListener("mouseout", function(){
+                pag_buttons.classList.remove("add");
+                pag_buttons.classList.add("remove");
+                stopSwipe = false;
+            })
+            
+            setInterval(function() {
+                if(!stopSwipe){
+                    mySwipe.next();
+                }    
+            }, 2 * 1000)
+        }
+
+    </script>
+    <script src="lamoda_feed.js"></script>
+</html>
