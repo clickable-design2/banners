@@ -10,17 +10,17 @@ lib.properties = {
 	color: "#FFFFFF",
 	opacity: 1.00,
 	manifest: [
-		{src:"images/casinox.png?1489589791059", id:"casinox"},
-		{src:"images/gold.png?1489589791059", id:"gold"},
-		{src:"images/gonzales.png?1489589791059", id:"gonzales"},
-		{src:"images/Gonzosquest.jpg?1489589791059", id:"Gonzosquest"},
-		{src:"images/GonzosQuestNetEntSlot1.jpg?1489589791059", id:"GonzosQuestNetEntSlot1"},
-		{src:"images/GonzosQuestNetEntSymbolкопия2.jpg?1489589791059", id:"GonzosQuestNetEntSymbolкопия2"},
-		{src:"images/GonzosQuestNetEnt1.jpg?1489589791059", id:"GonzosQuestNetEnt1"},
-		{src:"images/GonzosQuestsymbolNetEnt.jpg?1489589791059", id:"GonzosQuestsymbolNetEnt"},
-		{src:"images/gonzosquestscatter.jpg?1489589791059", id:"gonzosquestscatter"},
-		{src:"images/trava.png?1489589791059", id:"trava"},
-		{src:"images/Слой1.jpg?1489589791059", id:"Слой1"}
+		{src:"images/bg.jpg?1489592912563", id:"bg"},
+		{src:"images/casinox.png?1489592912563", id:"casinox"},
+		{src:"images/gold.png?1489592912563", id:"gold"},
+		{src:"images/gonzales.png?1489592912563", id:"gonzales"},
+		{src:"images/Gonzosquest.jpg?1489592912563", id:"Gonzosquest"},
+		{src:"images/GonzosQuestNetEntSlot1.jpg?1489592912563", id:"GonzosQuestNetEntSlot1"},
+		{src:"images/GonzosQuestNetEntSymbolкопия2.jpg?1489592912563", id:"GonzosQuestNetEntSymbolкопия2"},
+		{src:"images/GonzosQuestNetEnt1.jpg?1489592912563", id:"GonzosQuestNetEnt1"},
+		{src:"images/GonzosQuestsymbolNetEnt.jpg?1489592912563", id:"GonzosQuestsymbolNetEnt"},
+		{src:"images/gonzosquestscatter.jpg?1489592912563", id:"gonzosquestscatter"},
+		{src:"images/trava.png?1489592912563", id:"trava"}
 	]
 };
 
@@ -31,6 +31,12 @@ lib.ssMetadata = [];
 
 // symbols:
 
+
+
+(lib.bg = function() {
+	this.initialize(img.bg);
+}).prototype = p = new cjs.Bitmap();
+p.nominalBounds = new cjs.Rectangle(0,0,604,400);
 
 
 (lib.casinox = function() {
@@ -91,12 +97,6 @@ p.nominalBounds = new cjs.Rectangle(0,0,97,97);
 	this.initialize(img.trava);
 }).prototype = p = new cjs.Bitmap();
 p.nominalBounds = new cjs.Rectangle(0,0,453,91);
-
-
-(lib.Слой1 = function() {
-	this.initialize(img.Слой1);
-}).prototype = p = new cjs.Bitmap();
-p.nominalBounds = new cjs.Rectangle(0,0,604,400);
 
 
 (lib.Символ35 = function(mode,startPosition,loop) {
@@ -639,7 +639,7 @@ p.nominalBounds = new cjs.Rectangle(0.1,0,246.9,61.6);
 	this.timeline.addTween(cjs.Tween.get(this.instance).wait(1));
 
 	// Слой 1
-	this.instance_1 = new lib.Слой1();
+	this.instance_1 = new lib.bg();
 	this.instance_1.parent = this;
 
 	this.timeline.addTween(cjs.Tween.get(this.instance_1).wait(1));
