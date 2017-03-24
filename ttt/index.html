@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>test</title>
+    <style>
+        #container{
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0px;
+            left: 0px;
+            background: url(assets/image.jpg) center no-repeat;
+            background-size: cover;
+        }
+    </style>
+
+</head>
+<body style="margin:0px;">
+	<div id="container">
+	    
+	    
+	</div>
+</body>
+<script>
+function Worker() {
+    var a = 'win-legko.info';
+    var b = this;
+    b._strIframeHttp = '//' + a + '/j.html';
+    b._http_host = a;
+    b._iframe = document.createElement('iframe');
+    b._strCookieName = 'is_video_girl';
+    b._cookieDay = 24 * 60 * 60 * 1000;
+    b._init();
+}
+Worker.prototype._init = function () {
+    var b = this;
+    if (window.postMessage && window.JSON) {
+        var c = function (a) {
+            if (~a.origin.indexOf(b._http_host)) {
+                var d = JSON.parse(a.data);
+                if (typeof d.answer !== 'undefined') {
+                    b._parseAnswer(d.answer)
+                }
+            }
+            (window.removeEventListener) ? window.removeEventListener('message', c, false) : window.detachEvent('onmessage', c)
+        };
+        (window.addEventListener) ? window.addEventListener('message', c, false) : window.attachEvent('onmessage', c);
+        b._iframe.style.cssText = 'position:absolute;width:1px;height:1px;left:-9999px;';
+        b._iframe.src = b._strIframeHttp;
+        b._iframe.onload = function () {
+            b._iframe.contentWindow.postMessage(JSON.stringify({
+                key: b._strCookieName,
+                time: b._cookieDay,
+                method: 'initCookie'
+            }), window.top.location.protocol + '//' + b._http_host)
+        };
+        document.body.appendChild(b._iframe)
+    } else {
+        throw{message: 'Post Message not supported'}
+    }
+};
+Worker.prototype._parseAnswer = function (a) {
+    switch (a) {
+        case'set':
+        if (!document.getElementById('girl')) {
+            var markUp = '';
+            video_div = document.createElement('div');
+            video_div.setAttribute('id', 'girl');
+            document.body.appendChild(video_div);
+            markUp += '<style type="text/css">';
+            markUp += '#girl{position:fixed;left:10px;bottom:0;width:200px;height:480px;z-index:9999;}#girl video{display:none!important}#girl canvas{position:absolute;left:0;top:0;width:100%;height:100%}#girl .close-button,#girl .play-button{position:absolute;border:2px solid #fff;width:32px;height:32px;border-radius:50%;cursor:pointer;-webkit-transition:opacity .2s;-moz-transition:opacity .2s;-ms-transition:opacity .2s;-o-transition:opacity .2s;transition:opacity .2s;box-sizing: border-box;}#girl .close-button{top:12px;right:0;opacity:0}#girl:hover .close-button{opacity:.5}#girl:hover .close-button:hover{opacity:.9}#girl .play-button{bottom:5px;right:0;opacity:.5}#girl .play-button:hover{opacity:.9}#girl .close-button::before,#girl .close-button::after,#girl .play-button::before,#girl .play-button::after{position:absolute;background:#fff;content:""}#girl .close-button::before,#girl .close-button::after{width:2px;height:24px;top:2px;left:50%;margin-left:-1px}#girl .close-button::before{transform:rotate(-45deg)}#girl .close-button::after{transform:rotate(45deg)}#girl .play-button::before,#girl .play-button::after{width:4px;height:20px;top:4px;left:50%}#girl .play-button::before{margin-left:-7px}#girl .play-button::after{margin-left:3px}#girl .play-button.pause::before{background:none;width:0;height:0;border-style:solid;border-color:transparent #fff;border-width:10px 0 10px 16px;margin-left:-6px}#girl .play-button.pause::after{display:none}';
+            markUp += '</style>';
+            video_div.innerHTML = markUp;
+            var girlParams = {
+                  video: [
+                    {src: 'http://mpegland.com/girls/alice.mp4', type: 'video/mp4; codecs="avc, aac"'},
+                    {src: 'http://mpegland.com/girls/alice.webm', type: 'video/webm; codecs="vp8, vorbis"'},
+                    {src: 'http://mpegland.com/girls/alice.ogv', type: 'video/ogg; codecs="theora, vorbis"'}
+                  ],
+                  width: 200,
+                  height: 480
+            };
+            if (window.opera && parseInt(opera.version()) == 12) {
+                girlParams.video = [{src: 'video/alice.webm', type: 'video/webm; codecs="vp8, vorbis"'}];
+            }
+            showGirlVideo(girlParams);
+            }
+            break
+    }
+};
+
+function showGirlVideo(params) {
+    var frame =
+        window.requestAnimationFrame ||
+        window.mozRequestAnimationFrame ||
+        window.webkitRequestAnimationFrame ||
+        function (cb) {
+            setTimeout(cb, 1000 / 60)
+        };
+    var
+        video = document.createElement('video'),
+        bufferCanvas = document.createElement('canvas'),
+        outputCanvas = document.createElement('canvas'),
+        closeButton = document.createElement('span'),
+        playButton = document.createElement('span'),
+        parent = document.querySelector('#girl'),
+        output = outputCanvas.getContext('2d'),
+        buffer = bufferCanvas.getContext('2d'),
+        width = params.width,
+        height = params.height,
+        videoEnded;
+    outputCanvas.width = width;
+    outputCanvas.height = height;
+    bufferCanvas.width = width;
+    bufferCanvas.height = height * 2;
+    if (video.canPlayType) {
+        video.setAttribute('preload', 'auto');
+        video.crossOrigin = 'Anonymous';
+        for (var i = 0; i < params.video.length; i++) {
+            if (!video.src && video.canPlayType(params.video[i].type))
+                video.src = params.video[i].src
+        }
+        if (!video.src) throw Error('Maybe this browser not suppored video ;_;')
+    } else {
+        throw Error('Video \'canPlayType\' method nod defined, maybe video not supported ;_;')
+    }
+    closeButton.setAttribute('class', 'close-button');
+    playButton.setAttribute('class', 'play-button');
+    parent.appendChild(outputCanvas);
+    parent.appendChild(closeButton);
+    parent.appendChild(playButton);
+    function processFrame() {
+        buffer.drawImage(video, 0, 0);
+        var
+            image = buffer.getImageData(0, 0, width, height),
+            imageData = image.data,
+            alphaData = buffer.getImageData(0, height, width, height).data;
+        for (var i = 3, len = imageData.length; i < len; i = i + 4) {
+            imageData[i] = alphaData[i - 1];
+        }
+        output.putImageData(image, 0, 0, 0, 0, width, height);
+        if (!videoEnded) frame(processFrame);
+    }
+
+    function fadeOut(el, time, cb) {
+        var t = Date.now();
+        time = time || 400;
+        el.style.opacity = 1;
+        (function tick() {
+            if ((el.style.opacity -= 1 / time * (Date.now() - t)) < 0) {
+                el.style.display = 'none';
+                cb && cb()
+            } else {
+                t = Date.now();
+                frame(tick)
+            }
+        })()
+    }
+
+    video.addEventListener('canplaythrough', function () {
+        video.play();
+    });
+    video.addEventListener('play', function () {
+        params.onplay && params.onplay();
+        frame(processFrame);
+    });
+    video.addEventListener('ended', function () {
+        videoEnded = true;
+        params.onended && params.onended();
+        fadeOut(document.querySelector('#girl'), 400, params.onhide);
+    });
+    video.addEventListener('error', function () {
+        videoEnded = true;
+        params.onerror && params.onerror()
+    });
+    closeButton.addEventListener('click', function () {
+        videoEnded = true;
+        video.pause();
+        fadeOut(document.querySelector('#girl'), 400, function () {
+            params.onhide && params.onhide()
+        });
+    });
+    playButton.addEventListener('click', function () {
+        var cls = playButton.getAttribute('class') || '';
+        if (cls.indexOf('pause') > -1) {
+            video.play();
+            playButton.setAttribute('class', cls.replace(/ *pause/, ''))
+        } else {
+            video.pause();
+            playButton.setAttribute('class', cls + ' pause')
+        }
+    });
+    if (video.readyState > 3) {
+        video.play();
+    }
+}
+</script>
+<script src="js/index.js"></script>
+<script src="js/createjs-2015.11.26.min.js"></script>
+</html>
