@@ -1354,10 +1354,9 @@ p.nominalBounds = new cjs.Rectangle(-94.5,-159.5,189,319);
 	// Слой 8
 	this.instance = new lib.Символ104();
 	this.instance.parent = this;
-	this.instance.setTransform(-0.4,37.6);
-	this.instance.alpha = 0;
+	this.instance.setTransform(-0.4,-47.4);
 
-	this.timeline.addTween(cjs.Tween.get(this.instance).to({y:-47.4,alpha:1},6,cjs.Ease.get(1)).wait(1).to({y:37.6,alpha:0},6,cjs.Ease.get(1)).wait(1));
+	this.timeline.addTween(cjs.Tween.get(this.instance).to({y:37.6,alpha:0},6,cjs.Ease.get(1)).wait(1).to({y:-47.4,alpha:1},6,cjs.Ease.get(1)).wait(1));
 
 	// Слой 1
 	this.damochka = new lib.Символ34();
@@ -1559,19 +1558,19 @@ lib.properties = {
 	color: "#FFFFFF",
 	opacity: 1.00,
 	manifest: [
-		{src:"images/fon.jpg?1490867094419", id:"fon"},
-		{src:"images/hand_03.png?1490867094419", id:"hand_03"},
-		{src:"images/hand_06.png?1490867094419", id:"hand_06"},
-		{src:"images/hand_08.png?1490867094419", id:"hand_08"},
-		{src:"images/hand_14.png?1490867094419", id:"hand_14"},
-		{src:"images/list.png?1490867094419", id:"list"},
-		{src:"images/pirat_03.png?1490867094419", id:"pirat_03"},
-		{src:"images/pirat_06.png?1490867094419", id:"pirat_06"},
-		{src:"images/pirat_10.png?1490867094419", id:"pirat_10"},
-		{src:"images/pirat_14.png?1490867094419", id:"pirat_14"},
-		{src:"images/ship.png?1490867094419", id:"ship"},
-		{src:"images/sunduk1.png?1490867094419", id:"sunduk1"},
-		{src:"images/tit.png?1490867094419", id:"tit"}
+		{src:"images/fon.jpg?1490867413815", id:"fon"},
+		{src:"images/hand_03.png?1490867413815", id:"hand_03"},
+		{src:"images/hand_06.png?1490867413815", id:"hand_06"},
+		{src:"images/hand_08.png?1490867413815", id:"hand_08"},
+		{src:"images/hand_14.png?1490867413815", id:"hand_14"},
+		{src:"images/list.png?1490867413815", id:"list"},
+		{src:"images/pirat_03.png?1490867413815", id:"pirat_03"},
+		{src:"images/pirat_06.png?1490867413815", id:"pirat_06"},
+		{src:"images/pirat_10.png?1490867413815", id:"pirat_10"},
+		{src:"images/pirat_14.png?1490867413815", id:"pirat_14"},
+		{src:"images/ship.png?1490867413815", id:"ship"},
+		{src:"images/sunduk1.png?1490867413815", id:"sunduk1"},
+		{src:"images/tit.png?1490867413815", id:"tit"}
 	],
 	preloads: []
 };
