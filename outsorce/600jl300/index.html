@@ -86,10 +86,38 @@ function handleComplete(evt) {
 <!-- write your code here -->
 </head>
 <body onload="init();" style="margin:0px;">
-	<div id="animation_container" style="background-color:rgba(255, 255, 255, 0.00); width:600px; height:300px">
-		<canvas id="canvas" width="600" height="300" style="position: absolute; display: block; background-color:rgba(255, 255, 255, 0.00);"></canvas>
+	<div id="animation_container" style="background-color:rgba(255, 255, 255, 0.00); width:600px; height:300px; overflow: hidden; position: relative;">
+		<div id="player" style="width: 120%; height: 120%; position: absolute; left: -10%; top: -10px;"></div>
+        <canvas id="canvas" width="600" height="300" style="position: absolute; display: block; background-color:rgba(255, 255, 255, 0.00);"></canvas>
 		<div id="dom_overlay_container" style="pointer-events:none; overflow:hidden; width:600px; height:300px; position: absolute; left: 0px; top: 0px; display: block;">
 		</div>
 	</div>
+    <script>
+        var tag = document.createElement('script');
+        tag.src = "https://www.youtube.com/player_api";
+        var firstScriptTag = document.getElementsByTagName('script')[0];
+        firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+        var player;
+        function onYouTubePlayerAPIReady() {
+            video_Id = 'OiAmnKUaNmc';
+            player = new YT.Player('player', {
+                playerVars: {
+                    'autoplay': 1,
+                    'controls': 0,
+                    'loop': 1,
+                    'modestbranding': 1,
+                    'showinfo': 0,
+                    'playlist': video_Id
+                },
+                videoId: video_Id,
+                events: {
+                    'onReady': onPlayerReady
+                }
+            });
+        }
+        function onPlayerReady() {
+            player.mute();
+        }
+    </script>
 </body>
 </html>
