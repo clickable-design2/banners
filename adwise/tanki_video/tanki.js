@@ -1,9 +1,70 @@
 (function (lib, img, cjs, ss, an) {
 
 var p; // shortcut to reference prototypes
+lib.webFontTxtInst = {}; 
+var loadedTypekitCount = 0;
+var loadedGoogleCount = 0;
+var gFontsUpdateCacheList = [];
+var tFontsUpdateCacheList = [];
 lib.ssMetadata = [];
 
 
+
+lib.updateListCache = function (cacheList) {		
+	for(var i = 0; i < cacheList.length; i++) {		
+		if(cacheList[i].cacheCanvas)		
+			cacheList[i].updateCache();		
+	}		
+};		
+
+lib.addElementsToCache = function (textInst, cacheList) {		
+	var cur = textInst;		
+	while(cur != exportRoot) {		
+		if(cacheList.indexOf(cur) != -1)		
+			break;		
+		cur = cur.parent;		
+	}		
+	if(cur != exportRoot) {		
+		var cur2 = textInst;		
+		var index = cacheList.indexOf(cur);		
+		while(cur2 != cur) {		
+			cacheList.splice(index, 0, cur2);		
+			cur2 = cur2.parent;		
+			index++;		
+		}		
+	}		
+	else {		
+		cur = textInst;		
+		while(cur != exportRoot) {		
+			cacheList.push(cur);		
+			cur = cur.parent;		
+		}		
+	}		
+};		
+
+lib.gfontAvailable = function(family, totalGoogleCount) {		
+	lib.properties.webfonts[family] = true;		
+	var txtInst = lib.webFontTxtInst && lib.webFontTxtInst[family] || [];		
+	for(var f = 0; f < txtInst.length; ++f)		
+		lib.addElementsToCache(txtInst[f], gFontsUpdateCacheList);		
+
+	loadedGoogleCount++;		
+	if(loadedGoogleCount == totalGoogleCount) {		
+		lib.updateListCache(gFontsUpdateCacheList);		
+	}		
+};		
+
+lib.tfontAvailable = function(family, totalTypekitCount) {		
+	lib.properties.webfonts[family] = true;		
+	var txtInst = lib.webFontTxtInst && lib.webFontTxtInst[family] || [];		
+	for(var f = 0; f < txtInst.length; ++f)		
+		lib.addElementsToCache(txtInst[f], tFontsUpdateCacheList);		
+
+	loadedTypekitCount++;		
+	if(loadedTypekitCount == totalTypekitCount) {		
+		lib.updateListCache(tFontsUpdateCacheList);		
+	}		
+};
 // symbols:
 
 
@@ -240,7 +301,7 @@ p.nominalBounds = new cjs.Rectangle(-121.5,-14.9,243.1,29.9);
 	this.instance.alpha = 0;
 	this.instance._off = true;
 
-	this.timeline.addTween(cjs.Tween.get(this.instance).wait(866).to({_off:false},0).to({y:88.8,alpha:1},8,cjs.Ease.get(1)).wait(82).to({y:108.8,alpha:0},8).wait(27));
+	this.timeline.addTween(cjs.Tween.get(this.instance).wait(892).to({_off:false},0).to({y:88.8,alpha:1},8,cjs.Ease.get(1)).wait(84).to({y:108.8,alpha:0},11).wait(27));
 
 	// Слой 3
 	this.instance_1 = new lib.Символ8();
@@ -249,7 +310,7 @@ p.nominalBounds = new cjs.Rectangle(-121.5,-14.9,243.1,29.9);
 	this.instance_1.alpha = 0;
 	this.instance_1._off = true;
 
-	this.timeline.addTween(cjs.Tween.get(this.instance_1).wait(858).to({_off:false},0).to({y:1,alpha:1},8,cjs.Ease.get(1)).wait(98).to({y:-14,alpha:0},8,cjs.Ease.get(1)).wait(19));
+	this.timeline.addTween(cjs.Tween.get(this.instance_1).wait(884).to({_off:false},0).to({y:1,alpha:1},8,cjs.Ease.get(1)).wait(103).to({y:-14,alpha:0},8,cjs.Ease.get(1)).wait(19));
 
 	// Слой 2
 	this.instance_2 = new lib.Символ7();
@@ -258,7 +319,7 @@ p.nominalBounds = new cjs.Rectangle(-121.5,-14.9,243.1,29.9);
 	this.instance_2.alpha = 0;
 	this.instance_2._off = true;
 
-	this.timeline.addTween(cjs.Tween.get(this.instance_2).wait(849).to({_off:false},0).to({y:-106.9,alpha:1},9).wait(114).to({alpha:0},9,cjs.Ease.get(1)).wait(10));
+	this.timeline.addTween(cjs.Tween.get(this.instance_2).wait(875).to({_off:false},0).to({y:-106.9,alpha:1},9).wait(119).to({alpha:0},9,cjs.Ease.get(1)).wait(10));
 
 	// Слой 1
 	this.instance_3 = new lib.Символ3();
@@ -266,7 +327,7 @@ p.nominalBounds = new cjs.Rectangle(-121.5,-14.9,243.1,29.9);
 	this.instance_3.alpha = 0;
 	this.instance_3._off = true;
 
-	this.timeline.addTween(cjs.Tween.get(this.instance_3).wait(839).to({_off:false},0).to({alpha:0.621},10).wait(132).to({alpha:0},9).wait(1));
+	this.timeline.addTween(cjs.Tween.get(this.instance_3).wait(865).to({_off:false},0).to({alpha:0.621},10).wait(137).to({alpha:0},9).wait(1));
 
 }).prototype = p = new cjs.MovieClip();
 p.nominalBounds = null;
@@ -302,7 +363,7 @@ p.nominalBounds = null;
 	this.instance.setTransform(18.3,51.2);
 	this.instance.alpha = 0;
 
-	this.timeline.addTween(cjs.Tween.get(this.instance).to({y:0,alpha:1},10).wait(833).to({y:51.2,alpha:0},7,cjs.Ease.get(1)).wait(141));
+	this.timeline.addTween(cjs.Tween.get(this.instance).to({y:0,alpha:1},10).wait(862).to({y:51.2,alpha:0},7,cjs.Ease.get(1)).wait(141));
 
 }).prototype = p = new cjs.MovieClip();
 p.nominalBounds = new cjs.Rectangle(-73.4,33.1,146.9,36.2);
@@ -401,13 +462,6 @@ p.nominalBounds = null;
 	// actions tween:
 	this.timeline.addTween(cjs.Tween.get(this).call(this.frame_0).wait(1));
 
-	// Слой 1
-	this.kurs = new lib.Символ2();
-	this.kurs.parent = this;
-	this.kurs.setTransform(321,152.5);
-
-	this.timeline.addTween(cjs.Tween.get(this.kurs).wait(1));
-
 	// Слой 3
 	this.instance = new lib.Символ4();
 	this.instance.parent = this;
@@ -422,6 +476,13 @@ p.nominalBounds = null;
 
 	this.timeline.addTween(cjs.Tween.get(this.instance_1).wait(1));
 
+	// Слой 1
+	this.kurs = new lib.Символ2();
+	this.kurs.parent = this;
+	this.kurs.setTransform(321,152.5);
+
+	this.timeline.addTween(cjs.Tween.get(this.kurs).wait(1));
+
 }).prototype = p = new cjs.MovieClip();
 p.nominalBounds = new cjs.Rectangle(346.7,413.5,584.4,82.6);
 // library properties:
@@ -431,10 +492,11 @@ lib.properties = {
 	fps: 30,
 	color: "#FFFFFF",
 	opacity: 0.00,
+	webfonts: {},
 	manifest: [
-		{src:"images/deathskullandbones.png?1492155215737", id:"deathskullandbones"},
-		{src:"images/prizel.png?1492155215737", id:"prizel"},
-		{src:"images/security.png?1492155215737", id:"security"}
+		{src:"images/deathskullandbones.png", id:"deathskullandbones"},
+		{src:"images/prizel.png", id:"prizel"},
+		{src:"images/security.png", id:"security"}
 	],
 	preloads: []
 };
