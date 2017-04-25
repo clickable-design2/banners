@@ -242,7 +242,7 @@ function getMCSymbolPrototype(symbol, nominalBounds, frameBounds) {
 
 	// Слой 2
 	this.shape = new cjs.Shape();
-	this.shape.graphics.f("#000000").s().p("AjyBEIgMgDIgIgHIgMgLQgHgHgCgFQgBgFADgFQADgEAFgBQgBgVAFgWIADgIIANgQQACgCAIgDIAMgEQALgBANAFQAJADAFAFQAKAIAIAVIAEANQAEAUgNAUIgFAFQgGAIgPAKQgHAGgEAAIgLABgADtAaQgJgDgHgFQgTgOgDgeQgDgYALgJQADgCAIgEQAGgDAEAAQAFABAIAFQAUAPANATQAJAOABAMQABAOgJAKQgIAHgMAAQgJAAgKgDgAD4gLIAGAHIgBgCQgDgGgDgBg");
+	this.shape.graphics.f("#36363C").s().p("AjyBEIgMgDIgIgHIgMgLQgHgHgCgFQgBgFADgFQADgEAFgBQgBgVAFgWIADgIIANgQQACgCAIgDIAMgEQALgBANAFQAJADAFAFQAKAIAIAVIAEANQAEAUgNAUIgFAFQgGAIgPAKQgHAGgEAAIgLABgADtAaQgJgDgHgFQgTgOgDgeQgDgYALgJQADgCAIgEQAGgDAEAAQAFABAIAFQAUAPANATQAJAOABAMQABAOgJAKQgIAHgMAAQgJAAgKgDgAD4gLIAGAHIgBgCQgDgGgDgBg");
 	this.shape.setTransform(106.4,15.9);
 	this.shape._off = true;
 
@@ -470,10 +470,9 @@ p.nominalBounds = new cjs.Rectangle(0,0,271,244);
 	this.instance.parent = this;
 	this.instance.setTransform(135.5,122,1,1,0,0,0,135.5,122);
 
-	this.timeline.addTween(cjs.Tween.get(this.instance).to({x:126.3},6,cjs.Ease.get(-1)).to({x:115.5},7,cjs.Ease.get(1)).to({x:125.5},7,cjs.Ease.get(-1)).to({x:135.5},7,cjs.Ease.get(1)).wait(1));
+	this.timeline.addTween(cjs.Tween.get(this.instance).wait(1));
 
-}).prototype = p = new cjs.MovieClip();
-p.nominalBounds = new cjs.Rectangle(0,0,271,244);
+}).prototype = getMCSymbolPrototype(lib.Символ43, new cjs.Rectangle(0,0,271,244), null);
 
 
 (lib.Символ41 = function(mode,startPosition,loop) {
@@ -758,10 +757,9 @@ p.nominalBounds = new cjs.Rectangle(4.5,-0.5,11.9,14.8);
 	this.instance.parent = this;
 	this.instance.setTransform(135.5,122,1,1,0,0,0,135.5,122);
 
-	this.timeline.addTween(cjs.Tween.get(this.instance).to({y:129.1},9,cjs.Ease.get(-1)).to({y:137},10,cjs.Ease.get(1)).to({y:129.5},10,cjs.Ease.get(-1)).to({y:122},10,cjs.Ease.get(1)).wait(1));
+	this.timeline.addTween(cjs.Tween.get(this.instance).wait(1));
 
-}).prototype = p = new cjs.MovieClip();
-p.nominalBounds = new cjs.Rectangle(0,0,271,244);
+}).prototype = getMCSymbolPrototype(lib.Символ44, new cjs.Rectangle(0,0,271,244), null);
 
 
 (lib.Символ38 = function(mode,startPosition,loop) {
@@ -1096,7 +1094,7 @@ lib.properties = {
 	color: "#FFFFFF",
 	opacity: 1.00,
 	manifest: [
-		{src:"images/adsniper_jdun_366x280_atlas_.png?1493108206307", id:"adsniper_jdun_366x280_atlas_"}
+		{src:"images/adsniper_jdun_366x280_atlas_.png?1493112700285", id:"adsniper_jdun_366x280_atlas_"}
 	],
 	preloads: []
 };
