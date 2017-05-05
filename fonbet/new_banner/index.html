@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="HandheldFriendly" content="true" />
+        <meta http-equiv="cleartype" content="on" />
+        <meta name="MobileOptimized" content="width" />
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="mobile-web-app-capable" content="yes">
+        <meta name="format-detection" content="telephone=no">
+        <meta name="format-detection" content="address=no"/>
+        <meta name="google" content="notranslate">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <script src="https://code.createjs.com/createjs-2015.11.26.min.js"></script>
+        <script src="script.js"></script>
+        <script>
+            var canvas, stage, exportRoot;
+
+            function getWindowSize() {
+                return {
+                    iw: Math.min(document.documentElement.clientWidth, window.innerWidth || 0),
+                    ih: Math.min(document.documentElement.clientHeight, window.innerHeight || 0),
+                }
+            }
+
+            function init() {
+                canvas = document.getElementById("animation");
+                images = images||{};
+                var loader = new createjs.LoadQueue(false);
+                loader.addEventListener("fileload", handleFileLoad);
+                loader.addEventListener("complete", handleComplete);
+                loader.loadManifest(lib.properties.manifest);
+            }
+                var flashVars = {
+                  reference: "%reference%",
+                  link: "%user1%",
+                  target: "%target%",
+                  rnd: parseInt("%random1%") || parseInt("%random%"),
+                  events: [
+                        "",
+                        "%event1%","%event2%","%event3%","%event4%","%event5%","%event6%","%event7%","%event8%","%event9%","%event10%","%event11%",
+                        "%event12%","%event13%","%event14%","%event15%","%event16%","%event17%","%event18%","%event19%","%event20%","%event21%",
+                        "%event22%","%event23%","%event24%","%event25%","%event26%","%event27%","%event28%","%event29%","%event30%"
+                  ]
+                };
+            function handleFileLoad(evt) {	
+                if (evt.item.type == "image") { images[evt.item.id] = evt.result; }	
+            }
+            function handleComplete(evt) {
+                exportRoot = new lib.index();
+                stage = new createjs.Stage(canvas);
+                stage.addChild(exportRoot);	
+                fnStartAnimation = function() {
+                    createjs.Ticker.timingMode = createjs.Ticker.RAF_SYNCHED;
+                    createjs.Ticker.setFPS(30);
+                    createjs.Ticker.addEventListener("tick", stage);
+                }	    
+
+                function makeResponsive() {		
+                    window.addEventListener('resize', resizeCanvas);		
+                    resizeCanvas();		
+                    function resizeCanvas() {			
+                        var sScale = getWindowSize();
+                        var w = sScale.iw, h = sScale.ih, p = window.devicePixelRatio;			
+                        stage.scaleX = stage.scaleY = p;
+
+                        canvas.width = w * p;			
+                        canvas.height = h * p;
+                        canvas.style.width =  w + 'px';				
+                        canvas.style.height = h + 'px';	
+                    }
+                }
+                makeResponsive();	
+                fnStartAnimation();
+            }
+        </script>
+    </head>
+    <body onload="init();">
+        <a href="%reference%@%user1%" target="%target%" >
+            <div id="main_wrap" style="webkit-touch-callout: none; -webkit-user-select: none; -khtml-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none;">
+
+                <!--Button-->
+                <div id="button" class="btn_anim">
+                    <div id="btn_title"></div>
+                    <div id="dark"></div>
+                </div>
+
+                <!--Boards-->
+                <div id="boards" class="players">
+                    <div id="board1"></div>
+                    <div id="board2">
+                        <div></div>
+                    </div>
+                </div>
+
+                <!--RedCurve-->
+                <div id="curve"></div>
+
+                <!--Players-->
+                <div id="players" class="players">
+                    <div id="player1"></div>
+                    <div id="player2"></div>
+                </div>
+
+                <!--Canvas Animation-->
+                <div id="canvas_container">
+                   <canvas id="animation"></canvas>
+                </div>
+
+                <!--Cup-->
+                <div id="cup"></div>
+
+                <!--Confetti-->
+                <div class="js-container container"></div>
+
+                <!--BG-->
+                <div id="black"></div>
+                <div id="background" class="zoom">
+                    <div></div>
+                </div>
+                
+            </div>
+        </a>
+        <script>
+            'use strict';
+            var Confettiful = function Confettiful(el) {
+              this.el = el;
+              this.containerEl = null;
+
+              this.confettiFrequency = 3;
+              this.confettiColors = ['#fce18a', '#ff726d', '#b48def', '#f4306d'];
+              this.confettiAnimations = ['slow', 'medium', 'fast'];
+
+              this._setupElements();
+              this._renderConfetti();
+            };
+
+            Confettiful.prototype._setupElements = function () {
+              var containerEl = document.createElement('div');
+              var elPosition = this.el.style.position;
+
+              if (elPosition !== 'relative' || elPosition !== 'absolute') {
+                this.el.style.position = 'relative';
+              }
+
+              containerEl.classList.add('confetti-container');
+
+              this.el.appendChild(containerEl);
+
+              this.containerEl = containerEl;
+            };
+
+            Confettiful.prototype._renderConfetti = function () {
+              var _this = this;
+
+              this.confettiInterval = setInterval(function () {
+                var confettiEl = document.createElement('div');
+                var confettiSize = Math.floor(Math.random() * 3) + 7 + 'px';
+                var confettiBackground = _this.confettiColors[Math.floor(Math.random() * _this.confettiColors.length)];
+                var confettiLeft = Math.floor(Math.random() * _this.el.offsetWidth) + 'px';
+                var confettiAnimation = _this.confettiAnimations[Math.floor(Math.random() * _this.confettiAnimations.length)];
+
+                confettiEl.classList.add('confetti', 'confetti--animation-' + confettiAnimation);
+                confettiEl.style.left = confettiLeft;
+                confettiEl.style.width = confettiSize;
+                confettiEl.style.height = confettiSize;
+                confettiEl.style.backgroundColor = confettiBackground;
+
+                confettiEl.removeTimeout = setTimeout(function () {
+                  confettiEl.parentNode.removeChild(confettiEl);
+                }, 3000);
+
+                _this.containerEl.appendChild(confettiEl);
+              }, 70);
+            };
+
+            window.confettiful = new Confettiful(document.querySelector('.js-container'));
+        </script>
+    </body>
+</html>
