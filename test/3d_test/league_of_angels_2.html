@@ -19,8 +19,6 @@
 var canvas, stage, exportRoot, anim_container, dom_overlay_container, fnStartAnimation;
 function init() {
 	canvas = document.getElementById("canvas");
-	anim_container = document.getElementById("animation_container");
-	dom_overlay_container = document.getElementById("dom_overlay_container");
 	images = images||{};
 	var loader = new createjs.LoadQueue(false);
 	loader.addEventListener("fileload", handleFileLoad);
@@ -72,8 +70,8 @@ function handleComplete(evt) {
 			}			
 			canvas.width = w*pRatio*sRatio;			
 			canvas.height = h*pRatio*sRatio;
-			canvas.style.width = dom_overlay_container.style.width = anim_container.style.width =  w*sRatio+'px';				
-			canvas.style.height = anim_container.style.height = dom_overlay_container.style.height = h*sRatio+'px';
+			canvas.style.width =  w*sRatio+'px';				
+			canvas.style.height = h*sRatio+'px';
 			stage.scaleX = pRatio*sRatio;			
 			stage.scaleY = pRatio*sRatio;			
 			lastW = iw; lastH = ih; lastS = sRatio;		
@@ -86,10 +84,6 @@ function handleComplete(evt) {
 <!-- write your code here -->
 </head>
 <body onload="init();" style="margin:0px; overflow: hidden;">
-	<div id="animation_container" style="background-color:rgba(255, 255, 255, 0); width:600px; height:300px">
-		<canvas id="canvas" width="600" height="300" style="position: absolute; display: block; background-color:rgba(255, 255, 255, 0);"></canvas>
-		<div id="dom_overlay_container" style="pointer-events:none; overflow:hidden; width:600px; height:300px; position: absolute; left: 0px; top: 0px; display: block;">
-		</div>
-	</div>
+    <canvas id="canvas" width="600" height="300" style="position: absolute; display: block; background-color:rgba(255, 255, 255, 0);"></canvas>
 </body>
 </html>
