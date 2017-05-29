@@ -755,12 +755,12 @@ p.nominalBounds = new cjs.Rectangle(0,0,733,420);
 	this.initialize(mode,startPosition,loop,{});
 
 	// timeline functions:
-	this.frame_102 = function() {
+	this.frame_185 = function() {
 		this.parent.parent.parent.goToX();
 	}
 
 	// actions tween:
-	this.timeline.addTween(cjs.Tween.get(this).wait(102).call(this.frame_102).wait(68));
+	this.timeline.addTween(cjs.Tween.get(this).wait(185).call(this.frame_185).wait(68));
 
 	// Слой 2
 	this.instance = new lib.Символ16();
@@ -768,21 +768,21 @@ p.nominalBounds = new cjs.Rectangle(0,0,733,420);
 	this.instance.setTransform(-366.4,240.1,0.304,0.304,15,0,0,384.8,450.4);
 	this.instance._off = true;
 
-	this.timeline.addTween(cjs.Tween.get(this.instance).wait(92).to({_off:false},0).to({regY:450.2,scaleX:2.17,scaleY:2.17,rotation:-18.9,x:-528.5,y:352.5},5).to({_off:true},15).wait(58));
+	this.timeline.addTween(cjs.Tween.get(this.instance).wait(175).to({_off:false},0).to({regY:450.2,scaleX:2.17,scaleY:2.17,rotation:-18.9,x:-528.5,y:352.5},5).to({_off:true},15).wait(58));
 
 	// head.png
 	this.instance_1 = new lib.Символ4();
 	this.instance_1.parent = this;
 	this.instance_1.setTransform(-373.9,171.1,1,1,-6.5,0,0,44,70.8);
 
-	this.timeline.addTween(cjs.Tween.get(this.instance_1).to({regX:43.9,rotation:-2,x:-373.7,y:173.1},12,cjs.Ease.get(-1)).to({regX:44,rotation:2.5,x:-373.2,y:175.3},13,cjs.Ease.get(1)).to({regY:70.9,rotation:-1.8,x:-373.6,y:173.2},13,cjs.Ease.get(-1)).to({regY:70.8,rotation:-6.5,x:-373.9,y:171.1},13,cjs.Ease.get(1)).to({_off:true},57).wait(62));
+	this.timeline.addTween(cjs.Tween.get(this.instance_1).to({regX:43.9,rotation:-2,x:-373.7,y:173.1},12,cjs.Ease.get(-1)).to({regX:44,rotation:2.5,x:-373.2,y:175.3},13,cjs.Ease.get(1)).to({regY:70.9,rotation:-1.8,x:-373.6,y:173.2},13,cjs.Ease.get(-1)).to({regY:70.8,rotation:-6.5,x:-373.9,y:171.1},13,cjs.Ease.get(1)).to({regX:43.9,rotation:-2,x:-373.7,y:173.1},12,cjs.Ease.get(-1)).to({regX:44,rotation:2.5,x:-373.2,y:175.3},13,cjs.Ease.get(1)).to({regY:70.9,rotation:-1.8,x:-373.6,y:173.2},13,cjs.Ease.get(-1)).to({regY:70.8,rotation:-6.5,x:-373.9,y:171.1},13,cjs.Ease.get(1)).to({regX:43.9,rotation:-2,x:-373.7,y:173.1},12,cjs.Ease.get(-1)).to({regX:44,rotation:2.5,x:-373.2,y:175.3},13,cjs.Ease.get(1)).to({regY:70.9,rotation:-1.8,x:-373.6,y:173.2},13,cjs.Ease.get(-1)).to({regY:70.8,rotation:-6.5,x:-373.9,y:171.1},13,cjs.Ease.get(1)).to({_off:true},38).wait(62));
 
 	// hand.png
 	this.instance_2 = new lib.Символ8();
 	this.instance_2.parent = this;
 	this.instance_2.setTransform(-299.4,259.8,1,1,0,0,0,86.5,6.8);
 
-	this.timeline.addTween(cjs.Tween.get(this.instance_2).to({rotation:-7.3,x:-295.3,y:258.9},12,cjs.Ease.get(-1)).to({rotation:-15.2,x:-290.8,y:257.9},13,cjs.Ease.get(1)).to({regX:86.4,regY:6.9,rotation:-7.5,x:-295.2,y:258.9},13,cjs.Ease.get(-1)).to({regX:86.5,regY:6.8,rotation:0,x:-299.4,y:259.8},13,cjs.Ease.get(1)).wait(32).to({regY:6.9,rotation:36.8,x:-297,y:261.1},4).to({regX:86.4,regY:6.7,rotation:-117,x:-258.4,y:218.4},5).to({_off:true},16).wait(62));
+	this.timeline.addTween(cjs.Tween.get(this.instance_2).to({rotation:-7.3,x:-295.3,y:258.9},12,cjs.Ease.get(-1)).to({rotation:-15.2,x:-290.8,y:257.9},13,cjs.Ease.get(1)).to({regX:86.4,regY:6.9,rotation:-7.5,x:-295.2,y:258.9},13,cjs.Ease.get(-1)).to({regX:86.5,regY:6.8,rotation:0,x:-299.4,y:259.8},13,cjs.Ease.get(1)).to({rotation:-7.3,x:-295.3,y:258.9},12,cjs.Ease.get(-1)).to({rotation:-15.2,x:-290.8,y:257.9},13,cjs.Ease.get(1)).to({regX:86.4,regY:6.9,rotation:-7.5,x:-295.2,y:258.9},13,cjs.Ease.get(-1)).to({regX:86.5,regY:6.8,rotation:0,x:-299.4,y:259.8},13,cjs.Ease.get(1)).to({rotation:-7.3,x:-295.3,y:258.9},12,cjs.Ease.get(-1)).to({rotation:-15.2,x:-290.8,y:257.9},13,cjs.Ease.get(1)).to({regX:86.4,regY:6.9,rotation:-7.5,x:-295.2,y:258.9},13,cjs.Ease.get(-1)).to({regX:86.5,regY:6.8,rotation:0,x:-299.4,y:259.8},13,cjs.Ease.get(1)).wait(13).to({regY:6.9,rotation:36.8,x:-297,y:261.1},4).to({regX:86.4,regY:6.7,rotation:-117,x:-258.4,y:218.4},5).to({_off:true},16).wait(62));
 
 	// Слой 2 - копия
 	this.instance_3 = new lib.Символ16();
@@ -790,49 +790,49 @@ p.nominalBounds = new cjs.Rectangle(0,0,733,420);
 	this.instance_3.setTransform(-366.5,220.1,0.115,0.115,30,0,0,384.4,450.9);
 	this.instance_3._off = true;
 
-	this.timeline.addTween(cjs.Tween.get(this.instance_3).wait(87).to({_off:false},0).to({regX:384.8,regY:450.4,scaleX:0.3,scaleY:0.3,rotation:15,x:-366.4,y:240.1},5).to({_off:true},1).wait(77));
+	this.timeline.addTween(cjs.Tween.get(this.instance_3).wait(170).to({_off:false},0).to({regX:384.8,regY:450.4,scaleX:0.3,scaleY:0.3,rotation:15,x:-366.4,y:240.1},5).to({_off:true},1).wait(77));
 
 	// tits.png
 	this.instance_4 = new lib.Символ7();
 	this.instance_4.parent = this;
 	this.instance_4.setTransform(-379.9,232,1,1,0,0,0,44,31);
 
-	this.timeline.addTween(cjs.Tween.get(this.instance_4).to({y:234.2},12,cjs.Ease.get(-1)).to({y:236.5},13,cjs.Ease.get(1)).to({y:234.3},13,cjs.Ease.get(-1)).to({y:232},13,cjs.Ease.get(1)).to({_off:true},57).wait(62));
+	this.timeline.addTween(cjs.Tween.get(this.instance_4).to({y:234.2},12,cjs.Ease.get(-1)).to({y:236.5},13,cjs.Ease.get(1)).to({y:234.3},13,cjs.Ease.get(-1)).to({y:232},13,cjs.Ease.get(1)).to({y:234.2},12,cjs.Ease.get(-1)).to({y:236.5},13,cjs.Ease.get(1)).to({y:234.3},13,cjs.Ease.get(-1)).to({y:232},13,cjs.Ease.get(1)).to({y:234.2},12,cjs.Ease.get(-1)).to({y:236.5},13,cjs.Ease.get(1)).to({y:234.3},13,cjs.Ease.get(-1)).to({y:232},13,cjs.Ease.get(1)).to({_off:true},38).wait(62));
 
 	// ple4o.png
 	this.instance_5 = new lib.Символ9();
 	this.instance_5.parent = this;
 	this.instance_5.setTransform(-329.7,197.5,1,1,0,0,0,2.2,13.5);
 
-	this.timeline.addTween(cjs.Tween.get(this.instance_5).to({scaleY:1,rotation:-4.5,x:-330.9,y:199.3},12,cjs.Ease.get(-1)).to({regX:2.1,regY:13.7,scaleY:0.99,rotation:-9.7,x:-332,y:201.1},13,cjs.Ease.get(1)).to({regX:2,scaleY:1,rotation:-4.8,x:-330.9,y:199.5},13,cjs.Ease.get(-1)).to({regX:2.2,regY:13.5,scaleY:1,rotation:0,x:-329.7,y:197.5},13,cjs.Ease.get(1)).wait(32).to({scaleY:1,skewX:-4.1,x:-328.7},4).to({scaleY:1.02,skewX:-48.4,skewY:-60,x:-320.5,y:199.3},5).to({_off:true},16).wait(62));
+	this.timeline.addTween(cjs.Tween.get(this.instance_5).to({scaleY:1,rotation:-4.5,x:-330.9,y:199.3},12,cjs.Ease.get(-1)).to({regX:2.1,regY:13.7,scaleY:0.99,rotation:-9.7,x:-332,y:201.1},13,cjs.Ease.get(1)).to({regX:2,scaleY:1,rotation:-4.8,x:-330.9,y:199.5},13,cjs.Ease.get(-1)).to({regX:2.2,regY:13.5,scaleY:1,rotation:0,x:-329.7,y:197.5},13,cjs.Ease.get(1)).to({scaleY:1,rotation:-4.5,x:-330.9,y:199.3},12,cjs.Ease.get(-1)).to({regX:2.1,regY:13.7,scaleY:0.99,rotation:-9.7,x:-332,y:201.1},13,cjs.Ease.get(1)).to({regX:2,scaleY:1,rotation:-4.8,x:-330.9,y:199.5},13,cjs.Ease.get(-1)).to({regX:2.2,regY:13.5,scaleY:1,rotation:0,x:-329.7,y:197.5},13,cjs.Ease.get(1)).to({scaleY:1,rotation:-4.5,x:-330.9,y:199.3},12,cjs.Ease.get(-1)).to({regX:2.1,regY:13.7,scaleY:0.99,rotation:-9.7,x:-332,y:201.1},13,cjs.Ease.get(1)).to({regX:2,scaleY:1,rotation:-4.8,x:-330.9,y:199.5},13,cjs.Ease.get(-1)).to({regX:2.2,regY:13.5,scaleY:1,rotation:0,x:-329.7,y:197.5},13,cjs.Ease.get(1)).wait(13).to({scaleY:1,skewX:-4.1,x:-328.7},4).to({scaleY:1.02,skewX:-48.4,skewY:-60,x:-320.5,y:199.3},5).to({_off:true},16).wait(62));
 
 	// kist.png
 	this.instance_6 = new lib.Символ10();
 	this.instance_6.parent = this;
 	this.instance_6.setTransform(-403.7,265.8,1,1,0,0,0,24.2,11.8);
 
-	this.timeline.addTween(cjs.Tween.get(this.instance_6).to({y:262.2},12,cjs.Ease.get(-1)).to({y:258.3},13,cjs.Ease.get(1)).to({y:262.1},13,cjs.Ease.get(-1)).to({y:265.8},13,cjs.Ease.get(1)).to({_off:true},57).wait(62));
+	this.timeline.addTween(cjs.Tween.get(this.instance_6).to({y:262.2},12,cjs.Ease.get(-1)).to({y:258.3},13,cjs.Ease.get(1)).to({y:262.1},13,cjs.Ease.get(-1)).to({y:265.8},13,cjs.Ease.get(1)).to({y:262.2},12,cjs.Ease.get(-1)).to({y:258.3},13,cjs.Ease.get(1)).to({y:262.1},13,cjs.Ease.get(-1)).to({y:265.8},13,cjs.Ease.get(1)).to({y:262.2},12,cjs.Ease.get(-1)).to({y:258.3},13,cjs.Ease.get(1)).to({y:262.1},13,cjs.Ease.get(-1)).to({y:265.8},13,cjs.Ease.get(1)).to({_off:true},38).wait(62));
 
 	// body.png
 	this.instance_7 = new lib.Символ3();
 	this.instance_7.parent = this;
 	this.instance_7.setTransform(-366.4,259.5,1,1,0,0,0,50.5,97.5);
 
-	this.timeline.addTween(cjs.Tween.get(this.instance_7).to({scaleY:0.99,x:-366.7,y:260.3},12,cjs.Ease.get(-1)).to({scaleY:0.98,x:-366.9,y:261},13,cjs.Ease.get(1)).to({regY:97.6,scaleY:0.99,x:-366.7,y:260.3},13,cjs.Ease.get(-1)).to({regY:97.5,scaleY:1,x:-366.4,y:259.5},13,cjs.Ease.get(1)).to({_off:true},57).wait(62));
+	this.timeline.addTween(cjs.Tween.get(this.instance_7).to({scaleY:0.99,x:-366.7,y:260.3},12,cjs.Ease.get(-1)).to({scaleY:0.98,x:-366.9,y:261},13,cjs.Ease.get(1)).to({regY:97.6,scaleY:0.99,x:-366.7,y:260.3},13,cjs.Ease.get(-1)).to({regY:97.5,scaleY:1,x:-366.4,y:259.5},13,cjs.Ease.get(1)).to({scaleY:0.99,x:-366.7,y:260.3},12,cjs.Ease.get(-1)).to({scaleY:0.98,x:-366.9,y:261},13,cjs.Ease.get(1)).to({regY:97.6,scaleY:0.99,x:-366.7,y:260.3},13,cjs.Ease.get(-1)).to({regY:97.5,scaleY:1,x:-366.4,y:259.5},13,cjs.Ease.get(1)).to({scaleY:0.99,x:-366.7,y:260.3},12,cjs.Ease.get(-1)).to({scaleY:0.98,x:-366.9,y:261},13,cjs.Ease.get(1)).to({regY:97.6,scaleY:0.99,x:-366.7,y:260.3},13,cjs.Ease.get(-1)).to({regY:97.5,scaleY:1,x:-366.4,y:259.5},13,cjs.Ease.get(1)).to({_off:true},38).wait(62));
 
 	// leg.png
 	this.instance_8 = new lib.Символ5();
 	this.instance_8.parent = this;
 	this.instance_8.setTransform(-346.1,345.2,1,1,0,0,0,22.8,20.2);
 
-	this.timeline.addTween(cjs.Tween.get(this.instance_8).to({scaleY:0.96,x:-346.8,y:343.9},12,cjs.Ease.get(-1)).to({scaleY:0.92,x:-347.6,y:342.5},13,cjs.Ease.get(1)).to({scaleY:0.96,x:-346.9,y:343.8},13,cjs.Ease.get(-1)).to({scaleY:1,x:-346.1,y:345.2},13,cjs.Ease.get(1)).to({_off:true},57).wait(62));
+	this.timeline.addTween(cjs.Tween.get(this.instance_8).to({scaleY:0.96,x:-346.8,y:343.9},12,cjs.Ease.get(-1)).to({scaleY:0.92,x:-347.6,y:342.5},13,cjs.Ease.get(1)).to({scaleY:0.96,x:-346.9,y:343.8},13,cjs.Ease.get(-1)).to({scaleY:1,x:-346.1,y:345.2},13,cjs.Ease.get(1)).to({scaleY:0.96,x:-346.8,y:343.9},12,cjs.Ease.get(-1)).to({scaleY:0.92,x:-347.6,y:342.5},13,cjs.Ease.get(1)).to({scaleY:0.96,x:-346.9,y:343.8},13,cjs.Ease.get(-1)).to({scaleY:1,x:-346.1,y:345.2},13,cjs.Ease.get(1)).to({scaleY:0.96,x:-346.8,y:343.9},12,cjs.Ease.get(-1)).to({scaleY:0.92,x:-347.6,y:342.5},13,cjs.Ease.get(1)).to({scaleY:0.96,x:-346.9,y:343.8},13,cjs.Ease.get(-1)).to({scaleY:1,x:-346.1,y:345.2},13,cjs.Ease.get(1)).to({_off:true},38).wait(62));
 
 	// leg-1.png
 	this.instance_9 = new lib.Символ6();
 	this.instance_9.parent = this;
 	this.instance_9.setTransform(-404.9,337.4,1,1,0,0,0,35,22.4);
 
-	this.timeline.addTween(cjs.Tween.get(this.instance_9).to({scaleY:0.99,x:-404.4,y:336.4},12,cjs.Ease.get(-1)).to({regY:22.5,scaleY:0.98,x:-403.9,y:335.4},13,cjs.Ease.get(1)).to({scaleY:0.99,x:-404.4,y:336.4},13,cjs.Ease.get(-1)).to({regY:22.4,scaleY:1,x:-404.9,y:337.4},13,cjs.Ease.get(1)).to({_off:true},57).wait(62));
+	this.timeline.addTween(cjs.Tween.get(this.instance_9).to({scaleY:0.99,x:-404.4,y:336.4},12,cjs.Ease.get(-1)).to({regY:22.5,scaleY:0.98,x:-403.9,y:335.4},13,cjs.Ease.get(1)).to({scaleY:0.99,x:-404.4,y:336.4},13,cjs.Ease.get(-1)).to({regY:22.4,scaleY:1,x:-404.9,y:337.4},13,cjs.Ease.get(1)).to({scaleY:0.99,x:-404.4,y:336.4},12,cjs.Ease.get(-1)).to({regY:22.5,scaleY:0.98,x:-403.9,y:335.4},13,cjs.Ease.get(1)).to({scaleY:0.99,x:-404.4,y:336.4},13,cjs.Ease.get(-1)).to({regY:22.4,scaleY:1,x:-404.9,y:337.4},13,cjs.Ease.get(1)).to({scaleY:0.99,x:-404.4,y:336.4},12,cjs.Ease.get(-1)).to({regY:22.5,scaleY:0.98,x:-403.9,y:335.4},13,cjs.Ease.get(1)).to({scaleY:0.99,x:-404.4,y:336.4},13,cjs.Ease.get(-1)).to({regY:22.4,scaleY:1,x:-404.9,y:337.4},13,cjs.Ease.get(1)).to({_off:true},38).wait(62));
 
 }).prototype = p = new cjs.MovieClip();
 p.nominalBounds = new cjs.Rectangle(-439.9,95.7,155,384.3);
@@ -1078,7 +1078,7 @@ p.nominalBounds = new cjs.Rectangle(311.1,122.7,797.9,451.8);
 	this.instance_15.setTransform(31.3,49.8,1,1,30,0,0,338.1,184.1);
 	this.instance_15.alpha = 0;
 
-	this.timeline.addTween(cjs.Tween.get(this.instance_15).wait(6).to({alpha:1},0).wait(65).to({alpha:0},5).wait(1));
+	this.timeline.addTween(cjs.Tween.get(this.instance_15).to({alpha:1},6).wait(65).to({alpha:0},5).wait(1));
 
 }).prototype = p = new cjs.MovieClip();
 p.nominalBounds = new cjs.Rectangle(-474.9,-386.8,1012.4,873.2);
@@ -1500,17 +1500,17 @@ lib.properties = {
 	color: "#FFFFFF",
 	opacity: 0.00,
 	manifest: [
-		{src:"images/body.png?1496049172109", id:"body"},
-		{src:"images/brassiere.png?1496049172109", id:"brassiere"},
-		{src:"images/girl_lif_s.jpg?1496049172109", id:"girl_lif_s"},
-		{src:"images/hand.png?1496049172109", id:"hand"},
-		{src:"images/handdd.png?1496049172109", id:"handdd"},
-		{src:"images/head1.png?1496049172109", id:"head1"},
-		{src:"images/kist.png?1496049172109", id:"kist"},
-		{src:"images/leg1.png?1496049172109", id:"leg1"},
-		{src:"images/leg.png?1496049172109", id:"leg"},
-		{src:"images/ple4o.png?1496049172109", id:"ple4o"},
-		{src:"images/tits.png?1496049172109", id:"tits"}
+		{src:"images/body.png?1496050694812", id:"body"},
+		{src:"images/brassiere.png?1496050694812", id:"brassiere"},
+		{src:"images/girl_lif_s.jpg?1496050694812", id:"girl_lif_s"},
+		{src:"images/hand.png?1496050694812", id:"hand"},
+		{src:"images/handdd.png?1496050694812", id:"handdd"},
+		{src:"images/head1.png?1496050694812", id:"head1"},
+		{src:"images/kist.png?1496050694812", id:"kist"},
+		{src:"images/leg1.png?1496050694812", id:"leg1"},
+		{src:"images/leg.png?1496050694812", id:"leg"},
+		{src:"images/ple4o.png?1496050694812", id:"ple4o"},
+		{src:"images/tits.png?1496050694812", id:"tits"}
 	],
 	preloads: []
 };
