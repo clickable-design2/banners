@@ -38,8 +38,8 @@ p.nominalBounds = new cjs.Rectangle(0,0,96,35);
 p.nominalBounds = new cjs.Rectangle(0,0,50,90);
 
 
-(lib.head = function() {
-	this.initialize(img.head);
+(lib.head1 = function() {
+	this.initialize(img.head1);
 }).prototype = p = new cjs.Bitmap();
 p.nominalBounds = new cjs.Rectangle(0,0,88,99);
 
@@ -529,7 +529,7 @@ function getMCSymbolPrototype(symbol, nominalBounds, frameBounds) {
 	this.initialize(mode,startPosition,loop,{});
 
 	// Слой 1
-	this.instance = new lib.head();
+	this.instance = new lib.head1();
 	this.instance.parent = this;
 
 	this.timeline.addTween(cjs.Tween.get(this.instance).wait(1));
@@ -1422,6 +1422,19 @@ p.nominalBounds = new cjs.Rectangle(0,0,109.6,108.5);
 	mask.graphics.p("ARRZqMAAAgzHIiKAAMAAAAzHI/TAAMAAAgzHIiKAAMAAAAzHI/TAAMAAAgzTMBjTAAAMAAAAzTg");
 	mask.setTransform(303.5,153);
 
+	// Слой 8
+	this.dark = new lib.Символ35();
+	this.dark.parent = this;
+	this.dark.setTransform(506.1,165.6,1,1,0,0,0,125,177.6);
+
+	var maskedShapeInstanceList = [this.dark];
+
+	for(var shapedInstanceItr = 0; shapedInstanceItr < maskedShapeInstanceList.length; shapedInstanceItr++) {
+		maskedShapeInstanceList[shapedInstanceItr].mask = mask;
+	}
+
+	this.timeline.addTween(cjs.Tween.get(this.dark).wait(1));
+
 	// Слой 13
 	this.instance = new lib.Символ41();
 	this.instance.parent = this;
@@ -1449,19 +1462,6 @@ p.nominalBounds = new cjs.Rectangle(0,0,109.6,108.5);
 	}
 
 	this.timeline.addTween(cjs.Tween.get(this.instance_1).wait(1));
-
-	// Слой 8
-	this.dark = new lib.Символ35();
-	this.dark.parent = this;
-	this.dark.setTransform(506.1,165.6,1,1,0,0,0,125,177.6);
-
-	var maskedShapeInstanceList = [this.dark];
-
-	for(var shapedInstanceItr = 0; shapedInstanceItr < maskedShapeInstanceList.length; shapedInstanceItr++) {
-		maskedShapeInstanceList[shapedInstanceItr].mask = mask;
-	}
-
-	this.timeline.addTween(cjs.Tween.get(this.dark).wait(1));
 
 	// Слой 3
 	this.instance_2 = new lib.Символ12();
@@ -1500,17 +1500,17 @@ lib.properties = {
 	color: "#FFFFFF",
 	opacity: 0.00,
 	manifest: [
-		{src:"images/body.png?1496048679520", id:"body"},
-		{src:"images/brassiere.png?1496048679520", id:"brassiere"},
-		{src:"images/girl_lif_s.jpg?1496048679520", id:"girl_lif_s"},
-		{src:"images/hand.png?1496048679520", id:"hand"},
-		{src:"images/handdd.png?1496048679520", id:"handdd"},
-		{src:"images/head.png?1496048679520", id:"head"},
-		{src:"images/kist.png?1496048679520", id:"kist"},
-		{src:"images/leg1.png?1496048679520", id:"leg1"},
-		{src:"images/leg.png?1496048679520", id:"leg"},
-		{src:"images/ple4o.png?1496048679520", id:"ple4o"},
-		{src:"images/tits.png?1496048679520", id:"tits"}
+		{src:"images/body.png?1496049172109", id:"body"},
+		{src:"images/brassiere.png?1496049172109", id:"brassiere"},
+		{src:"images/girl_lif_s.jpg?1496049172109", id:"girl_lif_s"},
+		{src:"images/hand.png?1496049172109", id:"hand"},
+		{src:"images/handdd.png?1496049172109", id:"handdd"},
+		{src:"images/head1.png?1496049172109", id:"head1"},
+		{src:"images/kist.png?1496049172109", id:"kist"},
+		{src:"images/leg1.png?1496049172109", id:"leg1"},
+		{src:"images/leg.png?1496049172109", id:"leg"},
+		{src:"images/ple4o.png?1496049172109", id:"ple4o"},
+		{src:"images/tits.png?1496049172109", id:"tits"}
 	],
 	preloads: []
 };
