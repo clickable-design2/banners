@@ -10,13 +10,13 @@ lib.properties = {
 	color: "#FFFFFF",
 	opacity: 1.00,
 	manifest: [
-		{src:"images/back.jpg?1496410929803", id:"back"},
-		{src:"images/blue.png?1496410929803", id:"blue"},
-		{src:"images/cup.png?1496410929803", id:"cup"},
-		{src:"images/girl.png?1496410929803", id:"girl"},
-		{src:"images/logo.png?1496410929803", id:"logo"},
-		{src:"images/money.png?1496410929803", id:"money"},
-		{src:"images/red.png?1496410929803", id:"red"}
+		{src:"images/back.jpg?1496413314944", id:"back"},
+		{src:"images/blue.png?1496413314944", id:"blue"},
+		{src:"images/cup.png?1496413314944", id:"cup"},
+		{src:"images/girl.png?1496413314944", id:"girl"},
+		{src:"images/logo.png?1496413314944", id:"logo"},
+		{src:"images/money.png?1496413314944", id:"money"},
+		{src:"images/red.png?1496413314944", id:"red"}
 	]
 };
 
@@ -827,6 +827,30 @@ p.nominalBounds = new cjs.Rectangle(0,0,1119.4,301.1);
 p.nominalBounds = new cjs.Rectangle(270.4,-6.7,384,85.6);
 
 
+(lib.Символ33 = function(mode,startPosition,loop) {
+	this.initialize(mode,startPosition,loop,{});
+
+	// timeline functions:
+	this.frame_0 = function() {
+		this.stop();
+	}
+	this.frame_14 = function() {
+		this.stop();
+	}
+
+	// actions tween:
+	this.timeline.addTween(cjs.Tween.get(this).call(this.frame_0).wait(14).call(this.frame_14).wait(16));
+
+	// Слой 1
+	this.tek = new lib.Символ22();
+	this.tek.setTransform(168,25.7,1,1,0,0,0,168,25.7);
+
+	this.timeline.addTween(cjs.Tween.get(this.tek).to({alpha:0},14).to({alpha:1},15).wait(1));
+
+}).prototype = p = new cjs.MovieClip();
+p.nominalBounds = new cjs.Rectangle(0,0,335.9,51.4);
+
+
 (lib.Символ14 = function(mode,startPosition,loop) {
 	this.initialize(mode,startPosition,loop,{});
 
@@ -952,6 +976,7 @@ p.nominalBounds = new cjs.Rectangle(-462.5,-27.5,718.6,85);
 				    this.girl.gotoAndPlay(2);
 					this.but.gotoAndPlay(2);
 					this.car.gotoAndPlay(2);
+					this.tek.gotoAndPlay(2);
 					
 				
 				}
@@ -963,6 +988,7 @@ p.nominalBounds = new cjs.Rectangle(-462.5,-27.5,718.6,85);
 					this.girl.gotoAndPlay(20);
 					this.but.gotoAndPlay(11);
 					this.car.gotoAndPlay(30);
+					this.tek.gotoAndPlay(15);
 				
 				}
 	}
@@ -989,16 +1015,16 @@ p.nominalBounds = new cjs.Rectangle(-462.5,-27.5,718.6,85);
 	this.timeline.addTween(cjs.Tween.get(this.girl).wait(1));
 
 	// Слой 3
-	this.instance_1 = new lib.Символ22();
-	this.instance_1.setTransform(208.1,32.8,1,1,0,0,0,168,25.7);
+	this.tek = new lib.Символ33();
+	this.tek.setTransform(208.1,32.8,1,1,0,0,0,168,25.7);
 
-	this.timeline.addTween(cjs.Tween.get(this.instance_1).wait(1));
+	this.timeline.addTween(cjs.Tween.get(this.tek).wait(1));
 
 	// Символ 1
-	this.instance_2 = new lib.Символ13();
-	this.instance_2.setTransform(66.3,148.9,0.847,0.847,0,0,0,58.4,21.1);
+	this.instance_1 = new lib.Символ13();
+	this.instance_1.setTransform(66.3,148.9,0.847,0.847,0,0,0,58.4,21.1);
 
-	this.timeline.addTween(cjs.Tween.get(this.instance_2).wait(1));
+	this.timeline.addTween(cjs.Tween.get(this.instance_1).wait(1));
 
 	// Слой 2
 	this.car = new lib.Символ14();
@@ -1007,16 +1033,16 @@ p.nominalBounds = new cjs.Rectangle(-462.5,-27.5,718.6,85);
 	this.timeline.addTween(cjs.Tween.get(this.car).wait(1));
 
 	// money.png
-	this.instance_3 = new lib.money();
-	this.instance_3.setTransform(300,162);
+	this.instance_2 = new lib.money();
+	this.instance_2.setTransform(300,162);
 
-	this.timeline.addTween(cjs.Tween.get(this.instance_3).wait(1));
+	this.timeline.addTween(cjs.Tween.get(this.instance_2).wait(1));
 
 	// Символ 5
-	this.instance_4 = new lib.Символ5();
-	this.instance_4.setTransform(609.1,136.5,1,1.093,0,0,0,609.1,150.5);
+	this.instance_3 = new lib.Символ5();
+	this.instance_3.setTransform(609.1,136.5,1,1.093,0,0,0,609.1,150.5);
 
-	this.timeline.addTween(cjs.Tween.get(this.instance_4).wait(1));
+	this.timeline.addTween(cjs.Tween.get(this.instance_3).wait(1));
 
 }).prototype = p = new cjs.MovieClip();
 p.nominalBounds = new cjs.Rectangle(-2.1,122,1519.4,359.9);
