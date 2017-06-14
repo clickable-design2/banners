@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script type="text/javascript" src="//banners.adfox.ru/files/adfox_HTML5.js"></script>
+        <script>
+            var canvas, stage, exportRoot, fnStartAnimation, imgSrc;
+            window.images = {};
+            
+            function getWindowSize() {
+                return {
+                    iw: Math.min(document.documentElement.clientWidth, window.innerWidth || 0),
+                    ih: Math.min(document.documentElement.clientHeight, window.innerHeight || 0),
+                }
+            }
+            
+            imgSrc = [
+                {src:"images/back.jpg", id:"back"},
+                {src:"images/blue.png", id:"blue"},
+                {src:"images/cup.png", id:"cup"},
+                {src:"images/flag.png", id:"flag"},
+                {src:"images/logo.png", id:"logo"},
+                {src:"images/money.png", id:"money"},
+                {src:"images/red.png", id:"red"}
+            ];
+            
+            function setImg(id, path) {
+                var img = new Image();
+                img.src = path;
+                images[id] = img;
+            }
+
+            for (i = 0; i < imgSrc.length; i++) { 
+                var data = imgSrc[i];
+                setImg(data.id, data.src);
+            }
+        </script>
+        <script src="https://code.createjs.com/createjs-2015.11.26.min.js"></script>
+        <script src="fonrace.js"></script>
+        <style>
+            body, #scene{overflow: hidden;}
+            #scene, canvas, #apearBox, #canvasBox > div {
+                position: absolute;
+                width: 100%; height: 100%;
+                top: 0; left: 0;
+            }
+            #apearBox{
+                transition-duration: 500ms;
+                -webkit-transition-duration: 500ms;
+            }
+            #canvasBox {position: absolute;}
+            .add {opacity: 1;}
+            .remove {opacity: 0;}
+        </style>
+    </head>
+    <body onload="init();">
+        <div id="apearBox" class="remove">
+            <div id="scene">
+                <div id="canvasBox">
+                    <div>
+                        <canvas id="canvas"></canvas>
+                        <div id="canvas_bg"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+    <script>
+        function init() {
+            canvasBox = document.getElementById("canvasBox");
+            canvas = document.getElementById("canvas");
+            handleComplete();
+        }
+        var flashVars = {
+          reference: "%reference%",
+          link: "%user1%",
+          target: "%target%",
+          rnd: parseInt("%random1%") || parseInt("%random%"),
+          events: [
+                "",
+                "%event1%",
+                "%event2%",
+                "%event3%",
+                "%event4%",
+                "%event5%",
+                "%event6%",
+                "%event7%",
+                "%event8%",
+                "%event9%",
+                "%event10%",
+                "%event11%",
+                "%event12%",
+                "%event13%",
+                "%event14%",
+                "%event15%",
+                "%event16%",
+                "%event17%",
+                "%event18%",
+                "%event19%",
+                "%event20%",
+                "%event21%",
+                "%event22%",
+                "%event23%",
+                "%event24%",
+                "%event25%",
+                "%event26%",
+                "%event27%",
+                "%event28%",
+                "%event29%",
+                "%event30%"
+          ]
+        };
+        function handleComplete(evt) {
+            exportRoot = new lib.fonrace();
+            stage = new createjs.Stage(canvas);
+            stage.addChild(exportRoot);	
+            fnStartAnimation = function() {
+                createjs.Ticker.setFPS(lib.properties.fps);
+                createjs.Ticker.addEventListener("tick", stage);
+            }
+            SetCanvas = function() {
+                var sScale = getWindowSize(),
+                    w = lib.properties.width, 
+                    h = lib.properties.height, 
+                    p = window.devicePixelRatio;
+
+                stage.scaleX = stage.scaleY = p;
+                canvas.width = w * p;			
+                canvas.height = h * p;
+                
+                canvasBox.style.width = w + 'px';
+                canvasBox.style.height = h + 'px';
+
+                canvasBox.style.left = 0 + 'px';
+                canvasBox.style.top = 0 + 'px';
+            }
+            SetCanvas();
+            fnStartAnimation();
+        }
+        </script>
+</html>
