@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script type="text/javascript" src="//banners.adfox.ru/files/adfox_HTML5.js"></script>
+        <script>
+            var canvas, stage, exportRoot, fnStartAnimation, imgSrc;
+            window.images = {};
+            
+            function getWindowSize() {
+                return {
+                    iw: Math.min(document.documentElement.clientWidth, window.innerWidth || 0),
+                    ih: Math.min(document.documentElement.clientHeight, window.innerHeight || 0),
+                }
+            }
+            
+            window.contentPreferences = {
+                horizontalMiddle: false,
+                verticalMiddle: false,
+                reScale: false
+            }
+            
+            imgSrc = [
+                {src:"images/btn.png", id:"btn"},
+                {src:"images/doll.png", id:"doll"},
+                {src:"images/doll2.png", id:"doll2"},
+                {src:"images/iph.png", id:"iph"},
+                {src:"images/iph2.png", id:"iph2"},
+                {src:"images/logo.png", id:"logo"},
+                {src:"images/mexball.png", id:"mexball"},
+                {src:"images/money.png", id:"money"},
+                {src:"images/nzball.png", id:"nzball"},
+                {src:"images/portball.png", id:"portball"},
+                {src:"images/rusball.png", id:"rusball"},
+                {src:"images/ten.png", id:"ten"},
+                {src:"images/tick.png", id:"tick"},
+                {src:"images/tickets.png", id:"tickets"}
+            ];
+            
+            function setImg(id, path) {
+                var img = new Image();
+                img.src = path;
+                images[id] = img;
+            }
+
+            for (i = 0; i < imgSrc.length; i++) { 
+                var data = imgSrc[i];
+                setImg(data.id, data.src);
+            }
+        </script>
+        <script src="https://code.createjs.com/createjs-2015.11.26.min.js"></script>
+        <script src="index.js"></script>
+        <style>
+            body, #scene{overflow: hidden;}
+            #scene, canvas, #apearBox, #canvasBox > div, #canvas_bg {
+                position: absolute;
+                width: 100%; height: 100%;
+                top: 0; left: 0;
+            }
+            
+            #canvas_bg{z-index: 1;}
+            #canvas{z-index: 2;}
+            #apearBox{
+                transition-duration: 500ms;
+                -webkit-transition-duration: 500ms;
+            }
+            #canvasBox {position: absolute; overflow: hidden;}
+            .add {opacity: 1;}
+            .remove {opacity: 0;}
+            
+            #bb_img {
+                position: absolute;
+                width: 400%; height: 100%;
+                background: url(images/bg.jpg) left center;
+                background-size: contain;
+                background-repeat: repeat-x;
+                
+                animation: bg_move 600ms infinite;
+                -webkit-animation: bg_move 600ms infinite;
+                
+                animation-timing-function: linear;
+                -webkit-animation-timing-function: linear;
+            }
+            /*@keyframes bg_move {from {left: 0;} to {left: -100%;}}
+            @-webkit-keyframes bg_move {from {left: 0;} to {left: -100%;}}*/
+        </style>
+    </head>
+    <body onload="init();">
+        <div id="apearBox" class="remove">
+            <div id="scene">
+                <div id="canvasBox">
+                    <div>
+                        <canvas id="canvas"></canvas>
+                        <div id="canvas_bg">
+                            <div id="bb_img"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+    <script>
+        function init() {
+            canvasBox = document.getElementById("canvasBox");
+            canvas = document.getElementById("canvas");
+            handleComplete();
+        }
+        var flashVars = {
+          reference: "%reference%",
+          link: "%user1%",
+          target: "%target%",
+          rnd: parseInt("%random1%") || parseInt("%random%"),
+          events: [
+                "",
+                "%event1%",
+                "%event2%",
+                "%event3%",
+                "%event4%",
+                "%event5%",
+                "%event6%",
+                "%event7%",
+                "%event8%",
+                "%event9%",
+                "%event10%",
+                "%event11%",
+                "%event12%",
+                "%event13%",
+                "%event14%",
+                "%event15%",
+                "%event16%",
+                "%event17%",
+                "%event18%",
+                "%event19%",
+                "%event20%",
+                "%event21%",
+                "%event22%",
+                "%event23%",
+                "%event24%",
+                "%event25%",
+                "%event26%",
+                "%event27%",
+                "%event28%",
+                "%event29%",
+                "%event30%"
+          ]
+        };
+        function handleComplete(evt) {
+            exportRoot = new lib.index();
+            stage = new createjs.Stage(canvas);
+            stage.addChild(exportRoot);	
+            fnStartAnimation = function() {
+                createjs.Ticker.setFPS(lib.properties.fps);
+                createjs.Ticker.addEventListener("tick", stage);
+            }
+            SetCanvas = function() {
+                var sScale = getWindowSize(),
+                    w = sScale.iw, 
+                    h = lib.properties.height, 
+                    p = window.devicePixelRatio, 
+                    scaleW = sScale.iw / w, 
+                    scaleY = sScale.ih / h, 
+                    scaleWY = scaleW * scaleY,
+                    scaleCanvas;
+
+                stage.scaleX = stage.scaleY = p;
+                canvas.width = w * p;			
+                canvas.height = h * p;
+                
+                if(sScale.iw < w){scaleCanvas = scaleW;}
+                else if(sScale.ih < h){scaleCanvas = scaleY;}
+                else if(sScale.iw < w && sScale.ih < h){scaleCanvas = scaleWY;}
+                else {scaleCanvas = 1;}
+                
+                var middleX = (sScale.iw / 2) - ((w * ((contentPreferences.reScale) ? scaleCanvas : 1)) / 2),
+                    middleY = (sScale.ih / 2) - ((h * ((contentPreferences.reScale) ? scaleCanvas : 1)) / 2);
+                
+                function cSizePos(scale){
+                    canvasBox.style.width = w * ((contentPreferences.reScale) ? scale : 1) + 'px';
+                    canvasBox.style.height = h * ((contentPreferences.reScale) ? scale : 1) + 'px';
+                    
+                    canvasBox.style.left = ((contentPreferences.horizontalMiddle) ? middleX : 0) + 'px';
+                    canvasBox.style.top = ((contentPreferences.verticalMiddle) ? middleY : 0) + 'px';;
+                }
+                cSizePos(scaleCanvas);
+            }
+            window.addEventListener('resize', SetCanvas);
+            SetCanvas();
+            fnStartAnimation();
+        }
+        </script>
+</html>
