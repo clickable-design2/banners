@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script src="https://code.createjs.com/createjs-2015.11.26.min.js"></script>
+        <script src="index.js"></script>
+        <script>
+        var canvas, stage, exportRoot, fnStartAnimation;
+        function getWindowSize() {
+            return {
+                iw: Math.min(document.documentElement.clientWidth, window.innerWidth || 0),
+                ih: Math.min(document.documentElement.clientHeight, window.innerHeight || 0),
+            }
+        }
+        function init() {
+            canvas = document.getElementById("canvas");
+            images = images||{};
+            var loader = new createjs.LoadQueue(false);
+            loader.addEventListener("fileload", handleFileLoad);
+            loader.addEventListener("complete", handleComplete);
+            loader.loadManifest(lib.properties.manifest);
+        }
+        var flashVars = {
+              reference: "%reference%",
+              link: "%user1%",
+              target: "%target%",
+              rnd: parseInt("%random1%") || parseInt("%random%"),
+              events: [
+                    "",
+                    "%event1%","%event2%","%event3%","%event4%","%event5%","%event6%","%event7%","%event8%","%event9%","%event10%","%event11%",
+                    "%event12%","%event13%","%event14%","%event15%","%event16%","%event17%","%event18%","%event19%","%event20%","%event21%",
+                    "%event22%","%event23%","%event24%","%event25%","%event26%","%event27%","%event28%","%event29%","%event30%"
+              ]
+        };
+        function handleFileLoad(evt) {	
+            if (evt.item.type == "image") { images[evt.item.id] = evt.result; }	
+        }
+        function handleComplete(evt) {
+            exportRoot = new lib.index();
+            stage = new createjs.Stage(canvas);
+            stage.addChild(exportRoot);	
+            fnStartAnimation = function() {
+                createjs.Ticker.setFPS(lib.properties.fps);
+                createjs.Ticker.addEventListener("tick", stage);
+            }	    
+
+            function makeResponsive() {		
+                window.addEventListener('resize', resizeCanvas);		
+                resizeCanvas();		
+                function resizeCanvas() {			
+                    var sScale = getWindowSize();
+                    var iw = sScale.iw, ih = sScale.ih,
+                        w = sScale.iw, h = sScale.ih, 
+                        p = window.devicePixelRatio;
+
+                    stage.scaleX = stage.scaleY = p;
+
+                    canvas.width = iw * p;			
+                    canvas.height = ih * p;
+                    canvas.style.width =  iw + 'px';				
+                    canvas.style.height = ih + 'px';
+                }
+            }
+            makeResponsive();	
+            fnStartAnimation();
+        }
+        </script>
+        <style>
+            #main_wrapper, #wrapper_background {
+                position: absolute;
+                width: 100%; height: 100%;
+                left: 0; top: 0;
+            } 
+
+            #main_wrapper, #content_box{
+                overflow: hidden;
+                transform: translateZ(0); -webkit-transform: translateZ(0);
+            }
+
+            #main_wrapper {
+                -webkit-touch-callout: none; 
+                -webkit-user-select: none; 
+                -khtml-user-select: none; 
+                -moz-user-select: none; 
+                -ms-user-select: none;
+                -o-user-select: none;
+                user-select: none; 
+                text-decoration: none;
+                animation: add_box 700ms ease-in-out; -webkit-animation: add_box 700ms ease-in-out;
+            }
+
+            #content_box{
+                position: absolute;
+                width: 100%; height: 100%;
+                left: 0; top: 0;
+                z-index: 2;
+
+                background-color: rgb(95, 95, 95);
+            }
+
+            #canvas{
+                position: absolute;
+                left: 0; top:0;
+                z-index: 4;
+            }
+            @keyframes add_box {
+                from {opacity: 0;}
+                to {opacity: 1;}
+            }
+
+            @-webkit-keyframes add_box {
+                from {opacity: 0;}
+                to {opacity: 1;}
+            }
+        </style>
+    </head>
+    <body onload="init();" style="margin:0px;">
+        <a href="%reference%@%user1%" target="%target%" >
+            <div id="main_wrapper">
+                <div id="content_box">
+                    <canvas id="canvas"></canvas>
+                 </div>
+            </div>
+        </a>
+    </body>
+</html>
