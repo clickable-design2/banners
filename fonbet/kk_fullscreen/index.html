@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="HandheldFriendly" content="true" />
+        <meta name="MobileOptimized" content="width" />
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="mobile-web-app-capable" content="yes">
+        <meta name="format-detection" content="telephone=no">
+        <meta name="format-detection" content="address=no"/>
+        <meta name="google" content="notranslate">
+        <script>
+            var canvas, stage, exportRoot, fnStartAnimation, imgSrc;
+            window.images = {};
+            
+            window.isTouch = (('ontouchstart' in window) || (navigator.msMaxTouchPoints > 0));
+            window.ua = navigator.userAgent.toLowerCase();
+            window.os = {
+                android: function() {return ua.match(/android/i);},
+                ios: function() {return ua.match(/iphone|ipad|ipod/i);}
+            };
+            imgSrc = [
+                {src:"images/btn1.png", id:"btn1"},
+                {src:"images/doll.png", id:"doll"},
+                {src:"images/doll2.png", id:"doll2"},
+                {src:"images/iph2.png", id:"iph2"},
+                {src:"images/mex.png", id:"mex"},
+                {src:"images/mexball.png", id:"mexball"},
+                {src:"images/money.png", id:"money"},
+                {src:"images/new_zel.png", id:"new_zel"},
+                {src:"images/nzball.png", id:"nzball"},
+                {src:"images/one.png", id:"one"},
+                {src:"images/one_txt.png", id:"one_txt"},
+                {src:"images/port.png", id:"port"},
+                {src:"images/portball.png", id:"portball"},
+                {src:"images/rus.png", id:"rus"},
+                {src:"images/rusball.png", id:"rusball"},
+                {src:"images/ten.png", id:"ten"},
+                {src:"images/three.png", id:"three"},
+                {src:"images/three_txt.png", id:"three_txt"},
+                {src:"images/tickets.png", id:"tickets"},
+                {src:"images/titile23.png", id:"titile23"},
+                {src:"images/title1.png", id:"title1"},
+                {src:"images/title21.png", id:"title21"},
+                {src:"images/title22.png", id:"title22"},
+                {src:"images/two.png", id:"two"},
+                {src:"images/two_txt.png", id:"two_txt"},
+                {src:"images/vs.png", id:"vs"}
+            ];
+            function setImg(id, path) {
+                var img = new Image();
+                img.src = path;
+                images[id] = img;
+            }
+            for (i = 0; i < imgSrc.length; i++) { 
+                var data = imgSrc[i];
+                setImg(data.id, data.src);
+            }
+        </script>
+        <style>
+            #main_wrapper, #wrapper_background, #bg, #sides, #dark {
+                position: absolute;
+                width: 100%; height: 100%;
+                left: 0; top: 0;
+            } 
+
+            #main_wrapper, #content_box{
+                overflow: hidden;
+                transform: translateZ(0); -webkit-transform: translateZ(0);
+            }
+            
+            #main_wrapper {
+                -webkit-touch-callout: none; 
+                -webkit-user-select: none; 
+                -khtml-user-select: none; 
+                -moz-user-select: none; 
+                -ms-user-select: none;
+                -o-user-select: none;
+                user-select: none; 
+                text-decoration: none;
+                animation: add_box 700ms ease-in-out; -webkit-animation: add_box 700ms ease-in-out;
+            }
+
+            #content_box{
+                position: absolute;
+                width: 100%; height: 100%;
+                left: 0; top: 0;
+                z-index: 2;
+            }
+            
+            #bg {
+                z-index: 1;
+                background: url(images/bg.jpg) center bottom no-repeat;
+                background-size: cover;
+                
+                animation: scale_bg 3s ease-in-out infinite alternate;
+                -webkit-animation: scale_bg 3s ease-in-out infinite alternate;
+            }
+            
+            @keyframes scale_bg {
+                from{transform: scale(1); -webkit-transform: scale(1);}
+                to{transform: scale(1.14); -webkit-transform: scale(1.14);}
+            }
+            
+            @-webkit-keyframes scale_bg {
+                from{transform: scale(1); -webkit-transform: scale(1);}
+                to{transform: scale(1.14); -webkit-transform: scale(1.14);}
+            }
+            
+            #dark {
+                z-index: 2;
+                background-image: -moz-radial-gradient( 50% 50%, circle closest-side, rgba(0,0,0,0) 0%, rgba(0,0,0,0.32941) 100%);
+                background-image: -webkit-radial-gradient( 50% 50%, circle closest-side, rgba(0,0,0,0) 0%, rgba(0,0,0,0.32941) 100%);
+                background-image: -ms-radial-gradient( 50% 50%, circle closest-side, rgba(0,0,0,0) 0%, rgba(0,0,0,0.32941) 100%);
+                
+                animation: add_box 800ms infinite alternate;
+                -webkit-animation: add_box 800ms infinite alternate;
+                
+                animation-timing-function: linear;
+                -webkit-animation-timing-function: linear;
+            }
+            
+            #sides {
+                z-index: 4;
+            }
+            
+            #sides > div {
+                position: absolute;
+                width: 30%;
+                height: 30%;
+                bottom: -5%;
+            }
+            
+            #red {
+                left: 0;
+                background: url(images/red_phone.png) left bottom no-repeat;
+                background-size: contain;
+                
+                animation: move_red 700ms ease-in-out infinite alternate;
+                -webkit-animation: move_red 700ms ease-in-out infinite alternate;
+            }
+            
+            @keyframes move_red {
+                from {transform: translateY(0); -webkit-transform: translateY(0);}
+                to {transform: translateY(10%); -webkit-transform: translateY(10%);}
+            }
+            
+            @-webkit-keyframes move_red {
+                from {transform: translateY(0); -webkit-transform: translateY(0);}
+                to {transform: translateY(10%); -webkit-transform: translateY(10%);}
+            }
+            
+            #tick {
+                right: 0;
+                background: url(images/ticket.png) right bottom no-repeat;
+                background-size: contain;
+                
+                animation: move_tick 700ms ease-in-out infinite alternate;
+                -webkit-animation: move_tick 700ms ease-in-out infinite alternate;
+            }
+            
+            @keyframes move_tick {
+                from {transform: translateY(10%); -webkit-transform: translateY(10%);}
+                to {transform: translateY(0); -webkit-transform: translateY(0);}
+            }
+            
+            @-webkit-keyframes move_tick {
+                from {transform: translateY(10%); -webkit-transform: translateY(10%);}
+                to {transform: translateY(0); -webkit-transform: translateY(0);}
+            }
+
+            #canvas{
+                position: absolute;
+                left: 0; top:0;
+                z-index: 4;
+            }
+            
+            #logo{
+                position: absolute;
+                left: 0; top:5%;
+                width: 100%;
+                height: 15%;
+                z-index: 5;
+            }
+            #logo > div{
+                position: absolute;
+                left: 0; top:15%;
+                width: 100%;
+                height: 70%;
+                background: url(images/logo.svg) center no-repeat;
+                background-size: contain;
+                
+                animation: scale_logo 700ms ease-in-out infinite alternate;
+                -webkit-animation: scale_logo 700ms ease-in-out infinite alternate;
+            }
+            
+            @keyframes scale_logo {
+                from{transform: scale(1); -webkit-transform: scale(1);}
+                to{transform: scale(0.85); -webkit-transform: scale(0.85);}
+            }
+            
+            @-webkit-keyframes scale_logo {
+                from{transform: scale(1); -webkit-transform: scale(1);}
+                to{transform: scale(0.85); -webkit-transform: scale(0.85);}
+            }
+            
+            #mousover {
+                position: absolute;
+                width: 100%;
+                height: 40%;
+                left: 0;
+                top: 30%;
+                z-index: 8;
+            }
+            
+            #button {
+                position: absolute;
+                width: 100%;
+                height: 30%;
+                left: 0;
+                top: 55%;
+                z-index: 9;
+            }
+            #button > div{
+                position: absolute;
+                left: 0; top:30%;
+                width: 100%;
+                height: 40%;
+                background: url(images/button.svg) center no-repeat;
+                background-size: contain;
+                
+                animation: scale_logo 400ms ease-in-out infinite alternate;
+                -webkit-animation: scale_logo 400ms ease-in-out infinite alternate;
+             }
+
+            @keyframes add_box {
+                from {opacity: 0;}
+                to {opacity: 1;}
+            }
+
+            @-webkit-keyframes add_box {
+                from {opacity: 0;}
+                to {opacity: 1;}
+            }
+            
+            @media (orientation: portrait) and (max-width: 420px){
+               #sides > div {
+                    position: absolute;
+                    width: 45%;
+                    height: 40%;
+                    bottom: -5%;
+                } 
+            }
+            
+            @media (orientation: landscape) and (max-height: 600px){
+                #button {
+                    height: 45%;
+                    top: 63%;
+                }
+            }
+        </style>   
+        <script src="https://code.createjs.com/createjs-2015.11.26.min.js"></script>
+        <script src="index.js"></script>
+        <script>
+        function getWindowSize() {
+            return {
+                iw: Math.min(document.documentElement.clientWidth, window.innerWidth || 0),
+                ih: Math.min(document.documentElement.clientHeight, window.innerHeight || 0),
+            }
+        }
+        function init() {
+            canvas = document.getElementById("canvas");
+            createjs.MotionGuidePlugin.install();
+            handleComplete();
+        }
+        var flashVars = {
+              reference: "%reference%",
+              link: "%user1%",
+              target: "%target%",
+              rnd: parseInt("%random1%") || parseInt("%random%"),
+              events: [
+                    "",
+                    "%event1%","%event2%","%event3%","%event4%","%event5%","%event6%","%event7%","%event8%","%event9%","%event10%","%event11%",
+                    "%event12%","%event13%","%event14%","%event15%","%event16%","%event17%","%event18%","%event19%","%event20%","%event21%",
+                    "%event22%","%event23%","%event24%","%event25%","%event26%","%event27%","%event28%","%event29%","%event30%"
+              ]
+        };
+        function handleComplete(evt) {
+            exportRoot = new lib.fullscreen();
+            stage = new createjs.Stage(canvas);
+            stage.addChild(exportRoot);	
+            fnStartAnimation = function() {
+                createjs.Ticker.setFPS(30);
+                createjs.Ticker.addEventListener("tick", stage);
+            }	    
+            function makeResponsive() {		
+                window.addEventListener('resize', resizeCanvas);		
+                resizeCanvas();		
+                function resizeCanvas() {			
+                    var sScale = getWindowSize();
+                    var iw = sScale.iw, ih = sScale.ih,
+                        w = sScale.iw, h = sScale.ih, 
+                        p = window.devicePixelRatio;
+                    
+                    stage.scaleX = stage.scaleY = p;
+                    
+                    canvas.width = iw * p;			
+                    canvas.height = ih * p;
+                    canvas.style.width =  iw + 'px';				
+                    canvas.style.height = ih + 'px';
+                }
+            }
+            makeResponsive();
+            function setButton(){
+                var btn = document.getElementById('button');
+                var mover = document.getElementById('mousover');
+                if(os.ios() || os.android() || isTouch){
+                    btn.style.display = 'block';
+                    mover.style.display = 'none';
+                } else {
+                    btn.style.display = 'none';
+                    mover.style.display = 'block';
+                }
+            }
+            setButton();
+            fnStartAnimation();
+        }
+        </script>
+    </head>
+    <body onload="init();" style="margin:0px;">
+        <a href="%reference%@%user1%" target="%target%" >
+            <div id="main_wrapper">
+                <div id="content_box">
+                    <div id="button">
+                        <div></div>
+                    </div>
+                    <div id="mousover"></div>
+                    <div id="logo">
+                        <div></div>
+                    </div>
+                    <canvas id="canvas"></canvas>
+                    <div id="sides">
+                        <div id="red"></div>
+                        <div id="tick"></div>
+                    </div>
+                    <div id="dark"></div>
+                    <div id="bg"></div>
+                 </div>
+            </div>
+        </a>
+    </body>
+</html>
