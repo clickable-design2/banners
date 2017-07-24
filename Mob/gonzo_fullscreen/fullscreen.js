@@ -779,11 +779,11 @@ p.nominalBounds = new cjs.Rectangle(-28,1.5,199.9,236.3);
 	// Слой 2
 	this.instance_3 = new lib.Символ4_1();
 	this.instance_3.parent = this;
-	this.instance_3.setTransform(206.5,-40.2);
+	this.instance_3.setTransform(136.5,-40.2);
 
 	this.timeline.addTween(cjs.Tween.get(this.instance_3).wait(1));
 
-}).prototype = getMCSymbolPrototype(lib.Символ1_1, new cjs.Rectangle(-214.6,-302,560.6,506.5), null);
+}).prototype = getMCSymbolPrototype(lib.Символ1_1, new cjs.Rectangle(-214.6,-302,490.6,506.5), null);
 
 
 // stage content:
@@ -817,24 +817,24 @@ p.nominalBounds = new cjs.Rectangle(-28,1.5,199.9,236.3);
 		    
 		    /* Позиции элементов по умолчанию */
 		    
-		    _this.btn.x = iw / 2;
-		    _this.btn.y = ((w < h && w > 599) ? ih * 0.6 : ih * 0.52);
+		    _this.btn.x = w < h ? iw * 0.5 : (w > 950 && w > h) ? iw * 0.72 : iw * 0.77;
+		    _this.btn.y = w < h ? ((w < h && w > 599) ? ih * 0.6 : ih * 0.52) : ih * 0.8;
 			
-			_this.man.x = iw / 2;
-		    _this.man.y = ((w < h && w > 599) ? ih * 1.1 : ih);
+			_this.man.x = w < h ? iw / 2 : iw * 0.22;
+		    _this.man.y = w < h ? ((w < h && w > 599) ? ih * 1.1 : ih) : ih * 0.85;
 			
-			_this.txt.x = iw / 2;
-		    _this.txt.y = ((w < h && w > 599) ? ih * 0.36 : ih * 0.32);
+			_this.txt.x = w < h ? iw / 2 : ((w > 950) ? iw * 0.72 : iw * 0.77);
+		    _this.txt.y = w < h ? ((w < h && w > 599) ? ih * 0.36 : ih * 0.32) : ih * 0.5;
 			
-			_this.logo.x = iw * 0.5;
-		    _this.logo.y = ((w < h && w > 599) ? ih * 0.12 : ih * 0.1);
+			_this.logo.x = w < h ? iw * 0.5 : ((w > 950) ? iw * 0.72 : iw * 0.77);
+		    _this.logo.y = w < h ? ((w < h && w > 599) ? ih * 0.12 : ih * 0.1) : ih * 0.2;
 		    
 		    
 			/* Функция ресайза */
 		    function setScale(scale) {
 				
 		        _this.btn.scaleX = _this.btn.scaleY = ((w < h && w > 599) ? scale * 0.8 : scale);
-				_this.man.scaleX = _this.man.scaleY = ((w > h) ? scale * 1.3 : scale);
+				_this.man.scaleX = _this.man.scaleY = ((w > h) ? scale * 1.2 : scale);
 				_this.txt.scaleX = _this.txt.scaleY = ((w < h && w > 599) ? scale * 0.8 : scale);
 				_this.logo.scaleX = _this.logo.scaleY = ((w < h && w > 599) ? scale * 0.8 : scale);
 		    }
@@ -859,17 +859,7 @@ p.nominalBounds = new cjs.Rectangle(-28,1.5,199.9,236.3);
 		    /* Ориентация устройства */
 		
 		    if(w > h) {
-				_this.btn.x = ((w > 950) ? iw * 0.72 : iw * 0.77);
-				_this.btn.y = ih * 0.8;
-				
-				_this.man.x = iw * 0.3;
-				_this.man.y = ih * 0.85;
-				
-				_this.txt.x = ((w > 950) ? iw * 0.72 : iw * 0.77);
-				_this.txt.y = ih * 0.5;
-				
-				_this.logo.x = ((w > 950) ? iw * 0.72 : iw * 0.77);
-				_this.logo.y = ih * 0.2;		
+				//...///
 		    }
 					
 		}
@@ -910,7 +900,7 @@ p.nominalBounds = new cjs.Rectangle(-28,1.5,199.9,236.3);
 	// tors.png
 	this.man = new lib.Символ1_1();
 	this.man.parent = this;
-	this.man.setTransform(903.9,302.8,1,1,0,0,0,80,0);
+	this.man.setTransform(852.9,312.8,1,1,0,0,0,29,10);
 
 	this.timeline.addTween(cjs.Tween.get(this.man).wait(1));
 
@@ -922,7 +912,7 @@ p.nominalBounds = new cjs.Rectangle(-28,1.5,199.9,236.3);
 	this.timeline.addTween(cjs.Tween.get(this.logo).wait(1));
 
 }).prototype = p = new cjs.MovieClip();
-p.nominalBounds = new cjs.Rectangle(702,384.7,979.9,718.3);
+p.nominalBounds = new cjs.Rectangle(702,384.7,909.9,718.3);
 // library properties:
 lib.properties = {
 	width: 1024,
