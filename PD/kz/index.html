@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+
+<script src="https://code.createjs.com/createjs-2015.11.26.min.js"></script>
+<script src="index.js"></script>
+<script>
+var canvas, stage, exportRoot, fnStartAnimation;
+
+function getWindowSize() {
+    return {
+        iw: Math.min(document.documentElement.clientWidth, window.innerWidth || 0),
+        ih: Math.min(document.documentElement.clientHeight, window.innerHeight || 0),
+    }
+}    
+
+function init() {
+	canvas = document.getElementById("canvas");
+	var comp=AdobeAn.getComposition("354734A50BDF40A2AAE218A8D0B01E18");
+	var lib=comp.getLibrary();
+	var loader = new createjs.LoadQueue(false);
+	loader.addEventListener("fileload", function(evt){handleFileLoad(evt,comp)});
+	loader.addEventListener("complete", function(evt){handleComplete(evt,comp)});
+	var lib=comp.getLibrary();
+	loader.loadManifest(lib.properties.manifest);
+}
+var flashVars = {
+      reference: "%reference%",
+      link: "%user1%",
+      target: "%target%",
+      rnd: parseInt("%random1%") || parseInt("%random%"),
+      events: [
+            "",
+            "%event1%",
+            "%event2%",
+            "%event3%",
+            "%event4%",
+            "%event5%",
+            "%event6%",
+            "%event7%",
+            "%event8%",
+            "%event9%",
+            "%event10%",
+            "%event11%",
+            "%event12%",
+            "%event13%",
+            "%event14%",
+            "%event15%",
+            "%event16%",
+            "%event17%",
+            "%event18%",
+            "%event19%",
+            "%event20%",
+            "%event21%",
+            "%event22%",
+            "%event23%",
+            "%event24%",
+            "%event25%",
+            "%event26%",
+            "%event27%",
+            "%event28%",
+            "%event29%",
+            "%event30%"
+      ]
+    };
+function handleFileLoad(evt, comp) {
+	var images=comp.getImages();	
+	if (evt && (evt.item.type == "image")) { images[evt.item.id] = evt.result; }	
+}
+function handleComplete(evt,comp) {
+	//This function is always called, irrespective of the content. You can use the variable "stage" after it is created in token create_stage.
+	var lib=comp.getLibrary();
+	var ss=comp.getSpriteSheet();
+	var queue = evt.target;
+	var ssMetadata = lib.ssMetadata;
+	for(i=0; i<ssMetadata.length; i++) {
+		ss[ssMetadata[i].name] = new createjs.SpriteSheet( {"images": [queue.getResult(ssMetadata[i].name)], "frames": ssMetadata[i].frames} )
+	}
+	exportRoot = new lib.index();
+	stage = new lib.Stage(canvas);
+	stage.addChild(exportRoot);
+	stage.enableMouseOver();	
+	//Registers the "tick" event listener.
+	fnStartAnimation = function() {
+		createjs.Ticker.setFPS(lib.properties.fps);
+		createjs.Ticker.addEventListener("tick", stage);
+        canvas.style.cursor = "pointer";
+        canvas.addEventListener("click", function() {
+            window.callClick();
+        });
+	}	    
+	function makeResponsive() {		
+		window.addEventListener('resize', resizeCanvas);		
+		resizeCanvas();		
+		function resizeCanvas() {			
+			var sScale = getWindowSize(),
+                w = sScale.iw, 
+                h = lib.properties.height, 
+                p = window.devicePixelRatio;
+
+            stage.scaleX = stage.scaleY = p;
+            canvas.width = w * p;			
+            canvas.height = h * p;
+            canvas.style.width = w + 'px';			
+            canvas.style.height = h + 'px';
+		}
+	}
+	makeResponsive();	
+	AdobeAn.compositionLoaded(lib.properties.id);
+	fnStartAnimation();
+}
+</script>
+<!-- write your code here -->
+</head>
+<body onload="init();" style="margin:0px;">
+    <canvas id="canvas" style="position: absolute; background-color:rgba(255, 255, 255, 1.00);"></canvas>
+</body>
+</html>
