@@ -509,6 +509,19 @@ p.nominalBounds = new cjs.Rectangle(-186.4,-220.3,436.8,584.7);
 p.nominalBounds = new cjs.Rectangle(-139.5,-244.7,394.9,450.3);
 
 
+(lib.Символ3 = function(mode,startPosition,loop) {
+	this.initialize(mode,startPosition,loop,{});
+
+	// Слой 1
+	this.logo1 = new lib.Символ18();
+	this.logo1.parent = this;
+	this.logo1.setTransform(0.3,-0.1,0.907,0.907);
+
+	this.timeline.addTween(cjs.Tween.get(this.logo1).wait(1));
+
+}).prototype = getMCSymbolPrototype(lib.Символ3, new cjs.Rectangle(-194.6,-40.3,389.4,80.7), null);
+
+
 (lib.Символ33 = function(mode,startPosition,loop) {
 	this.initialize(mode,startPosition,loop,{});
 
@@ -562,11 +575,11 @@ p.nominalBounds = new cjs.Rectangle(-139.5,-244.7,394.9,450.3);
 	// Слой 1
 	this.btn1 = new lib.Символ16();
 	this.btn1.parent = this;
-	this.btn1.setTransform(0,0,1.325,1.325);
+	this.btn1.setTransform(0,0,1.662,1.662);
 
 	this.timeline.addTween(cjs.Tween.get(this.btn1).wait(1));
 
-}).prototype = getMCSymbolPrototype(lib.Символ20, new cjs.Rectangle(-204,-49,408,106), null);
+}).prototype = getMCSymbolPrototype(lib.Символ20, new cjs.Rectangle(-255.9,-61.5,511.8,133), null);
 
 
 (lib.Символ19 = function(mode,startPosition,loop) {
@@ -575,11 +588,11 @@ p.nominalBounds = new cjs.Rectangle(-139.5,-244.7,394.9,450.3);
 	// Слой 1
 	this.txt1 = new lib.Символ10();
 	this.txt1.parent = this;
-	this.txt1.setTransform(0,1,1.378,1.378);
+	this.txt1.setTransform(0,1.2,1.905,1.905,0,0,0,0,0.1);
 
 	this.timeline.addTween(cjs.Tween.get(this.txt1).wait(1));
 
-}).prototype = getMCSymbolPrototype(lib.Символ19, new cjs.Rectangle(-199.7,-63.7,398.1,128.1), null);
+}).prototype = getMCSymbolPrototype(lib.Символ19, new cjs.Rectangle(-276.1,-88.5,550.4,177.1), null);
 
 
 (lib.Символ32 = function(mode,startPosition,loop) {
@@ -730,16 +743,16 @@ p.nominalBounds = new cjs.Rectangle(-84.5,-196,169,392);
 		    /* Позиции элементов по умолчанию */
 		    
 		    _this.btn.x = w < h ? iw * 0.5 : (w > 950 && w > h) ? iw * 0.72 : iw * 0.77;
-		    _this.btn.y = w < h ? ((w < h && w > 599) ? ih * 0.92 : ih * 0.9) : ih * 0.8;
+		    _this.btn.y = w < h ? ((w < h && w > 599) ? ih * 0.91 : ih * 0.9) : ih * 0.8;
 			
 			_this.man.x = w < h ? iw / 2 : iw * 0.33;
 		    _this.man.y = w < h ? ((w < h && w > 599) ? ih * 1.1 : ih) : ih * 1.1;
 			
 			_this.txt.x = w < h ? iw / 2 : ((w > 950) ? iw * 0.72 : iw * 0.77);
-		    _this.txt.y = w < h ? ((w < h && w > 599) ? ih * 0.3 : ih * 0.28) : ih * 0.5;
+		    _this.txt.y = w < h ? ((w < h && w > 599) ? ih * 0.32 : ih * 0.3) : ih * 0.5;
 			
 			_this.logo.x = w < h ? iw * 0.5 : ((w > 950) ? iw * 0.72 : iw * 0.77);
-		    _this.logo.y = w < h ? ((w < h && w > 599) ? ih * 0.12 : ih * 0.1) : ih * 0.2;
+		    _this.logo.y = w < h ? ((w < h && w > 599) ? ih * 0.1 : ih * 0.08) : ih * 0.2;
 		    
 		    
 			/* Функция ресайза */
@@ -810,9 +823,9 @@ p.nominalBounds = new cjs.Rectangle(-84.5,-196,169,392);
 	this.timeline.addTween(cjs.Tween.get(this.txt).wait(1));
 
 	// logo_gonzo.png
-	this.logo = new lib.Символ18();
+	this.logo = new lib.Символ3();
 	this.logo.parent = this;
-	this.logo.setTransform(443,254.5);
+	this.logo.setTransform(442.7,254.7);
 
 	this.timeline.addTween(cjs.Tween.get(this.logo).wait(1));
 
@@ -824,7 +837,7 @@ p.nominalBounds = new cjs.Rectangle(-84.5,-196,169,392);
 	this.timeline.addTween(cjs.Tween.get(this.man).wait(1));
 
 }).prototype = p = new cjs.MovieClip();
-p.nominalBounds = new cjs.Rectangle(702,172.2,959.8,930.8);
+p.nominalBounds = new cjs.Rectangle(650.1,172.2,1011.7,945.3);
 // library properties:
 lib.properties = {
 	width: 1024,
