@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html>
+    <!--Head-->
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="HandheldFriendly" content="true" />
+        <meta name="MobileOptimized" content="width" />
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="mobile-web-app-capable" content="yes">
+        <meta name="format-detection" content="telephone=no">
+        <meta name="format-detection" content="address=no"/>
+        <meta name="google" content="notranslate">
+
+        <script>
+            //Target URL Settings
+            var getAdHash = function() {
+                var adHash = '%AD_HASH%';
+                var res = window.location.search.match(/hash=([a-f\d]{32})/);
+                if(res) {
+                    adHash = res[1];
+                }
+                return adHash;
+            }
+        </script>
+
+        <style>
+            
+            /*======================================================= Default Styles =======================================================*/
+            
+            #main_wrapper {
+                position: absolute;
+                width: 100%; height: 100%;
+                left: 0; top: 0;
+                overflow: hidden;
+                -webkit-touch-callout: none; 
+                -webkit-user-select: none; 
+                -khtml-user-select: none; 
+                -moz-user-select: none; 
+                -ms-user-select: none;
+                -o-user-select: none;
+                user-select: none; 
+                text-decoration: none;
+            } 
+
+            #content_box{
+                position: absolute;
+                width: 100%; height: 100%;
+                left: 0; top: 0;
+                
+                background-color: rgba(255,255,255,1);
+
+                box-shadow: 0px 20px 50px 0px rgba(0,0,0,0.5);
+                transform: translateZ(0); -webkit-transform: translateZ(0);
+                animation: add_box 700ms; -webkit-animation: add_box 700ms;
+            }
+
+            #canvas{
+                position: absolute;
+                width: 100%; height: 100%;
+                left: 0; top:0;
+                z-index: 2;
+            }
+            
+            #gonzo_back{
+                position:   absolute;
+                width: 100%;
+                height: 100%;
+                background  : url(images/bg.jpg) center no-repeat;
+                background-size: cover;
+                z-index: 0;}
+            
+                
+            #black{
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                background-color: rgba(0,0,0,0.5);
+                z-index: 1;
+            }
+            
+            .black_bg{
+                animation: black_bg 0.7s ease-in-out infinite alternate;
+                -webkit-animation: black_bg 0.7s ease-in-out infinite alternate;
+            }
+            @keyframes black_bg{
+                from{opacity: 1; -webkit-opacity: 1;}
+                to{opacity: 0; -webkit-opacity: 0;}
+            }
+             @-webkit-keyframes black_bg{
+                from{opacity: 1; -webkit-opacity: 1;}
+                to{opacity: 0; -webkit-opacity: 0;}
+            }
+            
+            .zoom{
+                animation: zoom 3s ease-in-out infinite alternate;
+                -webkit-animation: zoom 3s ease-in-out infinite alternate;
+            }
+            @keyframes zoom{
+                from{transform: scale(1); -webkit-transform: scale(1);}
+                to{transform: scale(1.3); -webkit-transform: scale(1.3);}
+            }
+             @-webkit-keyframes zoom{
+                from{transform: scale(1); -webkit-transform: scale(1);}
+                to{transform: scale(1.3); -webkit-transform: scale(1.3);}
+            }
+
+            @keyframes add_box {
+                from {opacity: 0;}
+                to {opacity: 1;}
+            }
+
+            @-webkit-keyframes add_box {
+                from {opacity: 0;}
+                to {opacity: 1;}
+            }
+
+            /*======================================================= Default Styles =======================================================*/
+            
+            /*======================================================= Custom Styles =======================================================*/
+            
+            #example{
+                position: absolute;
+            }
+
+            /*Detect Screen Size : Atributes - width / height / max-width / max-height / min-width / min-height */
+
+            @media (max-width: 600px) and (max-height: 600px;){
+
+            }
+
+        
+            /*======================================================= Custom Styles =======================================================*/
+        </style>   
+
+        <script src="https://mobster.agency/files/js/createjs-29.03.17.min.js"></script>
+        <!--<script src="/files/js/createjs-29.03.17.min.js"></script>-->
+        <script src="sticker.js"></script>
+        <script>
+        var canvas, stage, exportRoot, fnStartAnimation;
+
+        function getWindowSize() {
+            return {
+                iw: Math.min(document.documentElement.clientWidth, window.innerWidth || 0),
+                ih: Math.min(document.documentElement.clientHeight, window.innerHeight || 0),
+            }
+        }
+
+        function init() {
+            canvas = document.getElementById("canvas");
+            images = images||{};
+
+            /*var image = new Image();
+            image.src = 'data:image/png;base64,';
+            images['image'] = image;*/
+
+            var loader = new createjs.LoadQueue(false);
+            loader.addEventListener("fileload", handleFileLoad);
+            loader.addEventListener("complete", handleComplete);
+            loader.loadManifest(lib.properties.manifest);
+            /*handleComplete();*/
+        }
+        function handleFileLoad(evt) {	
+            if (evt.item.type == "image") { images[evt.item.id] = evt.result; }	
+        }
+        function handleComplete(evt) {
+            exportRoot = new lib.sticker();
+            stage = new createjs.Stage(canvas);
+            stage.addChild(exportRoot);	
+            fnStartAnimation = function() {
+                createjs.Ticker.setFPS(30);
+                createjs.Ticker.addEventListener("tick", stage);
+            }	    
+            function makeResponsive() {		
+                window.addEventListener('resize', resizeCanvas);		
+                resizeCanvas();		
+                function resizeCanvas() {			
+                    var sScale = getWindowSize();
+                    
+                    /* Canvas Size */
+                    var iw = sScale.iw, 
+                        ih = sScale.ih;
+                    
+                    /* Stage Size */
+                    var w = sScale.iw, 
+                        h = sScale.ih / 0.35, 
+                        p = window.devicePixelRatio;
+                    
+                    stage.scaleX = stage.scaleY = p;
+                    
+                    /* Set Canvas Size */
+                    canvas.width = iw * p;			
+                    canvas.height = ih * p;
+                    
+                    /* <============================ Custom Code ============================> */
+                    
+                    var exampleElement;
+                    
+                    /*Detect Orientation*/
+                    
+                    if(h > w){
+                        /* Orientation: Portrait */
+                    }
+                    
+                    if(w > h){
+                        /* Orientation: Landscape */
+                    }
+                    
+                     /* <============================ Custom Code ============================> */
+                }
+            }
+            makeResponsive();	
+            fnStartAnimation();
+        }
+        </script>
+    </head>
+    
+    <!--Body-->
+    <body onload="init();" style="margin:0px;">
+        <div id="main_wrapper">
+            <div id="content_box">
+                <!--Content-->
+                
+                <canvas id="canvas"></canvas>
+                <div id="black" class="black_bg"></div>
+                <div id="gonzo_back" class="zoom"></div>
+                <!--Content-->
+            </div>
+        </div>
+    </body>
+</html>
